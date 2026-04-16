@@ -139,7 +139,7 @@ const Speakers = () => (
     <section className="section-py bg-background">
       <div className="container-conf">
         <AnimatedSection>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-12">Ekipa Salumanus</h2>
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-12 font-semibold">Ekipa Salumanus</h2>
         </AnimatedSection>
         <SpeakerSlider speakers={salumanusSpeakers} perPage={4} />
       </div>
@@ -148,7 +148,7 @@ const Speakers = () => (
     <section className="section-py bg-background">
       <div className="container-conf">
         <AnimatedSection>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-12">Ekipa DCN Europe</h2>
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-12 font-semibold">Ekipa DCN Europe</h2>
         </AnimatedSection>
         <SpeakerSlider speakers={dcnSpeakers} perPage={4} />
       </div>

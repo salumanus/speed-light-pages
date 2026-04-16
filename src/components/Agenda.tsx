@@ -23,7 +23,7 @@ const Agenda = () => {
     <section id="agenda" className="section-py bg-background">
       <div className="container-conf">
         <AnimatedSection>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-16">Agenda</h2>
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-16 font-semibold">Agenda</h2>
         </AnimatedSection>
 
         <div ref={ref} className="relative max-w-3xl mx-auto">
