@@ -16,6 +16,7 @@ const Index = () => (
     <Speakers />
     <Agenda />
     <FeatureCards />
+    <Audience />
     <CtaSection />
     <Footer />
   </>
