@@ -97,7 +97,7 @@ const SpeakerSlider = ({ speakers, perPage }: { speakers: Speaker[]; perPage: nu
             }`}
           >
             {visible.map(s => (
-              <SpeakerCard key={s.name} speaker={s} />
+              <SpeakerCard key={s.name} speaker={s} index={page * perPage + i} />
             ))}
           </motion.div>
         </AnimatePresence>
