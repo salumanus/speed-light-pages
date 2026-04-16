@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import heroImg from "@/assets/hero-f1.jpg";
+import heroImg from "@/assets/hero-f1.avif";
 
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
