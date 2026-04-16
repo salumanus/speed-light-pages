@@ -45,7 +45,7 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => (
           href={speaker.linkedin || "#"}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-accent transition-colors flex-shrink-0"
+          className="text-accent hover:opacity-80 transition-opacity flex-shrink-0"
           aria-label={`LinkedIn ${speaker.name}`}
         >
           <Linkedin size={18} />
