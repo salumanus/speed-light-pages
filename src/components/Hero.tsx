@@ -11,7 +11,7 @@ const Hero = () => {
     { el: <span className="inline-block bg-accent text-accent-foreground px-4 py-1.5 text-sm font-medium uppercase tracking-widest rounded-sm">Edycja XVIII</span>, delay: 0 },
     { el: <h1 className="font-heading text-6xl sm:text-7xl md:text-8xl text-dark-fg leading-none font-semibold lg:text-7xl">Inżynieria zwycięstwa</h1>, delay: 0.15 },
     { el: <p className="text-xl text-primary-foreground font-normal md:text-4xl">Technologia na najwyższych obrotach.</p>, delay: 0.3 },
-    { el: <p className="text-base md:text-lg text-dark-fg/60">20 Października 2026 — Hotel Novotel Centrum, Warszawa</p>, delay: 0.45 },
+    { el: <p className="text-base text-primary-foreground md:text-xl">20 Października 2026 — Hotel Novotel Centrum, Warszawa</p>, delay: 0.45 },
     { el: <a href="#rejestracja" className="btn-accent mt-2">Zarejestruj się</a>, delay: 0.6 },
   ];
 
