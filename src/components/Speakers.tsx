@@ -96,7 +96,7 @@ const SpeakerSlider = ({ speakers, perPage }: { speakers: Speaker[]; perPage: nu
                 : "grid-cols-1 md:grid-cols-2"
             }`}
           >
-            {visible.map(s => (
+            {visible.map((s, i) => (
               <SpeakerCard key={s.name} speaker={s} index={page * perPage + i} />
             ))}
           </motion.div>
