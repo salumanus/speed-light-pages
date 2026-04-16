@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Speakers from "@/components/Speakers";
 import Agenda from "@/components/Agenda";
 import FeatureCards from "@/components/FeatureCards";
+import Audience from "@/components/Audience";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 
@@ -15,6 +16,7 @@ const Index = () => (
     <Speakers />
     <Agenda />
     <FeatureCards />
+    <Audience />
     <CtaSection />
     <Footer />
   </>
