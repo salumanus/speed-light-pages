@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Orbitron"', 'sans-serif'],
+        heading: ['"Inter Tight"', 'sans-serif'],
         body: ['"Inter"', 'sans-serif'],
       },
       colors: {
