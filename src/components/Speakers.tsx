@@ -10,6 +10,19 @@ interface Speaker {
   linkedin?: string;
 }
 
+const speakerPhotos = [
+  "1560250097-0b93528c311a",
+  "1472099645785-5658abf4ff4e",
+  "1519085360753-af0119f7cbe7",
+  "1507003211169-0a1dd7228f2d",
+  "1500648767791-00dcc994a43e",
+  "1438761681033-6461ffad8d80",
+  "1494790108377-be9c29b29330",
+  "1506794778202-cad84cf45f1d",
+  "1573497019940-1c28c88b4f3e",
+  "1580489944761-15a19d654956",
+];
+
 const salumanusSpeakers: Speaker[] = [
   { name: "Marcin Bała", role: "CEO Salumanus", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
   { name: "Andrzej Wojnar", role: "Architekt rozwiązań", desc: "Ekspert projektowania złożonych systemów sieciowych.", linkedin: "" },
@@ -26,17 +39,18 @@ const dcnSpeakers: Speaker[] = [
   { name: "Grzegorz Banach", role: "Brand Manager DCN Europe", desc: "Buduje rozpoznawalność marki DCN w Europie i odpowiada za komunikację produktową.", linkedin: "" },
 ];
 
-const SpeakerCard = ({ speaker }: { speaker: Speaker }) => (
+const SpeakerCard = ({ speaker, index }: { speaker: Speaker; index: number }) => (
   <motion.div
     whileHover={{ scale: 1.02 }}
     className="group flex-shrink-0"
   >
-    <div className="bg-secondary rounded-lg overflow-hidden aspect-[3/4] mb-4 flex items-center justify-center">
-      <div className="w-full h-full bg-gradient-to-b from-muted to-secondary flex items-end justify-center pb-6">
-        <span className="font-heading text-2xl text-muted-foreground/40">
-          {speaker.name.split(" ").map(n => n[0]).join("")}
-        </span>
-      </div>
+    <div className="bg-secondary rounded-lg overflow-hidden aspect-[3/4] mb-4">
+      <img
+        src={`https://images.unsplash.com/photo-${speakerPhotos[index % speakerPhotos.length]}?w=400&h=530&fit=crop&crop=face`}
+        alt={speaker.name}
+        className="w-full h-full object-cover"
+        loading="lazy"
+      />
     </div>
     <div className="flex items-center justify-between gap-2">
       <h3 className="font-heading text-xl md:text-2xl text-foreground">{speaker.name}</h3>
@@ -82,8 +96,8 @@ const SpeakerSlider = ({ speakers, perPage }: { speakers: Speaker[]; perPage: nu
                 : "grid-cols-1 md:grid-cols-2"
             }`}
           >
-            {visible.map(s => (
-              <SpeakerCard key={s.name} speaker={s} />
+            {visible.map((s, i) => (
+              <SpeakerCard key={s.name} speaker={s} index={page * perPage + i} />
             ))}
           </motion.div>
         </AnimatePresence>
