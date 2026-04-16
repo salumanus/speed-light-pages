@@ -122,7 +122,7 @@ const Speakers = () => (
         <AnimatedSection>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-12">Ekipa DCN Europe</h2>
         </AnimatedSection>
-        <SpeakerSlider speakers={dcnSpeakers} perPage={2} />
+        <SpeakerSlider speakers={dcnSpeakers} perPage={4} />
       </div>
     </section>
   </>
