@@ -40,7 +40,7 @@ const Audience = () => (
         </h2>
       </AnimatedSection>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {cards.map((card, i) => (
           <AnimatedSection key={card.title} delay={i * 0.1}>
             <motion.div
