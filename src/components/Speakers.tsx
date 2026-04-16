@@ -1,28 +1,29 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Linkedin } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 interface Speaker {
   name: string;
   role: string;
   desc: string;
+  linkedin?: string;
 }
 
 const salumanusSpeakers: Speaker[] = [
-  { name: "Marcin Bała", role: "CEO Salumanus", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem." },
-  { name: "Andrzej Wojnar", role: "Architekt rozwiązań", desc: "Ekspert projektowania złożonych systemów sieciowych." },
-  { name: "Łukasz Sukiennik", role: "Dyrektor Działu Systemów Transmisyjnych", desc: "Specjalista od systemów DWDM i transmisji optycznej." },
-  { name: "Łukasz Bogdanik", role: "Procurement Manager", desc: "Odpowiada za strategiczne zakupy i relacje z dostawcami." },
-  { name: "Jan Kowalski", role: "Inżynier systemowy", desc: "Specjalista od wdrożeń i konfiguracji sieci." },
-  { name: "Anna Nowak", role: "Project Manager", desc: "Koordynuje projekty infrastrukturalne dla kluczowych klientów." },
-  { name: "Piotr Wiśniewski", role: "Konsultant techniczny", desc: "Doradza w zakresie doboru technologii sieciowych." },
-  { name: "Jarosław Garczewski", role: "Specjalista ds. wsparcia", desc: "Zapewnia najwyższą jakość obsługi posprzedażowej." },
+  { name: "Marcin Bała", role: "CEO Salumanus", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
+  { name: "Andrzej Wojnar", role: "Architekt rozwiązań", desc: "Ekspert projektowania złożonych systemów sieciowych.", linkedin: "" },
+  { name: "Łukasz Sukiennik", role: "Dyrektor Działu Systemów Transmisyjnych", desc: "Specjalista od systemów DWDM i transmisji optycznej.", linkedin: "" },
+  { name: "Łukasz Bogdanik", role: "Procurement Manager", desc: "Odpowiada za strategiczne zakupy i relacje z dostawcami.", linkedin: "" },
+  { name: "Jan Kowalski", role: "Inżynier systemowy", desc: "Specjalista od wdrożeń i konfiguracji sieci.", linkedin: "" },
+  { name: "Anna Nowak", role: "Project Manager", desc: "Koordynuje projekty infrastrukturalne dla kluczowych klientów.", linkedin: "" },
+  { name: "Piotr Wiśniewski", role: "Konsultant techniczny", desc: "Doradza w zakresie doboru technologii sieciowych.", linkedin: "" },
+  { name: "Jarosław Garczewski", role: "Specjalista ds. wsparcia", desc: "Zapewnia najwyższą jakość obsługi posprzedażowej.", linkedin: "" },
 ];
 
 const dcnSpeakers: Speaker[] = [
-  { name: "Piotr Zając", role: "Prezes DCN Europe", desc: "Lider europejskiego oddziału DCN, odpowiedzialny za strategię rozwoju na rynku EMEA." },
-  { name: "Grzegorz Banach", role: "Brand Manager DCN Europe", desc: "Buduje rozpoznawalność marki DCN w Europie i odpowiada za komunikację produktową." },
+  { name: "Piotr Zając", role: "Prezes DCN Europe", desc: "Lider europejskiego oddziału DCN, odpowiedzialny za strategię rozwoju na rynku EMEA.", linkedin: "" },
+  { name: "Grzegorz Banach", role: "Brand Manager DCN Europe", desc: "Buduje rozpoznawalność marki DCN w Europie i odpowiada za komunikację produktową.", linkedin: "" },
 ];
 
 const SpeakerCard = ({ speaker }: { speaker: Speaker }) => (
@@ -37,7 +38,20 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => (
         </span>
       </div>
     </div>
-    <h3 className="font-heading text-xl md:text-2xl text-foreground">{speaker.name}</h3>
+    <div className="flex items-center justify-between gap-2">
+      <h3 className="font-heading text-xl md:text-2xl text-foreground">{speaker.name}</h3>
+      {speaker.linkedin !== undefined && (
+        <a
+          href={speaker.linkedin || "#"}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted-foreground hover:text-accent transition-colors flex-shrink-0"
+          aria-label={`LinkedIn ${speaker.name}`}
+        >
+          <Linkedin size={18} />
+        </a>
+      )}
+    </div>
     <p className="text-accent text-sm font-medium mb-1">{speaker.role}</p>
     <p className="text-muted-foreground text-sm">{speaker.desc}</p>
   </motion.div>
