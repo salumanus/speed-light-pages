@@ -26,17 +26,18 @@ const dcnSpeakers: Speaker[] = [
   { name: "Grzegorz Banach", role: "Brand Manager DCN Europe", desc: "Buduje rozpoznawalność marki DCN w Europie i odpowiada za komunikację produktową.", linkedin: "" },
 ];
 
-const SpeakerCard = ({ speaker }: { speaker: Speaker }) => (
+const SpeakerCard = ({ speaker, index }: { speaker: Speaker; index: number }) => (
   <motion.div
     whileHover={{ scale: 1.02 }}
     className="group flex-shrink-0"
   >
-    <div className="bg-secondary rounded-lg overflow-hidden aspect-[3/4] mb-4 flex items-center justify-center">
-      <div className="w-full h-full bg-gradient-to-b from-muted to-secondary flex items-end justify-center pb-6">
-        <span className="font-heading text-2xl text-muted-foreground/40">
-          {speaker.name.split(" ").map(n => n[0]).join("")}
-        </span>
-      </div>
+    <div className="bg-secondary rounded-lg overflow-hidden aspect-[3/4] mb-4">
+      <img
+        src={`https://images.unsplash.com/photo-${speakerPhotos[index % speakerPhotos.length]}?w=400&h=530&fit=crop&crop=face`}
+        alt={speaker.name}
+        className="w-full h-full object-cover"
+        loading="lazy"
+      />
     </div>
     <div className="flex items-center justify-between gap-2">
       <h3 className="font-heading text-xl md:text-2xl text-foreground">{speaker.name}</h3>
