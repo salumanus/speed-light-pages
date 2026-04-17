@@ -45,7 +45,7 @@ const SpeakerCard = ({ speaker, index }: { speaker: Speaker; index: number }) =>
     whileHover={{ scale: 1.02 }}
     className="group flex-shrink-0"
   >
-    <div className="bg-secondary rounded-lg overflow-hidden aspect-square mb-4">
+    <div className="bg-secondary overflow-hidden aspect-square mb-4 border border-accent" style={{ borderRadius: "5px" }}>
       <img
         src={speakerImg}
         alt={speaker.name}
@@ -53,22 +53,20 @@ const SpeakerCard = ({ speaker, index }: { speaker: Speaker; index: number }) =>
         loading="lazy"
       />
     </div>
-    <div className="flex items-center justify-between gap-2">
-      <h3 className="font-heading text-xl md:text-2xl text-foreground">{speaker.name}</h3>
-      {speaker.linkedin !== undefined && (
-        <a
-          href={speaker.linkedin || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-accent hover:opacity-80 transition-opacity flex-shrink-0"
-          aria-label={`LinkedIn ${speaker.name}`}
-        >
-          <Linkedin size={18} />
-        </a>
-      )}
-    </div>
+    <h3 className="font-heading text-xl md:text-2xl text-foreground">{speaker.name}</h3>
     <p className="text-accent text-sm font-medium mb-1">{speaker.role}</p>
-    <p className="text-muted-foreground text-sm">{speaker.desc}</p>
+    <p className="text-muted-foreground text-sm mb-3">{speaker.desc}</p>
+    {speaker.linkedin !== undefined && (
+      <a
+        href={speaker.linkedin || "#"}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-muted-foreground hover:text-accent transition-colors inline-flex"
+        aria-label={`LinkedIn ${speaker.name}`}
+      >
+        <Linkedin size={18} />
+      </a>
+    )}
   </motion.div>
 );
 
