@@ -132,7 +132,7 @@ const SpeakerSlider = ({ speakers, perPage }: { speakers: Speaker[]; perPage: nu
 
 const Speakers = () => (
   <>
-    <section className="bg-background" style={{ paddingTop: "1rem", paddingBottom: "1rem" }}>
+    <section className="bg-background my-[39px]" style={{ paddingTop: "1rem", paddingBottom: "1rem" }}>
       <div className="container-conf">
         <AnimatedSection>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground font-semibold" style={{ marginBottom: "1.5rem" }}>Salumanus Racing Team</h2>
