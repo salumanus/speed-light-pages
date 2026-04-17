@@ -26,9 +26,9 @@ const speakerPhotos = [
 
 const salumanusSpeakers: Speaker[] = [
   { name: "Marcin Bała", role: "CEO Salumanus", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
-  { name: "Andrzej Wojnar", role: "Architekt rozwiązań", desc: "Ekspert projektowania złożonych systemów sieciowych.", linkedin: "" },
-  { name: "Łukasz Sukiennik", role: "Dyrektor Działu Systemów Transmisyjnych", desc: "Specjalista od systemów DWDM i transmisji optycznej.", linkedin: "" },
-  { name: "Łukasz Bogdanik", role: "Procurement Manager", desc: "Odpowiada za strategiczne zakupy i relacje z dostawcami.", linkedin: "" },
+  { name: "Marcin Bała", role: "Architekt rozwiązań", desc: "Ekspert projektowania złożonych systemów sieciowych.", linkedin: "" },
+  { name: "Marcin Bała", role: "Dyrektor Działu Systemów Transmisyjnych", desc: "Specjalista od systemów DWDM i transmisji optycznej.", linkedin: "" },
+  { name: "Marcin Bała", role: "Procurement Manager", desc: "Odpowiada za strategiczne zakupy i relacje z dostawcami.", linkedin: "" },
   { name: "Jan Kowalski", role: "Inżynier systemowy", desc: "Specjalista od wdrożeń i konfiguracji sieci.", linkedin: "" },
   { name: "Anna Nowak", role: "Project Manager", desc: "Koordynuje projekty infrastrukturalne dla kluczowych klientów.", linkedin: "" },
   { name: "Piotr Wiśniewski", role: "Konsultant techniczny", desc: "Doradza w zakresie doboru technologii sieciowych.", linkedin: "" },
