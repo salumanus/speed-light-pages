@@ -45,7 +45,7 @@ const About = () => (
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 font-semibold">O konferencji</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Dni Światła to coroczna konferencja organizowana przez Salumanus i DCN Europe, poświęcona najnowszym
-              technologiom sieciowym i transmisyjnym. XVIII edycja przenosi nas na tor wyścigowy — bo w świecie
+              technologiom sieciowym i transmisyjnym. XVIII edycja przenosi nas na tor wyścigowy - bo w świecie
               technologii, tak jak w Formule 1, liczy się precyzja, szybkość i niezawodność.
             </p>
             <p className="text-muted-foreground leading-relaxed">
