@@ -135,7 +135,7 @@ const SpeakerSlider = ({ speakers, perPage }: { speakers: Speaker[]; perPage: nu
 
 const Speakers = () => (
   <>
-    <section className="section-py bg-background">
+    <section className="bg-background" style={{ paddingTop: "1rem", paddingBottom: "1rem" }}>
       <div className="container-conf">
         <AnimatedSection>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-12 font-semibold">Ekipa Salumanus</h2>
@@ -144,10 +144,10 @@ const Speakers = () => (
       </div>
     </section>
 
-    <section className="section-py bg-background">
+    <section style={{ backgroundColor: "#f1f1f1", paddingTop: "1rem", paddingBottom: "1rem" }}>
       <div className="container-conf">
         <AnimatedSection>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-12 font-semibold">Ekipa DCN Europe</h2>
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-12 font-semibold" style={{ color: "#000" }}>Ekipa DCN Europe</h2>
         </AnimatedSection>
         <SpeakerSlider speakers={dcnSpeakers} perPage={4} />
       </div>
