@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import AnimatedSection from "./AnimatedSection";
-import logoSalumanus from "@/assets/logo-salumanus.svg";
+import logoSalumanus from "@/assets/Salumanus_logo_dark.svg";
 import logoDcn from "@/assets/logo-dcn.svg";
 
 const Counter = ({ end, label }: { end: number; label: string }) => {
