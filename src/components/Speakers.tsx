@@ -36,8 +36,8 @@ const salumanusSpeakers: Speaker[] = [
 ];
 
 const dcnSpeakers: Speaker[] = [
-  { name: "Piotr Zając", role: "Prezes DCN Europe", desc: "Lider europejskiego oddziału DCN, odpowiedzialny za strategię rozwoju na rynku EMEA.", linkedin: "" },
-  { name: "Grzegorz Banach", role: "Brand Manager DCN Europe", desc: "Buduje rozpoznawalność marki DCN w Europie i odpowiada za komunikację produktową.", linkedin: "" },
+  { name: "Marcin Bała", role: "Prezes DCN Europe", desc: "Lider europejskiego oddziału DCN, odpowiedzialny za strategię rozwoju na rynku EMEA.", linkedin: "" },
+  { name: "Marcin Bała", role: "Brand Manager DCN Europe", desc: "Buduje rozpoznawalność marki DCN w Europie i odpowiada za komunikację produktową.", linkedin: "" },
 ];
 
 const SpeakerCard = ({ speaker, index }: { speaker: Speaker; index: number }) => (
