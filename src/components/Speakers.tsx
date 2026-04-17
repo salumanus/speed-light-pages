@@ -41,15 +41,12 @@ const dcnSpeakers: Speaker[] = [
 ];
 
 const SpeakerCard = ({ speaker, index }: { speaker: Speaker; index: number }) => (
-  <motion.div
-    whileHover={{ scale: 1.02 }}
-    className="group flex-shrink-0"
-  >
+  <div className="group flex-shrink-0">
     <div className="bg-secondary overflow-hidden aspect-square mb-4 border border-accent" style={{ borderRadius: "5px" }}>
       <img
         src={speakerImg}
         alt={speaker.name}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         loading="lazy"
       />
     </div>
@@ -67,7 +64,7 @@ const SpeakerCard = ({ speaker, index }: { speaker: Speaker; index: number }) =>
         <Linkedin size={18} />
       </a>
     )}
-  </motion.div>
+  </div>
 );
 
 const SpeakerSlider = ({ speakers, perPage }: { speakers: Speaker[]; perPage: number }) => {
@@ -144,7 +141,7 @@ const Speakers = () => (
       </div>
     </section>
 
-    <section style={{ backgroundColor: "#f1f1f1", paddingTop: "1rem", paddingBottom: "1rem" }}>
+    <section style={{ backgroundColor: "#f1f1f1", paddingTop: "1.5rem", paddingBottom: "1.5rem" }}>
       <div className="container-conf">
         <AnimatedSection>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-12 font-semibold" style={{ color: "#000" }}>Ekipa DCN Europe</h2>
