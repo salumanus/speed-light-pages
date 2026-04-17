@@ -28,7 +28,7 @@ const Counter = ({ end, label }: { end: number; label: string }) => {
 
   return (
     <div ref={ref} className="text-center">
-      <div className="font-heading text-5xl md:text-6xl text-accent">{count}</div>
+      <div className="font-heading text-5xl text-accent font-semibold md:text-9xl">{count}</div>
       <div className="text-muted-foreground text-sm mt-1 font-medium">{label}</div>
     </div>
   );
