@@ -52,8 +52,8 @@ const About = () => (
             </p>
             <div className="flex gap-12 mt-10">
               <Counter end={18} label="Edycji" />
-              <Counter end={10} label="Prelegentów" />
-              <Counter end={1} label="Dzień" />
+              <Counter end={24} label="Prelegentów" />
+              <Counter end={900} label="Ponad Uczestników wszystkich edycji" />
             </div>
           </div>
           <div className="flex flex-col gap-8 items-center justify-center">
