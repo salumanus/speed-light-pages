@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Linkedin } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import speakerImg from "@/assets/speaker.avif";
 
 interface Speaker {
   name: string;
@@ -44,9 +45,9 @@ const SpeakerCard = ({ speaker, index }: { speaker: Speaker; index: number }) =>
     whileHover={{ scale: 1.02 }}
     className="group flex-shrink-0"
   >
-    <div className="bg-secondary rounded-lg overflow-hidden aspect-[3/4] mb-4">
+    <div className="bg-secondary rounded-lg overflow-hidden aspect-square mb-4">
       <img
-        src={`https://images.unsplash.com/photo-${speakerPhotos[index % speakerPhotos.length]}?w=400&h=530&fit=crop&crop=face`}
+        src={speakerImg}
         alt={speaker.name}
         className="w-full h-full object-cover"
         loading="lazy"
