@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import AnimatedSection from "./AnimatedSection";
+import logoSalumanus from "@/assets/logo-salumanus.svg";
+import logoDcn from "@/assets/logo-dcn.svg";
 
 const Counter = ({ end, label }: { end: number; label: string }) => {
   const [count, setCount] = useState(0);
@@ -58,10 +60,10 @@ const About = () => (
           </div>
           <div className="flex flex-col gap-8 items-center justify-center">
             <div className="bg-secondary rounded-lg p-8 w-full max-w-sm flex items-center justify-center min-h-[120px]">
-              <span className="font-heading text-3xl text-foreground tracking-wider">SALUMANUS</span>
+              <img src={logoSalumanus} alt="Salumanus" className="w-full max-h-16 object-contain" />
             </div>
             <div className="bg-secondary rounded-lg p-8 w-full max-w-sm flex items-center justify-center min-h-[120px]">
-              <span className="font-heading text-3xl text-foreground tracking-wider">DCN EUROPE</span>
+              <img src={logoDcn} alt="DCN Europe" className="w-full max-h-16 object-contain" />
             </div>
           </div>
         </div>
