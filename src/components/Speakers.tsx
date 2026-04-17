@@ -29,10 +29,10 @@ const salumanusSpeakers: Speaker[] = [
   { name: "Marcin Bała", role: "Architekt rozwiązań", desc: "Ekspert projektowania złożonych systemów sieciowych.", linkedin: "" },
   { name: "Marcin Bała", role: "Dyrektor Działu Systemów Transmisyjnych", desc: "Specjalista od systemów DWDM i transmisji optycznej.", linkedin: "" },
   { name: "Marcin Bała", role: "Procurement Manager", desc: "Odpowiada za strategiczne zakupy i relacje z dostawcami.", linkedin: "" },
-  { name: "Marcin Bała", role: "Inżynier systemowy", desc: "Specjalista od wdrożeń i konfiguracji sieci.", linkedin: "" },
-  { name: "Marcin Bała", role: "Project Manager", desc: "Koordynuje projekty infrastrukturalne dla kluczowych klientów.", linkedin: "" },
-  { name: "Marcin Bała", role: "Konsultant techniczny", desc: "Doradza w zakresie doboru technologii sieciowych.", linkedin: "" },
-  { name: "Marcin Bała", role: "Specjalista ds. wsparcia", desc: "Zapewnia najwyższą jakość obsługi posprzedażowej.", linkedin: "" },
+  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Specjalista od wdrożeń i konfiguracji sieci.", linkedin: "" },
+  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Koordynuje projekty infrastrukturalne dla kluczowych klientów.", linkedin: "" },
+  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Doradza w zakresie doboru technologii sieciowych.", linkedin: "" },
+  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Zapewnia najwyższą jakość obsługi posprzedażowej.", linkedin: "" },
 ];
 
 const dcnSpeakers: Speaker[] = [
