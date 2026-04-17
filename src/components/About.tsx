@@ -42,7 +42,7 @@ const About = () => (
       <AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 font-semibold">O konferencji</h2>
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 font-semibold">O konferencji Dni Światła</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Dni Światła to coroczna konferencja organizowana przez Salumanus i DCN Europe, poświęcona najnowszym
               technologiom sieciowym i transmisyjnym. XVIII edycja przenosi nas na tor wyścigowy - bo w świecie
