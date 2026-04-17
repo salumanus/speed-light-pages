@@ -29,10 +29,10 @@ const salumanusSpeakers: Speaker[] = [
   { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
   { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
   { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
-  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Specjalista od wdrożeń i konfiguracji sieci.", linkedin: "" },
-  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Koordynuje projekty infrastrukturalne dla kluczowych klientów.", linkedin: "" },
-  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Doradza w zakresie doboru technologii sieciowych.", linkedin: "" },
-  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Zapewnia najwyższą jakość obsługi posprzedażowej.", linkedin: "" },
+  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
+  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
+  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
+  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
 ];
 
 const dcnSpeakers: Speaker[] = [
