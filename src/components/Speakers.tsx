@@ -135,7 +135,13 @@ const Speakers = () => (
     <section className="bg-background my-[39px]" style={{ paddingTop: "1rem", paddingBottom: "1rem" }}>
       <div className="container-conf">
         <AnimatedSection>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground font-semibold" style={{ marginBottom: "1.5rem" }}>Salumanus Racing Team</h2>
+          <div className="flex items-center gap-3 mb-8">
+            <span className="w-3 h-3 rounded-sm bg-accent inline-block" />
+            <span className="font-heading text-sm uppercase tracking-widest text-foreground">Salumanus</span>
+          </div>
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground font-semibold leading-tight" style={{ marginBottom: "1.5rem" }}>
+            <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Salumanus Racing Team</span>
+          </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-3xl">Osiągnęli już niejeden szczyt przepustowości. Mistrzowie systemów xWDM i transmisji optycznej - na torze i w sieci nie ma dla nich niemożliwych prędkości.</p>
         </AnimatedSection>
         <SpeakerSlider speakers={salumanusSpeakers} perPage={4} />
