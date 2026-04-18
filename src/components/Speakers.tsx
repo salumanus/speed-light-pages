@@ -148,7 +148,7 @@ const Speakers = () => (
       </div>
     </section>
 
-    <section className="bg-[#f8f4f2]" style={{ paddingTop: "3.5rem", paddingBottom: "3.5rem" }}>
+    <section className="bg-[#f8f4f2] my-0 py-[40px]">
       <div className="container-conf">
         <AnimatedSection>
           <div className="flex items-center gap-3 mb-8">
