@@ -46,7 +46,7 @@ const About = () => (
               <span className="w-3 h-3 rounded-sm bg-accent inline-block" />
               <span className="font-heading text-sm uppercase tracking-widest text-foreground">Dni Światła</span>
             </div>
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 font-semibold leading-tight">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
               O konferencji <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Dni Światła</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
