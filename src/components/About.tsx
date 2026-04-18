@@ -37,7 +37,7 @@ const Counter = ({ end, label }: { end: number; label: string }) => {
 };
 
 const About = () => (
-  <section className="section-py bg-[#e00400]/[0.06]">
+  <section className="section-py bg-[#f8f4f2]">
     <div className="container-conf">
       <AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
