@@ -31,7 +31,7 @@ const Counter = ({ end, label }: { end: number; label: string }) => {
   return (
     <div ref={ref} className="text-center">
       <div className="font-heading text-5xl text-accent font-semibold md:text-9xl">{count}</div>
-      <div className="text-muted-foreground text-sm mt-1 font-medium">{label}</div>
+      <div className="text-sm mt-1 font-medium text-primary">{label}</div>
     </div>
   );
 };
@@ -44,17 +44,17 @@ const About = () => (
           <div>
             <div className="flex items-center gap-3 mb-8">
               <span className="w-3 h-3 rounded-sm bg-accent inline-block" />
-              <span className="font-heading text-sm uppercase tracking-widest text-foreground">Dni Światła</span>
+              <span className="font-heading text-sm uppercase tracking-widest text-foreground font-normal">Dni Światła</span>
             </div>
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
               O konferencji <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Dni Światła</span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
+            <p className="leading-relaxed mb-4 text-primary">
               Dni Światła to coroczna konferencja organizowana przez Salumanus i DCN Europe, poświęcona najnowszym
               technologiom sieciowym i transmisyjnym. XVIII edycja przenosi nas na tor wyścigowy - bo w świecie
               technologii, tak jak w Formule 1, liczy się precyzja, szybkość i niezawodność.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="leading-relaxed text-primary">
               Spotkaj ekspertów branży, poznaj najnowsze rozwiązania i rozbuduj swoją sieć kontaktów w wyjątkowej
               atmosferze inspirowanej światem motorsportu.
             </p>
