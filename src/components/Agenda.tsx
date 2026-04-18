@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import AnimatedSection from "./AnimatedSection";
+import agendaImg from "@/assets/agenda-f1.jpg";
 
 const agendaItems = [
   {
@@ -86,12 +87,15 @@ const Agenda = () => {
           {/* Lewa kolumna — placeholder na zdjęcie */}
           <AnimatedSection>
             <div
-              className="bg-secondary aspect-[4/5] w-full flex items-center justify-center"
+              className="aspect-[4/5] w-full overflow-hidden"
               style={{ borderRadius: "5px" }}
             >
-              <span className="font-heading text-3xl md:text-4xl text-muted-foreground text-center px-6">
-                Zdjęcie
-              </span>
+              <img
+                src={agendaImg}
+                alt="Bolid F1 na torze - Dni Światła 2026"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
           </AnimatedSection>
 
