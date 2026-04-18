@@ -18,7 +18,7 @@ const FeatureCards = () => (
               whileHover={{ y: -6, borderColor: "hsl(1, 100%, 44%)" }}
               className="border border-dark-fg/10 rounded-lg p-8 md:p-10 transition-colors h-full"
             >
-              <span className="font-heading text-5xl md:text-6xl text-accent/30">{card.num}</span>
+              <span className="font-heading text-5xl md:text-6xl text-accent/30 opacity-100 font-medium">{card.num}</span>
               <h3 className="font-heading text-2xl md:text-3xl text-dark-fg mt-4 mb-3">{card.title}</h3>
               <p className="text-dark-muted leading-relaxed">{card.desc}</p>
             </motion.div>
