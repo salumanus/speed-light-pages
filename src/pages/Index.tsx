@@ -12,11 +12,11 @@ const Index = () => (
   <>
     <Navbar />
     <Hero />
+    <Audience />
     <About />
     <Speakers />
     <Agenda />
     <FeatureCards />
-    <Audience />
     <CtaSection />
     <Footer />
   </>
