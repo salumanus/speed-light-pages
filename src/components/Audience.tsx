@@ -50,7 +50,7 @@ const Audience = () => (
             >
               <card.icon className="w-12 h-12 mb-8 opacity-90" strokeWidth={1.2} />
               <h3 className="font-heading text-xl md:text-2xl mb-4 leading-snug">{card.title}</h3>
-              <div className="w-10 h-px bg-accent-foreground/30 mb-4" />
+              <div className="w-10 h-px mb-4 border-secondary bg-secondary" />
               <p className="text-sm leading-relaxed opacity-80">{card.desc}</p>
             </motion.div>
           </AnimatedSection>
