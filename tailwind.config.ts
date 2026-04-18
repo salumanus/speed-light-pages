@@ -14,8 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Inter Tight"', 'sans-serif'],
+        heading: ['"Formula1"', '"Inter Tight"', 'sans-serif'],
         body: ['"Inter"', 'sans-serif'],
+        f1: ['"Formula1"', 'sans-serif'],
+        'f1-wide': ['"Formula1 Wide"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
