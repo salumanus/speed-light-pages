@@ -47,7 +47,7 @@ const About = () => (
               <span className="font-heading text-sm uppercase tracking-widest text-foreground">Dni Światła</span>
             </div>
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 font-semibold leading-tight">
-              <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">O konferencji Dni Światła</span>
+              O konferencji <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Dni Światła</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Dni Światła to coroczna konferencja organizowana przez Salumanus i DCN Europe, poświęcona najnowszym

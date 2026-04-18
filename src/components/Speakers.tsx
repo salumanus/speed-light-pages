@@ -140,7 +140,7 @@ const Speakers = () => (
             <span className="font-heading text-sm uppercase tracking-widest text-foreground">Salumanus</span>
           </div>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground font-semibold leading-tight" style={{ marginBottom: "1.5rem" }}>
-            <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Salumanus Racing Team</span>
+            <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Salumanus</span> Racing Team
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-3xl">Osiągnęli już niejeden szczyt przepustowości. Mistrzowie systemów xWDM i transmisji optycznej - na torze i w sieci nie ma dla nich niemożliwych prędkości.</p>
         </AnimatedSection>
@@ -156,7 +156,7 @@ const Speakers = () => (
             <span className="font-heading text-sm uppercase tracking-widest" style={{ color: "#000" }}>DCN Europe</span>
           </div>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight" style={{ color: "#000", marginBottom: "1.5rem" }}>
-            <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">DCN Europe Racing Team</span>
+            <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">DCN Europe</span> Racing Team
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-3xl">Osiągnęli już niejeden szczyt przepustowości. Mistrzowie systemów xWDM i transmisji optycznej - na torze i w sieci nie ma dla nich niemożliwych prędkości.</p>
         </AnimatedSection>

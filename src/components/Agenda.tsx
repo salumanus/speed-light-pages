@@ -77,9 +77,8 @@ const Agenda = () => {
     <section id="agenda" className="section-py bg-background">
       <div className="container-conf">
         <AnimatedSection>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-16 font-semibold leading-tight">
-            <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Agenda</span>{" "}
-            <span className="text-foreground">Dni Światła 2026</span>
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-16 font-semibold leading-tight text-foreground">
+            Agenda <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Dni Światła</span> 2026
           </h2>
         </AnimatedSection>
 
