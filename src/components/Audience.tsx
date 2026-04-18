@@ -33,7 +33,7 @@ const Audience = () => (
           <span className="w-3 h-3 rounded-sm bg-accent inline-block" />
           <span className="font-heading text-sm uppercase tracking-widest text-foreground">Dla kogo</span>
         </div>
-        <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-16 max-w-4xl leading-tight">
+        <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-16 max-w-4xl leading-tight lg:text-5xl">
           Stworzone dla tych, którzy żyją na{" "}
           <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">styku sieci</span>{" "}
           i technologii.
