@@ -1,4 +1,4 @@
-import { useState, FormEvent } from "react";
+import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { CheckCircle2 } from "lucide-react";
 
@@ -7,62 +7,25 @@ interface RegistrationModalProps {
   onOpenChange: (open: boolean) => void;
 }
 
-const encode = (data: Record<string, string>) =>
-  Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-
 const RegistrationModal = ({ open, onOpenChange }: RegistrationModalProps) => {
-  const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setError(null);
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    const name = (formData.get("name") as string)?.trim() ?? "";
-    const email = (formData.get("email") as string)?.trim() ?? "";
-    const phone = (formData.get("phone") as string)?.trim() ?? "";
-    const message = (formData.get("message") as string)?.trim() ?? "";
-    const consent = formData.get("consent");
-
-    if (!name || name.length > 100) return setError("Podaj imię i nazwisko (max 100 znaków).");
-    if (!/^\S+@\S+\.\S+$/.test(email) || email.length > 255) return setError("Podaj prawidłowy adres e-mail.");
-    if (!phone || phone.length > 20) return setError("Podaj prawidłowy numer telefonu.");
-    if (!message || message.length > 1000) return setError("Wiadomość jest wymagana (max 1000 znaków).");
-    if (!consent) return setError("Wymagana jest zgoda na przetwarzanie danych.");
-
-    setSubmitting(true);
-    try {
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "rejestracja",
-          name,
-          company: ((formData.get("company") as string) ?? "").trim(),
-          email,
-          phone,
-          message,
-          consent: "yes",
-        }),
-      });
-      setSuccess(true);
-      form.reset();
-    } catch {
-      setError("Coś poszło nie tak. Spróbuj ponownie.");
-    } finally {
-      setSubmitting(false);
+  useEffect(() => {
+    if (open && typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("success") === "rejestracja") {
+        setSuccess(true);
+      }
     }
-  };
+  }, [open]);
 
   const handleOpenChange = (next: boolean) => {
     if (!next) {
       setSuccess(false);
-      setError(null);
+      if (typeof window !== "undefined" && window.location.search.includes("success=rejestracja")) {
+        const url = window.location.pathname + window.location.hash;
+        window.history.replaceState({}, "", url);
+      }
     }
     onOpenChange(next);
   };
