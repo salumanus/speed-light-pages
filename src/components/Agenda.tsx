@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import AnimatedSection from "./AnimatedSection";
-import agendaImg from "@/assets/agenda-f1.jpg";
+import agendaImg from "@/assets/a68ed97e-4c39-4ef1-bb7f-30c53452e0f4.jpg";
 
 const agendaItems = [
   {
