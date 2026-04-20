@@ -16,7 +16,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" ref={ref} className="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
+    <section id="home" ref={ref} className="relative h-[63vh] min-h-[450px] flex items-end overflow-hidden">
       <motion.div className="absolute inset-0" style={{ y }}>
         <img
           src={heroImg}
