@@ -14,8 +14,8 @@ const Index = () => (
   <>
     <Navbar />
     <Hero />
-    <Audience />
     <About />
+    <Audience />
     <Speakers />
     <Agenda />
     <FeatureCards />
