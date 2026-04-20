@@ -11,7 +11,7 @@ const Footer = () => (
             ul. Walerego Sławka 8A<br />
             30-633 Kraków<br />
             marketing@salumanus.com<br />
-            Tel: 600 600 600
+            Tel: (+48) 12 294 00 01
           </p>
         </div>
         <div>
