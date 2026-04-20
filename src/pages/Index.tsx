@@ -6,6 +6,7 @@ import Agenda from "@/components/Agenda";
 import FeatureCards from "@/components/FeatureCards";
 import Audience from "@/components/Audience";
 import CtaSection from "@/components/CtaSection";
+import SocialBar from "@/components/SocialBar";
 import Footer from "@/components/Footer";
 
 const Index = () => (
@@ -18,6 +19,7 @@ const Index = () => (
     <Agenda />
     <FeatureCards />
     <CtaSection />
+    <SocialBar />
     <Footer />
   </>
 );
