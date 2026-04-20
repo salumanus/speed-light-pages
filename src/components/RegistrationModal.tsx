@@ -59,8 +59,8 @@ const RegistrationModal = ({ open, onOpenChange }: RegistrationModalProps) => {
               <form
                 name="rejestracja"
                 method="POST"
+                action="/?success=rejestracja#rejestracja"
                 data-netlify="true"
-                onSubmit={handleSubmit}
                 className="space-y-4"
               >
                 <input type="hidden" name="form-name" value="rejestracja" />
@@ -145,6 +145,7 @@ const RegistrationModal = ({ open, onOpenChange }: RegistrationModalProps) => {
                   <input
                     type="checkbox"
                     name="consent"
+                    value="yes"
                     required
                     className="mt-1 w-4 h-4 rounded accent-accent shrink-0"
                   />
@@ -153,19 +154,12 @@ const RegistrationModal = ({ open, onOpenChange }: RegistrationModalProps) => {
                   </span>
                 </label>
 
-                {error && (
-                  <p className="text-sm text-red-400" role="alert">
-                    {error}
-                  </p>
-                )}
-
                 <button
                   type="submit"
-                  disabled={submitting}
-                  className="w-full py-3 font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-60"
+                  className="w-full py-3 font-semibold text-white transition-opacity hover:opacity-90"
                   style={{ backgroundColor: "#D61F2F", borderRadius: "2rem" }}
                 >
-                  {submitting ? "Wysyłanie..." : "Zarejestruj się"}
+                  Zarejestruj się
                 </button>
               </form>
             </>
