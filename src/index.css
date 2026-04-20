@@ -125,17 +125,27 @@
   }
 
   .btn-accent {
-    @apply inline-flex items-center justify-center font-semibold text-accent-foreground transition-all duration-200;
+    @apply inline-flex items-center justify-center font-semibold text-accent-foreground transition-all duration-200 uppercase;
     background-color: hsl(var(--accent));
-    min-height: 5rem;
-    padding: 1em 2.5em;
-    border-radius: 0.25em;
+    padding: 1.1em 2.5em;
+    border-radius: 9999px;
     font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 0.02em;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    box-shadow: 0 4px 14px hsl(var(--accent) / 0.25);
+  }
+  .btn-accent::after {
+    content: "›";
+    margin-left: 0.6em;
+    font-size: 1.2em;
+    line-height: 1;
+    transition: transform 0.2s ease;
   }
   .btn-accent:hover {
-    filter: brightness(1.15);
-    transform: translateY(-2px);
+    filter: brightness(1.08);
+    box-shadow: 0 6px 20px hsl(var(--accent) / 0.4);
+  }
+  .btn-accent:hover::after {
+    transform: translateX(3px);
   }
 }
