@@ -30,7 +30,7 @@ const Counter = ({ end, label }: { end: number; label: string }) => {
 
   return (
     <div ref={ref} className="text-center">
-      <div className="font-heading text-5xl text-accent font-medium md:text-8xl">{count}</div>
+      <div className="font-heading text-5xl font-medium md:text-8xl text-primary">{count}</div>
       <div className="text-sm mt-1 font-medium text-primary">{label}</div>
     </div>
   );
