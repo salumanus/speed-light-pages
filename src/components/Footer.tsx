@@ -8,14 +8,9 @@ const Footer = () => (
             Dni Światła 2026 - Edycja XVIII<br />
             Inżynieria zwycięstwa. Technologia na najwyższych obrotach.<br />
             <br />
-            <br />
-            <br />
             ul. Walerego Sławka 8A<br />
-            <br />
             30-633 Kraków<br />
-            <br />
             marketing@salumanus.com<br />
-            <br />
             Tel: 600 600 600
           </p>
         </div>
