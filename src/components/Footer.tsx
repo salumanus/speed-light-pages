@@ -4,10 +4,19 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
           <h3 className="font-heading text-2xl text-dark-fg mb-4">SALUMANUS</h3>
-          <p className="text-dark-muted text-sm leading-relaxed">
-            Dni Światła 2026 — Edycja XVIII<br />
-            Inżynieria zwycięstwa.<br />
-            Technologia na najwyższych obrotach.
+          <p className="text-sm leading-relaxed text-dark-muted">
+            Dni Światła 2026 - Edycja XVIII<br />
+            Inżynieria zwycięstwa. Technologia na najwyższych obrotach.<br />
+            <br />
+            <br />
+            <br />
+            ul. Walerego Sławka 8A<br />
+            <br />
+            30-633 Kraków<br />
+            <br />
+            marketing@salumanus.com<br />
+            <br />
+            Tel: 600 600 600
           </p>
         </div>
         <div>
