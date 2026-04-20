@@ -1,11 +1,17 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { Play } from "lucide-react";
 import heroImg from "@/assets/Hero__1.jpg";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+
+const VIDEO_ID = "DD6osPQBDzw";
+const VIDEO_THUMB = `https://img.youtube.com/vi/${VIDEO_ID}/hqdefault.jpg`;
 
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const [open, setOpen] = useState(false);
 
   const items = [
     { el: <span className="inline-block bg-accent text-accent-foreground px-4 py-1.5 text-sm font-medium uppercase tracking-widest rounded">Edycja XVIII</span>, delay: 0 },
@@ -27,18 +33,68 @@ const Hero = () => {
         />
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/60 to-transparent" style={{ opacity: 0.85 }} />
-      <div className="relative container-conf pb-20 md:pb-28 flex flex-col gap-4 md:gap-5">
-        {items.map((item, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: item.delay, ease: "easeOut" }}
+      <div className="relative container-conf pb-20 md:pb-28 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10">
+        <div className="flex flex-col gap-4 md:gap-5 lg:max-w-[70%]">
+          {items.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: item.delay, ease: "easeOut" }}
+            >
+              {item.el}
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+          className="w-full max-w-xs lg:w-72 shrink-0"
+        >
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            className="group block w-full text-left rounded-lg overflow-hidden bg-[#000000] shadow-xl transition-transform hover:-translate-y-1"
+            aria-label="Odtwórz wideo Dni Światła 2024"
           >
-            {item.el}
-          </motion.div>
-        ))}
+            <div className="relative aspect-video">
+              <img
+                src={VIDEO_THUMB}
+                alt="Dni Światła 2024 - miniatura wideo"
+                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="flex items-center justify-center w-14 h-14 rounded-full bg-accent text-accent-foreground shadow-lg group-hover:scale-110 transition-transform">
+                  <Play className="w-6 h-6 ml-0.5" fill="currentColor" />
+                </span>
+              </div>
+            </div>
+            <div className="px-4 py-3">
+              <p className="font-heading text-dark-fg text-base md:text-lg leading-tight">Dni Światła 2024</p>
+              <p className="text-dark-muted text-xs mt-1 uppercase tracking-widest">Zobacz Video</p>
+            </div>
+          </button>
+        </motion.div>
       </div>
+
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="max-w-4xl p-0 bg-[#000000] border-0 overflow-hidden">
+          <div className="aspect-video w-full">
+            {open && (
+              <iframe
+                className="w-full h-full"
+                src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&rel=0`}
+                title="Dni Światła 2024"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
