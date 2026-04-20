@@ -20,6 +20,15 @@
   <meta name="twitter:card" content="summary">
 </head>
   <body>
+    <!-- Hidden form for Netlify build-time detection -->
+    <form name="rejestracja" data-netlify="true" hidden>
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <textarea name="message"></textarea>
+      <input type="checkbox" name="consent" />
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

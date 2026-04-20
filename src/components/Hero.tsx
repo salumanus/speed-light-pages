@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { Play } from "lucide-react";
 import heroImg from "@/assets/Hero__1.jpg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import RegistrationModal from "./RegistrationModal";
 
 const VIDEO_ID = "DD6osPQBDzw";
 const VIDEO_THUMB = `https://img.youtube.com/vi/${VIDEO_ID}/hqdefault.jpg`;
@@ -12,13 +13,14 @@ const Hero = () => {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
   const [open, setOpen] = useState(false);
+  const [regOpen, setRegOpen] = useState(false);
 
   const items = [
     { el: <span className="inline-block bg-accent text-accent-foreground px-4 py-1.5 text-sm font-medium uppercase tracking-widest rounded">Edycja XVIII</span>, delay: 0 },
     { el: <h1 className="font-heading text-6xl sm:text-7xl md:text-8xl text-dark-fg leading-none font-medium lg:text-7xl">Inżynieria zwycięstwa</h1>, delay: 0.15 },
     { el: <p className="text-xl text-primary-foreground font-normal md:text-4xl">Konferencja dla specjalistów z branży Telko i Data Center.<br />Technologia na najwyższych obrotach.</p>, delay: 0.3 },
     { el: <p className="text-base text-primary-foreground md:text-2xl">20 października 2026 - Hotel Novotel Centrum | Warszawa</p>, delay: 0.45 },
-    { el: <a href="#rejestracja" className="btn-accent mt-2">Zarejestruj się</a>, delay: 0.6 },
+    { el: <button type="button" onClick={() => setRegOpen(true)} className="btn-accent mt-2">Zarejestruj się</button>, delay: 0.6 },
   ];
 
   return (
@@ -95,6 +97,8 @@ const Hero = () => {
           </div>
         </DialogContent>
       </Dialog>
+
+      <RegistrationModal open={regOpen} onOpenChange={setRegOpen} />
     </section>
   );
 };
