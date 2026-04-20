@@ -20,7 +20,17 @@ const Hero = () => {
     { el: <h1 className="font-heading text-6xl sm:text-7xl md:text-8xl text-dark-fg leading-none font-medium lg:text-7xl">Inżynieria zwycięstwa</h1>, delay: 0.15 },
     { el: <p className="text-xl text-primary-foreground font-normal md:text-4xl">Konferencja dla specjalistów z branży Telko i Data Center.<br />Technologia na najwyższych obrotach.</p>, delay: 0.3 },
     { el: <p className="text-base text-primary-foreground md:text-2xl">20 października 2026 - Hotel Novotel Centrum | Warszawa</p>, delay: 0.45 },
-    { el: <button type="button" onClick={() => setRegOpen(true)} className="btn-accent mt-2">Zarejestruj się</button>, delay: 0.6 },
+    { el: (
+      <div className="flex flex-wrap gap-3 mt-2">
+        <button type="button" onClick={() => setRegOpen(true)} className="btn-accent">Zarejestruj się</button>
+        <a
+          href="#agenda"
+          className="inline-flex items-center justify-center px-7 py-3 rounded-full border-2 border-white text-white font-semibold transition-all duration-200 hover:bg-white/10 hover:-translate-y-0.5"
+        >
+          Agenda
+        </a>
+      </div>
+    ), delay: 0.6 },
   ];
 
   return (
