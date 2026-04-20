@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logoDniSwiatla from "@/assets/dni-swiatla-2026.svg";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -22,8 +23,8 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 border-b transition-colors duration-300 ${scrolled ? "bg-black border-dark-fg/10 backdrop-blur-sm" : "bg-accent border-transparent"}`}>
       <div className="container-conf flex items-center justify-between h-16 md:h-20">
-        <a href="#home" className="text-dark-fg font-heading text-2xl md:text-3xl tracking-wider">
-          SALUMANUS
+        <a href="#home" className="flex items-center">
+          <img src={logoDniSwiatla} alt="Dni Światła 2026" className="h-5 md:h-6 w-auto" />
         </a>
 
         {/* Desktop nav */}
