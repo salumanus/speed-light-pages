@@ -1,9 +1,11 @@
+import logoDniSwiatla from "@/assets/dni-swiatla-2026.svg";
+
 const Footer = () => (
   <footer id="kontakt" className="border-t border-dark-fg/10 py-12 bg-[#15151e]">
     <div className="container-conf">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
-          <h3 className="font-heading text-2xl text-dark-fg mb-4">SALUMANUS</h3>
+          <img src={logoDniSwiatla} alt="Dni Światła 2026" className="h-6 w-auto mb-4" />
           <p className="text-sm leading-relaxed text-dark-muted">
             Dni Światła 2026 - Edycja XVIII<br />
             Inżynieria zwycięstwa. Technologia na najwyższych obrotach.<br />
