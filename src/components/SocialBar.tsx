@@ -1,7 +1,7 @@
 import { Facebook, Linkedin, Youtube } from "lucide-react";
 
 const SocialBar = () => (
-  <div className="bg-[#15151e] border-t border-dark-fg/10 py-5">
+  <div className="border-t border-dark-fg/10 py-5 bg-[#393941]">
     <div className="container-conf flex items-center justify-between gap-4">
       <span className="text-dark-fg text-sm font-semibold uppercase tracking-widest">
         Social Media
