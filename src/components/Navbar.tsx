@@ -32,14 +32,14 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
-              className="text-dark-fg/80 hover:text-accent text-sm font-medium uppercase tracking-wider transition-colors"
+              className="text-dark-fg hover:opacity-70 text-sm font-medium uppercase tracking-wider transition-opacity"
             >
               {item.label}
             </a>
           ))}
           <button
             onClick={() => setLang(lang === "PL" ? "EN" : "PL")}
-            className="text-dark-fg/60 hover:text-dark-fg text-sm font-medium border border-dark-fg/20 rounded px-3 py-1 transition-colors"
+            className="text-dark-fg hover:opacity-70 text-sm font-medium border border-dark-fg/30 rounded px-3 py-1 transition-opacity"
           >
             {lang}
           </button>
@@ -60,7 +60,7 @@ const Navbar = () => {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="text-dark-fg/80 hover:text-accent text-sm font-medium uppercase tracking-wider transition-colors"
+                className="text-dark-fg hover:opacity-70 text-sm font-medium uppercase tracking-wider transition-opacity"
               >
                 {item.label}
               </a>
