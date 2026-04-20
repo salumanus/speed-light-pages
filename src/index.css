@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
 @font-face {
   font-family: 'Formula1';
   src: url('/fonts/Formula1-Regular.ttf') format('truetype');
