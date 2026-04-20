@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AnimatedSection from "./AnimatedSection";
 import RegistrationModal from "./RegistrationModal";
 import dolaczBg from "@/assets/dolacz-background.svg";
 
 const CtaSection = () => {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("success") === "rejestracja") {
+      setOpen(true);
+    }
+  }, []);
 
   return (
     <section
