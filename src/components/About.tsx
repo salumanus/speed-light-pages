@@ -3,7 +3,7 @@ import AnimatedSection from "./AnimatedSection";
 import logoSalumanus from "@/assets/Salumanus_logo_dark.svg";
 import logoDcn from "@/assets/logo-dcn.svg";
 
-const Counter = ({ end, label }: { end: number; label: string }) => {
+const Counter = ({ end, label, suffix = "" }: { end: number; label: string; suffix?: string }) => {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const started = useRef(false);
@@ -30,7 +30,7 @@ const Counter = ({ end, label }: { end: number; label: string }) => {
 
   return (
     <div ref={ref} className="text-center">
-      <div className="font-heading text-5xl font-medium md:text-8xl text-primary">{count}</div>
+      <div className="font-heading text-5xl font-medium md:text-8xl text-primary">{count}{suffix}</div>
       <div className="text-sm mt-1 font-medium text-primary">{label}</div>
     </div>
   );
@@ -59,9 +59,9 @@ const About = () => (
               atmosferze inspirowanej światem motorsportu.
             </p>
             <div className="flex gap-12 mt-10">
-              <Counter end={18} label="Edycji" />
-              <Counter end={24} label="Prelegentów" />
-              <Counter end={900} label="Ponad Uczestników wszystkich edycji" />
+              <Counter end={17} label="Edycji" />
+              <Counter end={60} label="Prelegentów" suffix="+" />
+              <Counter end={100} label="Ponad Uczestników wszystkich edycji" suffix="+" />
             </div>
           </div>
           <div className="flex flex-col gap-8 items-center justify-center">
