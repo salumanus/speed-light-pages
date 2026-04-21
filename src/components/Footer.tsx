@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="container-conf">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
-          <img src={logoDniSwiatla} alt="Dni Światła 2026" className="h-[26px] w-auto mb-4" />
+          <img src={logoDniSwiatla} alt="Dni Światła 2026" className="h-[39px] w-auto mb-4" />
           <p className="text-sm leading-relaxed text-dark-muted">
             Dni Światła 2026 - Edycja XVIII<br />
             Inżynieria zwycięstwa. Technologia na najwyższych obrotach.<br />
