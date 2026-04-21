@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 border-b transition-colors duration-300 ${scrolled ? "bg-black border-dark-fg/10 backdrop-blur-sm" : "bg-accent border-transparent"}`}>
-      <div className="container-conf flex items-center justify-between h-16 md:h-20">
+      <div className="container-conf flex items-center justify-between h-[52px] md:h-16">
         <a href="#home" className="flex items-center">
           <img src={logoDniSwiatla} alt="Dni Światła 2026" className="h-[32px] md:h-[39px] w-auto" />
         </a>
