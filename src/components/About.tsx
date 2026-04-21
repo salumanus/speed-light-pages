@@ -30,7 +30,7 @@ const Counter = ({ end, label, suffix = "" }: { end: number; label: string; suff
 
   return (
     <div ref={ref} className="text-center">
-      <div className="font-heading text-5xl font-medium md:text-8xl text-primary">{count}{suffix}</div>
+      <div className="font-heading text-5xl font-medium text-primary md:text-7xl">{count}{suffix}</div>
       <div className="text-sm mt-1 font-medium text-primary">{label}</div>
     </div>
   );
@@ -61,7 +61,7 @@ const About = () => (
             <div className="flex gap-12 mt-10">
               <Counter end={17} label="Edycji" />
               <Counter end={60} label="Prelegentów" suffix="+" />
-              <Counter end={100} label="Ponad Uczestników wszystkich edycji" suffix="+" />
+              <Counter end={1000} label="Ponad Uczestników wszystkich edycji" suffix="+" />
             </div>
           </div>
           <div className="flex flex-col gap-8 items-center justify-center">
