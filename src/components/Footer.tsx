@@ -7,7 +7,7 @@ const Footer = () => (
         <div>
           <img src={logoDniSwiatla} alt="Dni Światła 2026" className="h-[39px] w-auto mb-4" />
           <p className="text-sm leading-relaxed text-dark-muted">
-            Dni Światła 2026 - Edycja XVIII<br />
+            Dni Światła 2026 - 18 Edycja<br />
             Inżynieria zwycięstwa. Technologia na najwyższych obrotach.<br />
             <br />
             ul. Walerego Sławka 8A<br />
