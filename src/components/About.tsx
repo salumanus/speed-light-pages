@@ -50,13 +50,10 @@ const About = () => (
               O konferencji <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Dni Światła</span>
             </h2>
             <p className="leading-relaxed mb-4 text-muted-foreground">
-              Dni Światła to coroczna konferencja organizowana przez Salumanus i DCN Europe, poświęcona najnowszym
-              technologiom sieciowym i transmisyjnym. XVIII edycja przenosi nas na tor wyścigowy - bo w świecie
-              technologii, tak jak w Formule 1, liczy się precyzja, szybkość i niezawodność.
+              Dni Światła to jedna z najważniejszych konferencji branży Telko i Data Center w Polsce, organizowane przez Salumanus i DCN Europe. Nieprzerwanie od ponad 17 lat, a XVIII edycja wjeżdża na najwyższy poziom toru Formuły 1.
             </p>
             <p className="leading-relaxed text-muted-foreground">
-              Spotkaj ekspertów branży, poznaj najnowsze rozwiązania i rozbuduj swoją sieć kontaktów w wyjątkowej
-              atmosferze inspirowanej światem motorsportu.
+              Świat, w którym technologia, precyzja i prędkość decydują o wszystkim, a zwycięża ten, kto łączy to w bezbłędną strategię - dokładnie tak jak w nowoczesnej sieci.
             </p>
             <div className="flex gap-12 mt-10">
               <Counter end={17} label="Edycji" />
