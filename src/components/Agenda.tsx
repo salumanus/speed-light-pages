@@ -48,7 +48,7 @@ const agendaItems = [
   },
   {
     time: "13:15–15:30",
-    title: "Lunch + networking (zgodnie z formatem z poprzednich lat)",
+    title: "Lunch + networking",
     speaker: "",
     lang: "",
   },
