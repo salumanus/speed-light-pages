@@ -41,7 +41,7 @@ const SpeakerCard = ({ speaker, index }: { speaker: Speaker; index: number }) =>
         loading="lazy"
       />
     </div>
-    <h3 className="font-heading text-xl md:text-2xl text-foreground">{speaker.name}</h3>
+    <h3 className="font-heading text-xl text-foreground md:text-xl">{speaker.name}</h3>
     <p className="text-accent text-sm font-medium mb-1">{speaker.role}</p>
     <p className="text-muted-foreground text-sm mb-3">{speaker.desc}</p>
     {speaker.linkedin !== undefined && (
