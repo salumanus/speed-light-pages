@@ -25,9 +25,9 @@ const speakerPhotos = [
 ];
 
 const salumanusSpeakers: Speaker[] = [
-  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Ewangelista xWDM. Łączy biznes, technologię i umiejętność czytania branżowej przyszłości — tam, gdzie inni widzą trendy, on widzi następny ruch.", linkedin: "" },
-  { name: "Andrzej Wojnar", role: "Dyrektor ds. Technicznych", desc: "Inżynier i manager z artystyczną duszą. W Salumanus zagląda w bity i fotony - a czasem dzieli je na czworo. Po godzinach: fotografia i enologia.", linkedin: "" },
-  { name: "Łukasz Sukiennik", role: "Dyrektor ds. Technicznych", desc: "Inżynier automatyki z talentem do tłumaczenia zawiłości sieciowych projektów. Pracuje projektowo - autorskie rozwiązania, szyte pod konkretnego klienta.", linkedin: "" },
+  { name: "Marcin Bała", role: "Product Manager", desc: "Ewangelista xWDM. Łączy biznes, technologię i umiejętność czytania branżowej przyszłości — tam, gdzie inni widzą trendy, on widzi następny ruch.", linkedin: "" },
+  { name: "Andrzej Wojnar", role: "Product Manager", desc: "Inżynier i manager z artystyczną duszą. W Salumanus zagląda w bity i fotony - a czasem dzieli je na czworo. Po godzinach: fotografia i enologia.", linkedin: "" },
+  { name: "Łukasz Sukiennik", role: "Product Manager", desc: "Inżynier automatyki z talentem do tłumaczenia zawiłości sieciowych projektów. Pracuje projektowo - autorskie rozwiązania, szyte pod konkretnego klienta.", linkedin: "" },
 ];
 
 const dcnSpeakers: Speaker[] = [
