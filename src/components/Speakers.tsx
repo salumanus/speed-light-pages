@@ -124,7 +124,7 @@ const SpeakerSlider = ({ speakers, perPage }: { speakers: Speaker[]; perPage: nu
 const Speakers = () => (
   <>
     <section className="bg-background my-[39px]" style={{ paddingTop: "1rem", paddingBottom: "1rem" }}>
-      <div className="container-conf">
+      <div className="container-conf bg-[#f8f4f2] my-0 py-[40px]">
         <AnimatedSection>
           <div className="flex items-center gap-3 mb-8">
             <span className="w-3 h-3 rounded-sm bg-accent inline-block" />
