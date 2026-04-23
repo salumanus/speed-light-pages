@@ -8,21 +8,27 @@ const SocialBar = () => (
       </span>
       <div className="flex items-center gap-3">
         <a
-          href="#"
+          href="https://www.youtube.com/channel/UC_V0jyOt8NEuf8mJuTNQnDQ"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="YouTube"
           className="w-10 h-10 rounded-full bg-dark-fg text-dark-bg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
         >
           <Youtube size={18} />
         </a>
         <a
-          href="#"
+          href="https://www.linkedin.com/company/salumanus/mycompany/"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="LinkedIn"
           className="w-10 h-10 rounded-full bg-dark-fg text-dark-bg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
         >
           <Linkedin size={18} />
         </a>
         <a
-          href="#"
+          href="https://www.facebook.com/SALUMANUS"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="Facebook"
           className="w-10 h-10 rounded-full bg-dark-fg text-dark-bg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
         >
