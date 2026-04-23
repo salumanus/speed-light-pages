@@ -5,27 +5,39 @@ import faqImg from "@/assets/faq-f1.jpg";
 const faqs = [
   {
     q: "Jak mogę kupić bilet na Dni Światła 2026?",
-    a: "Bilety dostępne są wyłącznie poprzez oficjalny formularz rejestracyjny na naszej stronie. Po wypełnieniu formularza otrzymasz potwierdzenie oraz instrukcję płatności na podany adres e-mail.",
+    a: "Zapisy dla partnerów Salumanus i DCN Europe są już otwarte - udział w tej grupie jest bezpłatny, wystarczy skontaktować się ze swoim opiekunem handlowym. Liczba miejsc jest ograniczona - Dni Światła co roku wypełniają salę do ostatniego krzesła.\nBilety dla uczestników spoza grona partnerów uruchomimy w późniejszym terminie. Cenę, datę startu sprzedaży i warunki opublikujemy na tej stronie oraz w naszych kanałach komunikacji — zostaw e-mail w formularzu, a damy znać pierwsi.",
   },
   {
     q: "Gdzie odbędzie się konferencja?",
-    a: "18 edycja Dni Światła odbędzie się w nowoczesnym centrum konferencyjnym w Polsce. 20 października 2026 - Hotel Novotel Centrum | Warszawa",
+    a: "18 edycja Dni Światła odbędzie się 20 października 2026 w Hotelu Novotel Centrum w Warszawie - nowoczesne centrum konferencyjne w sercu stolicy, z dogodnym dojazdem komunikacją miejską.",
   },
   {
-    q: "Czy w cenie biletu zapewniony jest nocleg?",
-    a: "Tak, standardowy pakiet uczestnictwa obejmuje dwa noclegi w hotelu partnerskim wraz z pełnym wyżywieniem oraz dostępem do strefy networkingowej.",
+    q: "Dla kogo jest konferencja?",
+    a: "Dni Światła to wydarzenie dla profesjonalistów z branży Telko i Data Center - inżynierów sieci, administratorów IT, architektów, CTO oraz decydentów biznesowych z polskich i międzynarodowych operatorów, integratorów i dostawców usług Enterprise.",
   },
   {
     q: "Kiedy zostanie opublikowana pełna agenda?",
-    a: "Szczegółowa agenda wraz z listą wszystkich prelegentów i tematów wystąpień zostanie opublikowana na 60 dni przed rozpoczęciem konferencji.",
+    a: "Szczegółową agendę wraz z listą wszystkich prelegentów i tematów wystąpień opublikujemy na 60 dni przed konferencją - czyli w drugiej połowie sierpnia 2026. Wcześniej, co tydzień od lipca, będziemy odsłaniać kolejne prezentacje w naszych kanałach komunikacji.",
   },
   {
-    q: "Czy mogę otrzymać fakturę VAT?",
-    a: "Oczywiście. Podczas rejestracji zaznacz opcję otrzymania faktury VAT i podaj dane firmy. Faktura zostanie wystawiona po zaksięgowaniu wpłaty.",
+    q: "Czy prezentacje będą tłumaczone?",
+    a: "Tak. Część wystąpień naszych partnerów międzynarodowych (Hekatron, PacketLight, RAICcom, DCN Europe) odbędzie się w języku angielskim - zapewniamy tłumaczenie na język polski.",
   },
   {
-    q: "Czy istnieje możliwość rezygnacji z udziału?",
-    a: "Tak, rezygnacja jest możliwa do 30 dni przed wydarzeniem ze zwrotem 100% wpłaconej kwoty. Po tym terminie zwrot wynosi 50%.",
+    q: "Czy w cenie biletu zapewniony jest nocleg?",
+    a: "Nocleg nie jest wliczony w udział w konferencji. Na prośbę uczestników możemy udostępnić preferencyjne warunki rezerwacji w Hotelu Novotel Centrum - szczegóły otrzymasz po rejestracji.",
+  },
+  {
+    q: "Czy po konferencji będzie wydarzenie networkingowe afterparty?",
+    a: "Tak - i to jeden z najmocniejszych punktów Dni Światła. Po części merytorycznej zapraszamy na afterparty od 17:00 do 02:00: kolacja, DJ i przestrzeń na rozmowy, których nie zdążysz odbyć w ciągu dnia. To miejsce, gdzie zaczyna się więcej projektów niż na niejednej konferencji w całości.",
+  },
+  {
+    q: "Czy można zostać partnerem lub sponsorem wydarzenia?",
+    a: "Tak. Jeśli Twoja firma dostarcza rozwiązania z obszaru Telko, Data Center lub bezpieczeństwa sieci i chcesz zaprezentować je społeczności Dni Światła - napisz na marketing@salumanus.com. Liczba partnerów jest ograniczona.",
+  },
+  {
+    q: "Nie znalazłeś odpowiedzi na swoje pytanie?",
+    a: "Napisz do nas na marketing@salumanus.com - odpowiemy najszybciej jak to możliwe.",
   },
 ];
 
@@ -47,7 +59,7 @@ const Faq = () => (
                   <AccordionTrigger className="font-heading text-lg md:text-xl text-foreground py-6 text-left hover:no-underline">
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-base md:text-lg leading-relaxed pb-6">
+                  <AccordionContent className="text-muted-foreground text-base md:text-lg leading-relaxed pb-6 whitespace-pre-line">
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>
