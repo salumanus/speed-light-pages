@@ -158,7 +158,7 @@ const Speakers = () => (
           <h2 className="font-heading text-4xl md:text-5xl leading-tight lg:text-4xl" style={{ color: "#000", marginBottom: "1.5rem" }}>
             <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">DCN Europe</span> Racing Team
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-3xl">Osiągnęli już niejeden szczyt przepustowości. Mistrzowie systemów xWDM i transmisji optycznej - na torze i w sieci nie ma dla nich niemożliwych prędkości.</p>
+          <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-3xl">Wyścig nie kończy się na prostej — wygrywa go pit stop. Wi-Fi 7, rozwiązania Enterprise dla biur, kampusów i przemysłu, 100G w Data Center. DCN Europe dostarcza sieć, która trzyma tempo od pierwszego do ostatniego okrążenia.</p>
         </AnimatedSection>
         <SpeakerSlider speakers={dcnSpeakers} perPage={4} />
       </div>
