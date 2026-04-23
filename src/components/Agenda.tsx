@@ -123,11 +123,11 @@ const Agenda = () => {
                   className="flex gap-6 md:gap-8 pl-10 relative"
                 >
                   <div className="absolute left-0.5 top-2 w-3 h-3 rounded-full bg-accent border-2 border-background" />
-                  <div className="text-accent font-heading min-w-[110px]" style={{ fontSize: "20px" }}>
+                  <div className="text-accent font-heading min-w-[110px]" style={{ fontSize: "18px" }}>
                     {item.time}
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-heading text-xl md:text-2xl text-foreground leading-snug">
+                    <h3 className="font-heading text-foreground leading-snug" style={{ fontSize: "18px" }}>
                       {item.title}
                     </h3>
                     {item.speaker && (
