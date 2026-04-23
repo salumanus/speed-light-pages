@@ -25,7 +25,7 @@ const speakerPhotos = [
 ];
 
 const salumanusSpeakers: Speaker[] = [
-  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
+  { name: "Grzegorz Róż", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
   { name: "Andrzej Wojnar", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
   { name: "Łukasz Sukiennik", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
 ];
