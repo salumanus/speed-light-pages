@@ -69,6 +69,13 @@ const agendaItems = [
     title: "PANEL DYSKUSYJNY: „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki”",
     speaker: "Szczegóły wkrótce | Łukasz Dec (moderator)",
     lang: "PL",
+    highlight: true,
+  },
+  {
+    time: "17:00–02:00",
+    title: "Meta dnia - Afterparty / networking. Kolacja, DJ set, symulator F1 - rozmowy, których nie zdążysz odbyć w ciągu dnia",
+    speaker: "",
+    lang: "",
   },
 ];
 
@@ -120,23 +127,47 @@ const Agenda = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.06 }}
-                  className="flex gap-6 md:gap-8 pl-10 relative"
+                  className={`flex gap-6 md:gap-8 pl-10 relative ${
+                    item.highlight ? "bg-accent rounded-lg py-4 pr-4" : ""
+                  }`}
                 >
                   <div className="absolute left-0.5 top-2 w-3 h-3 rounded-full bg-accent border-2 border-background" />
-                  <div className="text-accent font-heading min-w-[110px]" style={{ fontSize: "18px" }}>
+                  <div
+                    className={`font-heading min-w-[110px] ${
+                      item.highlight ? "text-accent-foreground" : "text-accent"
+                    }`}
+                    style={{ fontSize: "18px" }}
+                  >
                     {item.time}
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-heading text-foreground leading-snug" style={{ fontSize: "18px" }}>
+                    <h3
+                      className={`font-heading leading-snug ${
+                        item.highlight ? "text-accent-foreground" : "text-foreground"
+                      }`}
+                      style={{ fontSize: "18px" }}
+                    >
                       {item.title}
                     </h3>
                     {item.speaker && (
-                      <p className="text-foreground text-sm font-medium mt-2">{item.speaker}</p>
+                      <p
+                        className={`text-sm font-medium mt-2 ${
+                          item.highlight ? "text-accent-foreground" : "text-foreground"
+                        }`}
+                      >
+                        {item.speaker}
+                      </p>
                     )}
                   </div>
                   {item.lang && (
                     <div className="shrink-0 self-start">
-                      <span className="inline-block border border-border text-foreground text-xs font-medium px-2 py-1 rounded">
+                      <span
+                        className={`inline-block border text-xs font-medium px-2 py-1 rounded ${
+                          item.highlight
+                            ? "border-accent-foreground text-accent-foreground"
+                            : "border-border text-foreground"
+                        }`}
+                      >
                         {item.lang}
                       </span>
                     </div>
