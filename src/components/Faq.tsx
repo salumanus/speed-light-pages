@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: "Gdzie odbędzie się konferencja?",
-    a: "XVIII edycja Dni Światła odbędzie się w nowoczesnym centrum konferencyjnym w Polsce. Dokładny adres oraz informacje logistyczne prześlemy zarejestrowanym uczestnikom na 30 dni przed wydarzeniem.",
+    a: "18 edycja Dni Światła odbędzie się w nowoczesnym centrum konferencyjnym w Polsce. 20 października 2026 - Hotel Novotel Centrum | Warszawa",
   },
   {
     q: "Czy w cenie biletu zapewniony jest nocleg?",
