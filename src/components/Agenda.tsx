@@ -142,10 +142,9 @@ const Agenda = () => {
                   </div>
                   <div className="flex-1">
                     <h3
-                      className={`font-heading leading-snug ${
+                      className={`font-heading leading-snug text-base ${
                         item.highlight ? "text-accent-foreground" : "text-foreground"
                       }`}
-                      style={{ fontSize: "18px" }}
                     >
                       {item.title}
                     </h3>
