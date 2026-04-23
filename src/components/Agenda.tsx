@@ -7,19 +7,19 @@ const agendaItems = [
   {
     time: "10:00–10:15",
     title: "Otwarcie Dni Światła",
-    speaker: "Imię i Nazwisko",
+    speaker: "Szczegóły wkrótce",
     lang: "PL",
   },
   {
     time: "10:15–10:45",
     title: "Koherenty optyczne — realne wdrożenia. „Salumanus krok przed brendami”",
-    speaker: "Andrzej Wojnar, Salumanus",
+    speaker: "Andrzej Wojnar | Salumanus",
     lang: "PL",
   },
   {
     time: "10:45–11:15",
     title: "Uniwersalny moduł optyczny — nowości w SRD, aktualizacje portfolio",
-    speaker: "Salumanus (do przydzielenia)",
+    speaker: "Szczegóły wkrótce | Salumanus",
     lang: "PL",
   },
   {
@@ -37,13 +37,13 @@ const agendaItems = [
   {
     time: "12:15–12:45",
     title: "IP/MPLS — rodzina produktów dla operatorów (L2/L3)",
-    speaker: "RAICcom (Kevin)",
+    speaker: "Szczegóły wkrótce RAICcom",
     lang: "EN",
   },
   {
     time: "12:45–13:15",
     title: "Telekom świadczący Enterprise jako usługa — klocki packet-optical",
-    speaker: "PacketLight",
+    speaker: "Szczegóły wkrótce | PacketLight",
     lang: "EN",
   },
   {
@@ -55,19 +55,19 @@ const agendaItems = [
   {
     time: "15:30–16:00",
     title: "DCN Europe — Enterprise / Wi-Fi 7 (premiera w maju) / case 100G w DC",
-    speaker: "DCN Europe",
+    speaker: "Szczegóły wkrótce | DCN Europe",
     lang: "EN",
   },
   {
     time: "16:00–16:30",
     title: "Multiservice BTS — „Co zrobić, kiedy nie będzie niczego” (podkład pod panel)",
-    speaker: "Andrzej Wojnar / Marcin Bała - Salumanus",
+    speaker: "Andrzej Wojnar | Marcin Bała - Salumanus",
     lang: "PL",
   },
   {
     time: "16:30–17:30",
     title: "PANEL DYSKUSYJNY: „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki”",
-    speaker: "Łukasz Dec (moderator) + top-level telekomy + operator energetyczny",
+    speaker: "Szczegóły wkrótce | Łukasz Dec (moderator)",
     lang: "PL",
   },
 ];
