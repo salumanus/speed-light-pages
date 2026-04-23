@@ -31,7 +31,7 @@ const salumanusSpeakers: Speaker[] = [
 ];
 
 const dcnSpeakers: Speaker[] = [
-  { name: "Marcin Bała", role: "Dyrektor Działu Produktów Sieciowych", desc: "Zarządza Działem Produktów Sieciowych DCN Europe - stąd startują najlepsze sieci LAN i Wi-Fi 6. Łączy potrzeby klienta, integratora i marki w jedno działające rozwiązanie.", linkedin: "https://www.linkedin.com/in/grzegorzroz/" },
+  { name: "Grzegorz Róż", role: "Dyrektor Działu Produktów Sieciowych", desc: "Zarządza Działem Produktów Sieciowych DCN Europe - stąd startują najlepsze sieci LAN i Wi-Fi 6. Łączy potrzeby klienta, integratora i marki w jedno działające rozwiązanie.", linkedin: "https://www.linkedin.com/in/grzegorzroz/" },
 ];
 
 const SpeakerCard = ({ speaker, index }: { speaker: Speaker; index: number }) => (
