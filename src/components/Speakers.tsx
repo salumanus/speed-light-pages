@@ -25,13 +25,13 @@ const speakerPhotos = [
 ];
 
 const salumanusSpeakers: Speaker[] = [
-  { name: "Grzegorz Róż", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
+  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Ewangelista xWDM. Łączy biznes, technologię i umiejętność czytania branżowej przyszłości — tam, gdzie inni widzą trendy, on widzi następny ruch.", linkedin: "" },
   { name: "Andrzej Wojnar", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
   { name: "Łukasz Sukiennik", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
 ];
 
 const dcnSpeakers: Speaker[] = [
-  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
+  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Ewangelista xWDM. Łączy biznes, technologię i umiejętność czytania branżowej przyszłości — tam, gdzie inni widzą trendy, on widzi następny ruch.", linkedin: "" },
 ];
 
 const SpeakerCard = ({ speaker, index }: { speaker: Speaker; index: number }) => (
