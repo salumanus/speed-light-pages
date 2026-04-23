@@ -28,9 +28,6 @@ const salumanusSpeakers: Speaker[] = [
   { name: "Marcin Bała", role: "Product Manager", desc: "Ewangelista xWDM. Łączy biznes, technologię i umiejętność czytania branżowej przyszłości — tam, gdzie inni widzą trendy, on widzi następny ruch.", linkedin: "https://www.linkedin.com/in/marcin-bala" },
   { name: "Andrzej Wojnar", role: "Product Manager", desc: "Inżynier i manager z artystyczną duszą. W Salumanus zagląda w bity i fotony - a czasem dzieli je na czworo. Po godzinach: fotografia i enologia.", linkedin: "https://www.linkedin.com/in/andrzej-wojnar-kr" },
   { name: "Łukasz Sukiennik", role: "Dyrektor Działu Wdrożenia i Serwisu", desc: "Inżynier automatyki z talentem do tłumaczenia zawiłości sieciowych projektów. Pracuje projektowo - autorskie rozwiązania, szyte pod konkretnego klienta.", linkedin: "https://www.linkedin.com/in/lukasz-sukiennik" },
-];
-
-const dcnSpeakers: Speaker[] = [
   { name: "Grzegorz Róż", role: "Dyrektor Działu Produktów Sieciowych", desc: "Zarządza Działem Produktów Sieciowych DCN Europe - stąd startują najlepsze sieci LAN i Wi-Fi 6. Łączy potrzeby klienta, integratora i marki w jedno działające rozwiązanie.", linkedin: "https://www.linkedin.com/in/grzegorzroz/" },
 ];
 
@@ -139,22 +136,6 @@ const Speakers = () => (
           <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-3xl">Osiągnęli już niejeden szczyt przepustowości. Mistrzowie systemów xWDM i transmisji optycznej - na torze i w sieci nie ma dla nich niemożliwych prędkości.</p>
         </AnimatedSection>
         <SpeakerSlider speakers={salumanusSpeakers} perPage={4} />
-      </div>
-    </section>
-
-    <section className="bg-[#f8f4f2] my-0 py-[40px]">
-      <div className="container-conf">
-        <AnimatedSection>
-          <div className="flex items-center gap-3 mb-8">
-            <span className="w-3 h-3 rounded-sm bg-accent inline-block" />
-            <span className="font-heading text-sm uppercase tracking-widest" style={{ color: "#000" }}>DCN Europe</span>
-          </div>
-          <h2 className="font-heading text-4xl md:text-5xl leading-tight lg:text-4xl" style={{ color: "#000", marginBottom: "1.5rem" }}>
-            <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">DCN Europe</span> Racing Team
-          </h2>
-          <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-3xl">Wyścig nie kończy się na prostej - wygrywa go pit stop. Wi-Fi 7, rozwiązania Enterprise dla biur, kampusów i przemysłu, 100G w Data Center. DCN Europe dostarcza sieć, która trzyma tempo od pierwszego do ostatniego okrążenia.</p>
-        </AnimatedSection>
-        <SpeakerSlider speakers={dcnSpeakers} perPage={4} />
       </div>
     </section>
   </>
