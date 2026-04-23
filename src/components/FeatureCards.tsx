@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 
 const cards = [
-  { num: "/01", title: "Strefa demo", desc: "Zadbamy o to, abyś mógł dotknąć i wypróbować technologii, o których mówimy." },
-  { num: "/02", title: "Eksperci", desc: "Znamy się na sieciach i uwielbiamy o tym opowiadać. Potrafimy też słuchać." },
-  { num: "/03", title: "Networking", desc: "Ludzie to fundament każdej konferencji. Poszerzysz swoje zawodowe grono." },
-  { num: "/04", title: "Biznes i technologie", desc: "Merytoryka to zawsze najmocniejszy punkt Dni Światła." },
+  { num: "/01", title: "Strefa demo", desc: "Technologia nie tylko na slajdach - dotykasz, podłączasz, sprawdzasz, jak działa w praktyce." },
+  { num: "/02", title: "Eksperci", desc: "Inżynierowie, którzy na co dzień projektują i wdrażają sieci. Pytaj śmiało - odpowiadają konkretem, nie marketingiem." },
+  { num: "/03", title: "Networking", desc: "Branża telko i DC spotyka się raz w roku. Nowe kontakty, stare znajomości, rozmowy, które otwierają kolejne projekty." },
+  { num: "/04", title: "Biznes i technologie", desc: "Merytoryka, która realnie wpływa na Twój biznes - tematy i decyzje, które zabierasz ze sobą do poniedziałku." },
 ];
 
 const FeatureCards = () => (
