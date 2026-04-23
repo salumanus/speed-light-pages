@@ -6,22 +6,22 @@ const cards = [
   {
     icon: Network,
     title: "Inżynierowie sieci",
-    desc: "Poznaj najnowsze technologie sieciowe i transmisyjne, które zrewolucjonizują Twoją infrastrukturę.",
+    desc: "Dla tych, którzy projektują i wdrażają - nie czytają o technologii, tylko jej używają. Koherenty optyczne w boju, IP/MPLS w realnych topologiach, packet-optical bez marketingu. Pokazujemy rozwiązania, które działają u operatorów, zanim trafią do folderów producentów.",
   },
   {
     icon: Server,
-    title: "Administratorzy IT",
-    desc: "Zdobądź wiedzę o najnowszych rozwiązaniach serwerowych i systemach zarządzania siecią.",
+    title: "Administratorzy IT i Data Center",
+    desc: "Dla ludzi odpowiedzialnych za sprawność, bezpieczeństwo i ciągłość działania sieci - od Wi-Fi 7 w kampusach po 100G w Data Center. Konkretne case'y, realne wdrożenia, praktyczne odpowiedzi na pytania, które pojawiają się o 3 nad ranem.",
   },
   {
     icon: Radio,
-    title: "Integratorzy systemów",
-    desc: "Odkryj narzędzia i platformy, które usprawnią wdrożenia u Twoich klientów.",
+    title: "Architekci i CTO",
+    desc: "Dla osób, które projektują infrastrukturę na dekady, nie na kwartały. QKD i kryptografia post-kwantowa, strategie odpornościowe, architektury multiservice BTS. Jak budować sieci, które przetrwają więcej niż jeden scenariusz - również ten, o którym wolelibyśmy nie myśleć.",
   },
   {
     icon: Cpu,
-    title: "Decydenci & menedżerowie",
-    desc: "Zainspiruj się strategiami technologicznymi, które napędzają rozwój biznesu.",
+    title: "Decydenci biznesowi",
+    desc: "Dla dyrektorów i zarządów operatorów telekomunikacyjnych oraz dostawców usług Enterprise. Tu technologia spotyka się z P&L - monetyzacja sieci, Enterprise-as-a-Service, zarządzanie ryzykiem geopolitycznym. Panel finałowy „Iskander czy totalny blackout\" — rozmowa, której nigdzie indziej nie usłyszysz.",
   },
 ];
 
@@ -45,10 +45,10 @@ const Audience = () => (
           <AnimatedSection key={card.title} delay={i * 0.1}>
             <motion.div
               whileHover={{ y: -4 }}
-              className="bg-accent text-accent-foreground p-8 md:p-10 h-full flex flex-col px-[20px]"
+              className="bg-accent text-accent-foreground p-8 md:p-10 h-full flex flex-col px-[20px] py-[20px]"
               style={{ opacity: 0.85 + i * 0.05 }}
             >
-              <card.icon className="w-12 h-12 mb-8 opacity-90" strokeWidth={1.2} />
+              <card.icon className="mb-8 opacity-90 w-[30px] h-[30px]" strokeWidth={1.2} />
               <h3 className="font-heading text-xl md:text-2xl mb-4 leading-snug">{card.title}</h3>
               <div className="w-10 h-px mb-4 border-secondary bg-secondary" />
               <p className="text-sm leading-relaxed text-primary-foreground font-normal opacity-100">{card.desc}</p>
