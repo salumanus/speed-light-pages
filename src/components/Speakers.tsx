@@ -26,7 +26,7 @@ const speakerPhotos = [
 
 const salumanusSpeakers: Speaker[] = [
   { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Ewangelista xWDM. Łączy biznes, technologię i umiejętność czytania branżowej przyszłości — tam, gdzie inni widzą trendy, on widzi następny ruch.", linkedin: "" },
-  { name: "Andrzej Wojnar", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
+  { name: "Andrzej Wojnar", role: "Dyrektor ds. Technicznych", desc: "Inżynier i manager z artystyczną duszą. W Salumanus zagląda w bity i fotony - a czasem dzieli je na czworo. Po godzinach: fotografia i enologia.", linkedin: "" },
   { name: "Łukasz Sukiennik", role: "Dyrektor ds. Technicznych", desc: "Wizjoner i lider branży telekomunikacyjnej z ponad 20-letnim doświadczeniem.", linkedin: "" },
 ];
 
