@@ -28,8 +28,8 @@ const Footer = () => (
         <div>
           <h4 className="font-heading text-lg text-dark-fg mb-4">Organizatorzy</h4>
           <div className="flex gap-6">
-            <span className="text-dark-muted text-sm font-medium">Salumanus</span>
-            <span className="text-dark-muted text-sm font-medium">DCN Europe</span>
+            <a href="https://www.salumanus.com/" target="_blank" rel="noopener noreferrer" className="text-dark-muted hover:text-accent text-sm font-medium transition-colors">Salumanus</a>
+            <a href="https://www.dcneurope.eu/pl" target="_blank" rel="noopener noreferrer" className="text-dark-muted hover:text-accent text-sm font-medium transition-colors">DCN Europe</a>
           </div>
         </div>
       </div>
