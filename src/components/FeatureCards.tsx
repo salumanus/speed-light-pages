@@ -11,6 +11,11 @@ const cards = [
 const FeatureCards = () => (
   <section className="section-py bg-dark-bg">
     <div className="container-conf">
+      <AnimatedSection>
+        <h2 className="font-heading text-4xl md:text-5xl text-dark-fg mb-16 w-full leading-tight lg:text-4xl">
+          Cztery powody, żeby wjechać na podium Dni Światła.
+        </h2>
+      </AnimatedSection>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {cards.map((card, i) => (
           <AnimatedSection key={card.num} delay={i * 0.1}>
