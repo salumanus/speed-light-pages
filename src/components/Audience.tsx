@@ -44,7 +44,7 @@ const Audience = () => (
           <AnimatedSection key={card.title} delay={i * 0.1}>
             <motion.div
               whileHover={{ y: -4 }}
-              className="bg-accent text-accent-foreground p-8 md:p-10 h-full py-[15px] px-[15px] items-start justify-start flex flex-col rounded-sm"
+              className="bg-accent text-accent-foreground p-8 md:p-10 h-full py-[15px] px-[15px] items-start justify-start flex flex-col rounded-lg"
               style={{ opacity: 0.85 + i * 0.05 }}
             >
               <card.icon className="mb-8 opacity-90 w-[30px] h-[30px]" strokeWidth={1.2} />
