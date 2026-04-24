@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Linkedin } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
-import speakerImg from "@/assets/speaker.avif";
+import speakerImg from "@/assets/marcin-bala.jpg";
 
 interface Speaker {
   name: string;
