@@ -13,13 +13,13 @@ const agendaItems = [
   {
     time: "10:15–10:45",
     title: "Szczegóły wkrótce",
-    speaker: "Andrzej Wojnar | Salumanus",
+    speaker: "Salumanus",
     lang: "PL",
   },
   {
     time: "10:45–11:15",
     title: "Szczegóły wkrótce",
-    speaker: "Szczegóły wkrótce | Salumanus",
+    speaker: "Salumanus",
     lang: "PL",
   },
   {
@@ -37,7 +37,7 @@ const agendaItems = [
   {
     time: "12:15–12:45",
     title: "Szczegóły wkrótce",
-    speaker: "Szczegóły wkrótce RAICcom",
+    speaker: "Szczegóły wkrótce | RAICcom",
     lang: "EN",
   },
   {
