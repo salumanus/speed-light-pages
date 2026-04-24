@@ -45,7 +45,7 @@ const Hero = () => {
         />
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/60 to-transparent" style={{ opacity: 0.85 }} />
-      <div className="relative container-conf pb-20 md:pb-28 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10">
+      <div className="relative container-conf pb-12 md:pb-20 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10">
         <div className="flex flex-col gap-4 md:gap-5 lg:max-w-[70%]">
           {items.map((item, i) => (
             <motion.div
