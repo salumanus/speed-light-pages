@@ -2,13 +2,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Linkedin } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
-import speakerImg from "@/assets/marcin-bala.jpg";
+import marcinBalaImg from "@/assets/marcin-bala.jpg";
+import andrzejWojnarImg from "@/assets/andrzej-wojnar.jpg";
+import lukaszSukiennikImg from "@/assets/lukasz-sukiennik.jpg";
+import grzegorzRozImg from "@/assets/grzegorz-roz.jpg";
 
 interface Speaker {
   name: string;
   role: string;
   desc: string;
   linkedin?: string;
+  image: string;
 }
 
 const speakerPhotos = [
@@ -25,17 +29,17 @@ const speakerPhotos = [
 ];
 
 const salumanusSpeakers: Speaker[] = [
-  { name: "Marcin Bała", role: "Product Manager", desc: "Ewangelista xWDM. Łączy biznes, technologię i umiejętność czytania branżowej przyszłości — tam, gdzie inni widzą trendy, on widzi następny ruch.", linkedin: "https://www.linkedin.com/in/marcin-bala" },
-  { name: "Andrzej Wojnar", role: "Product Manager", desc: "Inżynier i manager z artystyczną duszą. W Salumanus zagląda w bity i fotony - a czasem dzieli je na czworo. Po godzinach: fotografia i enologia.", linkedin: "https://www.linkedin.com/in/andrzej-wojnar-kr" },
-  { name: "Łukasz Sukiennik", role: "Dyrektor Działu Wdrożenia i Serwisu", desc: "Inżynier automatyki z talentem do tłumaczenia zawiłości sieciowych projektów. Pracuje projektowo - autorskie rozwiązania, szyte pod konkretnego klienta.", linkedin: "https://www.linkedin.com/in/lukasz-sukiennik" },
-  { name: "Grzegorz Róż", role: "Dyrektor Działu Produktów Sieciowych", desc: "Zarządza Działem Produktów Sieciowych DCN Europe - stąd startują najlepsze sieci LAN i Wi-Fi 6. Łączy potrzeby klienta, integratora i marki w jedno działające rozwiązanie.", linkedin: "https://www.linkedin.com/in/grzegorzroz/" },
+  { name: "Marcin Bała", role: "Product Manager", desc: "Ewangelista xWDM. Łączy biznes, technologię i umiejętność czytania branżowej przyszłości — tam, gdzie inni widzą trendy, on widzi następny ruch.", linkedin: "https://www.linkedin.com/in/marcin-bala", image: marcinBalaImg },
+  { name: "Andrzej Wojnar", role: "Product Manager", desc: "Inżynier i manager z artystyczną duszą. W Salumanus zagląda w bity i fotony - a czasem dzieli je na czworo. Po godzinach: fotografia i enologia.", linkedin: "https://www.linkedin.com/in/andrzej-wojnar-kr", image: andrzejWojnarImg },
+  { name: "Łukasz Sukiennik", role: "Dyrektor Działu Wdrożenia i Serwisu", desc: "Inżynier automatyki z talentem do tłumaczenia zawiłości sieciowych projektów. Pracuje projektowo - autorskie rozwiązania, szyte pod konkretnego klienta.", linkedin: "https://www.linkedin.com/in/lukasz-sukiennik", image: lukaszSukiennikImg },
+  { name: "Grzegorz Róż", role: "Dyrektor Działu Produktów Sieciowych", desc: "Zarządza Działem Produktów Sieciowych DCN Europe - stąd startują najlepsze sieci LAN i Wi-Fi 6. Łączy potrzeby klienta, integratora i marki w jedno działające rozwiązanie.", linkedin: "https://www.linkedin.com/in/grzegorzroz/", image: grzegorzRozImg },
 ];
 
 const SpeakerCard = ({ speaker, index }: { speaker: Speaker; index: number }) => (
   <div className="group flex-shrink-0">
     <div className="bg-secondary overflow-hidden aspect-square mb-4 border border-accent" style={{ borderRadius: "5px" }}>
       <img
-        src={speakerImg}
+        src={speaker.image}
         alt={speaker.name}
         className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         loading="lazy"
