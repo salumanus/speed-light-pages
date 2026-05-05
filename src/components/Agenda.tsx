@@ -65,7 +65,7 @@ const agendaItems = [
     lang: "PL",
   },
   {
-    time: "16:20–17:00",
+    time: "15:30 - 16:30",
     title: `PANEL DYSKUSYJNY: „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki"`,
     speaker: "Łukasz Dec (moderator)",
     lang: "PL",
