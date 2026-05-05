@@ -37,7 +37,7 @@ const agendaItems = [
   {
     time: "12:10–12:35",
     title: "IP/MPLS — rodzina produktów dla operatorów (L2/L3)",
-    speaker: "Heqa security",
+    speaker: "Salumanus",
     lang: "EN",
   },
   {
