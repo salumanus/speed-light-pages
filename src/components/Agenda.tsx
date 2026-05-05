@@ -72,7 +72,7 @@ const agendaItems = [
     highlight: true,
   },
   {
-    time: "17:00–17:30",
+    time: "17:40 – 02:00",
     title: "KAHOOT i sesja Q&A",
     speaker: "",
     lang: "PL",
