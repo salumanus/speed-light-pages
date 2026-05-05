@@ -54,19 +54,19 @@ const agendaItems = [
   },
   {
     time: "15:30–15:55",
-    title: "Multiservice BTS — „Co zrobić, kiedy nie będzie niczego" (podkład pod panel)",
+    title: `Multiservice BTS — „Co zrobić, kiedy nie będzie niczego" (podkład pod panel)`,
     speaker: "Salumanus",
     lang: "PL",
   },
   {
     time: "15:55–16:20",
-    title: "Koherenty Optyczne — realne wdrożenia. „Salumanus krok przed brendami"",
+    title: `Koherenty Optyczne — realne wdrożenia. „Salumanus krok przed brendami"`,
     speaker: "Salumanus",
     lang: "PL",
   },
   {
     time: "16:20–17:00",
-    title: "PANEL DYSKUSYJNY: „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki"",
+    title: `PANEL DYSKUSYJNY: „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki"`,
     speaker: "Łukasz Dec (moderator)",
     lang: "PL",
     highlight: true,
