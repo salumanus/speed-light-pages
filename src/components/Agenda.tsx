@@ -20,7 +20,7 @@ const agendaItems = [
     time: "10:25–10:50",
     title: "DCN Europe — Enterprise / Wi-Fi 7 (premiera w maju) / case 100G w DC",
     speaker: "DCN Europe",
-    lang: "EN",
+    lang: "PL",
   },
   {
     time: "10:50–11:20",
@@ -32,19 +32,19 @@ const agendaItems = [
     time: "11:20–11:55",
     title: "QKD / kryptografia post-kwantowa — zabezpieczanie połączeń",
     speaker: "Hekatron",
-    lang: "EN",
+    lang: "PL",
   },
   {
     time: "11:55–12:20",
     title: "IP/MPLS — rodzina produktów dla operatorów (L2/L3)",
     speaker: "Salumanus",
-    lang: "EN",
+    lang: "PL",
   },
   {
     time: "12:20–12:45",
     title: "Telekom świadczący Enterprise jako usługa — klocki packet-optical",
     speaker: "PacketLight",
-    lang: "EN",
+    lang: "PL",
   },
   {
     time: "12:45–13:10",
