@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Play } from "lucide-react";
 import teaserImg from "@/assets/teaser-2026.jpg";
+import logo from "@/assets/logo-dni-swiatla-26.svg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 const VIDEO_ID = "DD6osPQBDzw";
@@ -59,6 +60,15 @@ const TeaserOverlay = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-dark-bg/90 via-dark-bg/60 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/80 via-transparent to-transparent" />
+
+        <motion.img
+          src={logo}
+          alt="Dni Światła 2026"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="absolute top-8 md:top-10 left-8 md:left-12 h-10 md:h-14 w-auto"
+        />
 
         <div className="relative w-full px-8 md:px-12 pb-8 md:pb-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
           <div className="flex flex-col gap-4 md:gap-5 lg:max-w-[65%]">
