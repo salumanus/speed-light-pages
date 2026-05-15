@@ -88,7 +88,7 @@ const TeaserOverlay = () => {
               transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
               className="mt-2 flex-row flex items-center justify-start gap-[20px]"
             >
-              <span className="text-dark-muted uppercase tracking-widest text-lg text-gray-50">
+              <span className="text-dark-muted uppercase tracking-widest text-lg text-gray-50 font-medium">
                 Więcej informacji wkrótce
               </span>
               <a
