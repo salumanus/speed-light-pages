@@ -20,8 +20,8 @@ const Footer = () => (
           <h4 className="font-heading text-lg text-dark-fg mb-4">Nawigacja</h4>
           <div className="flex flex-col gap-2">
             <a href="#home" className="text-dark-muted hover:text-accent text-sm transition-colors">Home</a>
-            <a href="#agenda" className="text-dark-muted hover:text-accent text-sm transition-colors">Agenda</a>
-            <a href="#rejestracja" className="text-dark-muted hover:text-accent text-sm transition-colors">Rejestracja</a>
+            <a href="#agenda" className="text-dark-muted hover:text-accent text-sm transition-colors">Agenda (wkrótce)</a>
+            <a href="#rejestracja" className="text-dark-muted hover:text-accent text-sm transition-colors">Rejestracja&nbsp;&nbsp;(wkrótce)</a>
             <a href="#kontakt" className="text-dark-muted hover:text-accent text-sm transition-colors">Kontakt</a>
           </div>
         </div>
