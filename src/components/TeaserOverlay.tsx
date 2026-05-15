@@ -40,18 +40,19 @@ const TeaserOverlay = () => {
   ];
 
   return (
-    <section className="fixed inset-0 z-[100] flex items-end overflow-hidden bg-dark-bg">
-      <div className="absolute inset-0">
-        <img
-          src={teaserImg}
-          alt="Dni Światła 2026 - zapowiedź"
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-dark-bg/90 via-dark-bg/60 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/80 via-transparent to-transparent" />
+    <div className="fixed inset-0 z-[100] p-[60px]">
+      <section className="relative w-full h-full flex items-end overflow-hidden bg-dark-bg rounded-lg shadow-2xl">
+        <div className="absolute inset-0">
+          <img
+            src={teaserImg}
+            alt="Dni Światła 2026 - zapowiedź"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-dark-bg/90 via-dark-bg/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/80 via-transparent to-transparent" />
 
-      <div className="relative container-conf pb-12 md:pb-20">
+        <div className="relative container-conf pb-12 md:pb-20">
         <div className="flex flex-col gap-4 md:gap-5 lg:max-w-[70%]">
           {items.map((item, i) => (
             <motion.div
