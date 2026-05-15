@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Play } from "lucide-react";
+import { Play, Linkedin } from "lucide-react";
 import teaserImg from "@/assets/teaser-2026.jpg";
 import logo from "@/assets/logo-dni-swiatla-26.svg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -82,6 +82,25 @@ const TeaserOverlay = () => {
                 {item.el}
               </motion.div>
             ))}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+              className="flex flex-col items-end gap-2 mt-2"
+            >
+              <span className="text-sm text-dark-muted uppercase tracking-widest">
+                Więcej informacji wkrótce
+              </span>
+              <a
+                href="https://www.linkedin.com/company/salumanus/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn Salumanus"
+                className="text-dark-fg hover:text-accent transition-colors"
+              >
+                <Linkedin size={18} />
+              </a>
+            </motion.div>
           </div>
 
           <motion.div
