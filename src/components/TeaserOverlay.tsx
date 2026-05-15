@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Play } from "lucide-react";
+import { Play, Linkedin } from "lucide-react";
 import teaserImg from "@/assets/teaser-2026.jpg";
 import logo from "@/assets/logo-dni-swiatla-26.svg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
