@@ -86,7 +86,7 @@ const TeaserOverlay = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-              className="flex flex-col items-end gap-2 mt-2"
+              className="mt-2 flex-row flex items-center justify-start gap-[20px]"
             >
               <span className="text-dark-muted uppercase tracking-widest text-lg text-gray-50">
                 Więcej informacji wkrótce
@@ -98,7 +98,7 @@ const TeaserOverlay = () => {
                 aria-label="LinkedIn Salumanus"
                 className="text-dark-fg hover:text-accent transition-colors"
               >
-                <Linkedin size={18} />
+                <Linkedin size={30} className="text-lg h-[30px] w-[30px]" />
               </a>
             </motion.div>
           </div>
