@@ -22,7 +22,7 @@ const TeaserOverlay = () => {
     },
     {
       el: (
-        <h1 className="font-heading sm:text-6xl md:text-7xl text-dark-fg leading-none font-medium text-6xl">
+        <h1 className="font-heading sm:text-6xl md:text-7xl text-dark-fg leading-none font-medium text-5xl">
           Inżynieria zwycięstwa
         </h1>
       ),
