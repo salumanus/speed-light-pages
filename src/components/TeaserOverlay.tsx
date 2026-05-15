@@ -49,8 +49,8 @@ const TeaserOverlay = () => {
   ];
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 lg:p-[60px] pointer-events-none">
-      <section className="relative w-full h-[90%] lg:w-[70%] lg:h-[70%] flex items-end overflow-hidden bg-dark-bg rounded-lg shadow-2xl pointer-events-auto">
+    <div className="relative w-screen h-screen">
+      <section className="relative w-full h-full flex items-end overflow-hidden bg-dark-bg shadow-2xl">
         <div className="absolute inset-0">
           <img
             src={teaserImg}
