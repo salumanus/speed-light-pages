@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -13,19 +13,11 @@ import Footer from "@/components/Footer";
 import TeaserOverlay from "@/components/TeaserOverlay";
 
 const Index = () => {
-  useEffect(() => {
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = prev;
-    };
-  }, []);
-
   return (
     <>
       <div
         aria-hidden
-        className="fixed inset-0 overflow-hidden blur-md pointer-events-none select-none"
+        className="blur-md pointer-events-none select-none"
       >
         <Navbar />
         <Hero />
