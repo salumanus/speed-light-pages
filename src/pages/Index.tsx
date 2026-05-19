@@ -36,10 +36,12 @@ const Index = () => {
 
   if (!showFullSite) {
     return (
-      <>
-        <TeaserOverlay />
+      <div className="min-h-screen flex flex-col">
+        <div className="flex-1 flex">
+          <TeaserOverlay />
+        </div>
         <Footer />
-      </>
+      </div>
     );
   }
 
