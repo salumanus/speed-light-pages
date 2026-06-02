@@ -70,7 +70,7 @@ const TeaserOverlay = () => {
           className="absolute top-8 md:top-10 left-8 md:left-12 h-10 md:h-14 w-auto"
         />
 
-        <div className="relative w-full px-8 md:px-12 pb-8 md:pb-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+        <div className="relative w-full container-conf pb-8 md:pb-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
           <div className="flex flex-col gap-4 md:gap-5 lg:max-w-[65%]">
             {items.map((item, i) => (
               <motion.div
