@@ -91,6 +91,7 @@ const Hero = () => {
             </div>
           </button>
         </motion.div>
+        </div>
       </div>
 
       <Dialog open={open} onOpenChange={setOpen}>
