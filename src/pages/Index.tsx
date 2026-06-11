@@ -30,7 +30,7 @@ const Index = () => {
       localStorage.removeItem("dev_preview_full");
       setShowFullSite(true);
     } else {
-      setShowFullSite(localStorage.getItem("dev_preview_full") === "1");
+      setShowFullSite(true);
     }
   }, []);
 
