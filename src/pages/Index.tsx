@@ -17,7 +17,7 @@ import TeaserOverlay from "@/components/TeaserOverlay";
 // np. https://twoja-domena.pl/?preview=full
 // Dostęp zostanie zapamiętany w localStorage. Aby wyłączyć: ?preview=off
 const Index = () => {
-  const [showFullSite, setShowFullSite] = useState(false);
+  const [showFullSite, setShowFullSite] = useState(true);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -28,7 +28,7 @@ const Index = () => {
       setShowFullSite(true);
     } else if (preview === "off") {
       localStorage.removeItem("dev_preview_full");
-      setShowFullSite(false);
+      setShowFullSite(true);
     } else {
       setShowFullSite(localStorage.getItem("dev_preview_full") === "1");
     }
