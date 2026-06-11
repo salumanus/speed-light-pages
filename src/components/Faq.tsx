@@ -5,7 +5,7 @@ import faqImg from "@/assets/faq-f1.jpg";
 const faqs = [
   {
     q: "Jak mogę kupić bilet na Dni Światła 2026?",
-    a: "Zapisy dla partnerów Salumanus i DCN Europe są już otwarte - udział w tej grupie jest bezpłatny, wystarczy skontaktować się ze swoim opiekunem handlowym. Liczba miejsc jest ograniczona - Dni Światła co roku wypełniają salę do ostatniego krzesła.\nBilety dla uczestników spoza grona partnerów uruchomimy w późniejszym terminie. Cenę, datę startu sprzedaży i warunki opublikujemy na tej stronie oraz w naszych kanałach komunikacji — zostaw e-mail w formularzu, a damy znać pierwsi.",
+    a: "Zapisy dla partnerów Salumanus i DCN Europe są już otwarte - udział w tej grupie jest bezpłatny, wystarczy skontaktować się ze swoim opiekunem handlowym. Liczba miejsc jest ograniczona - Dni Światła co roku wypełniają salę do ostatniego krzesła.\n",
   },
   {
     q: "Gdzie odbędzie się konferencja?",
