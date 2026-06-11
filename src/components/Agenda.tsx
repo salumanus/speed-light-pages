@@ -7,62 +7,62 @@ const agendaItems = [
   {
     time: "9:00–10:00",
     title: "Otwarcie Światła",
-    speaker: "Salumanus",
-    lang: "PL",
+    speaker: "",
+    lang: "",
   },
   {
     time: "10:00–10:25",
-    title: "Uniwersalny moduł optyczny — nowości w SRD, aktualizacje portfolio",
+    title: "Jeden bolid, każdy tor. Uniwersalny moduł optyczny i jego konfiguracja w środowisku SRD",
     speaker: "Salumanus",
     lang: "PL",
   },
   {
     time: "10:25–10:50",
     title: "DCN Europe — Enterprise / Wi-Fi 7 (premiera w maju) / case 100G w DC",
-    speaker: "DCN Europe",
-    lang: "PL",
+    speaker: "",
+    lang: "",
   },
   {
-    time: "10:50–11:20",
+    time: "10:50–11:15",
+    title: "QKD / kryptografia post-kwantowa — zabezpieczanie połączeń",
+    speaker: "",
+    lang: "",
+  },
+  {
+    time: "11:15–11:45",
     title: "Przerwa kawowa",
     speaker: "",
     lang: "",
   },
   {
-    time: "11:20–11:55",
-    title: "QKD / kryptografia post-kwantowa — zabezpieczanie połączeń",
-    speaker: "Hekatron",
-    lang: "PL",
-  },
-  {
-    time: "11:55–12:20",
-    title: "IP/MPLS — rodzina produktów dla operatorów (L2/L3)",
-    speaker: "Salumanus",
-    lang: "PL",
-  },
-  {
-    time: "12:20–12:45",
-    title: "Telekom świadczący Enterprise jako usługa — klocki packet-optical",
-    speaker: "PacketLight",
-    lang: "PL",
-  },
-  {
-    time: "12:45–13:10",
-    title: "DCNY - zaproszenie",
+    time: "11:45–12:10",
+    title: "DCN IP/MPLS — rodzina produktów dla operatorów (L2/L3)",
     speaker: "",
     lang: "",
   },
   {
-    time: "13:10–14:30",
+    time: "12:10–12:35",
+    title: "Telekom świadczący Enterprise jako usługa — klocki packet-optical",
+    speaker: "",
+    lang: "",
+  },
+  {
+    time: "12:35–13:00",
+    title: "Mniej pitstopów, szybsze okrążenie. Multiservice BTS jako węzeł agregujący sieci operatora",
+    speaker: "Salumanus",
+    lang: "PL",
+  },
+  {
+    time: "13:00–14:30",
     title: "Lunch",
     speaker: "",
     lang: "",
   },
   {
     time: "14:30–15:30",
-    title: `Panel dyskusyjny „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki"`,
-    speaker: "Łukasz Dec (moderator)",
-    lang: "PL",
+    title: `Panel dyskusyjny Łukasz Dec – „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki"`,
+    speaker: "",
+    lang: "",
     highlight: true,
   },
   {
@@ -73,13 +73,13 @@ const agendaItems = [
   },
   {
     time: "16:00–16:25",
-    title: `Multiservice BTS — „Co zrobić, kiedy nie będzie niczego" (podkład pod panel)`,
-    speaker: "Salumanus",
-    lang: "PL",
+    title: "DCNY - szczegóły wkrótce",
+    speaker: "",
+    lang: "",
   },
   {
     time: "16:25–16:50",
-    title: `Koherenty optyczne — realne wdrożenia. „Salumanus krok przed brendami"`,
+    title: "Zdjąć balast, dodać prędkość. Koherentne 100/400/800G i IP over DWDM w praktyce",
     speaker: "Salumanus",
     lang: "PL",
   },
@@ -87,7 +87,7 @@ const agendaItems = [
     time: "16:50–17:00",
     title: "KAHOOT i sesja Q&A",
     speaker: "",
-    lang: "PL",
+    lang: "",
   },
   {
     time: "17:00",
@@ -95,6 +95,7 @@ const agendaItems = [
     speaker: "",
     lang: "",
   },
+
 ];
 
 const Agenda = () => {
