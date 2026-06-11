@@ -120,7 +120,7 @@ const CtaSection = () => {
 
                 <div>
                   <label htmlFor="reg-message" className="block text-sm mb-1.5 text-white/90">
-                    Wiadomość <span className="text-accent">*</span>
+                    Dodatkowe informacje / Wiadomość <span className="text-accent">*</span>
                   </label>
                   <textarea
                     id="reg-message"
