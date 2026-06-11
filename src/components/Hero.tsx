@@ -22,7 +22,7 @@ const Hero = () => {
     { el: <p className="text-base text-primary-foreground md:text-2xl">20 października 2026 - Hotel Novotel Centrum | Warszawa</p>, delay: 0.45 },
     { el: (
       <div className="flex flex-wrap gap-3 mt-2">
-        <button type="button" onClick={() => setRegOpen(true)} className="btn-accent">Zarejestruj się</button>
+        <a href="#rejestracja" className="btn-accent">Zarejestruj się</a>
         <a
           href="#agenda"
           className="inline-flex items-center justify-center px-7 py-3 rounded-full border-2 border-white text-white font-semibold transition-all duration-200 hover:bg-white/10 hover:-translate-y-0.5"
