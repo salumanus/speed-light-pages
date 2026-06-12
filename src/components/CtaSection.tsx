@@ -119,6 +119,21 @@ const CtaSection = () => {
                 </div>
 
                 <div>
+                  <label htmlFor="reg-code" className="block text-sm mb-1.5 text-white/90">
+                    Kod rejestracyjny <span className="text-accent">*</span>
+                  </label>
+                  <input
+                    id="reg-code"
+                    name="code"
+                    type="text"
+                    required
+                    maxLength={50}
+                    placeholder="Wpisz kod otrzymany od opiekuna handlowego"
+                    className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-accent transition-colors"
+                  />
+                </div>
+
+                <div>
                   <label htmlFor="reg-message" className="block text-sm mb-1.5 text-white/90">
                     Dodatkowe informacje / Wiadomość <span className="text-accent">*</span>
                   </label>
