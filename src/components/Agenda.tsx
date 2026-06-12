@@ -107,7 +107,7 @@ const Agenda = () => {
     <section id="agenda" className="section-py bg-background">
       <div className="container-conf">
         <AnimatedSection>
-          <h2 className="font-heading text-4xl md:text-5xl mb-16 leading-tight text-foreground lg:text-4xl">
+          <h2 className="font-heading text-3xl md:text-5xl mb-16 leading-tight text-foreground lg:text-4xl">
             Agenda <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Dni Światła</span> 2026
           </h2>
         </AnimatedSection>
@@ -146,30 +146,42 @@ const Agenda = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.06 }}
-                  className={`flex gap-6 md:gap-8 pl-10 relative ${
+                  className={`flex gap-4 md:gap-8 pl-8 md:pl-10 relative ${
                     item.highlight ? "bg-accent rounded-lg py-4 pr-4" : ""
                   }`}
                 >
                   <div className="absolute left-0.5 top-2 w-3 h-3 rounded-full bg-accent border-2 border-background" />
                   <div
-                    className={`font-heading min-w-[110px] ${
+                    className={`font-heading min-w-[80px] md:min-w-[110px] text-sm md:text-[18px] ${
                       item.highlight ? "text-accent-foreground" : "text-accent"
                     }`}
-                    style={{ fontSize: "18px" }}
                   >
                     {item.time}
                   </div>
-                  <div className="flex-1">
-                    <h3
-                      className={`font-heading leading-snug text-lg ${
-                        item.highlight ? "text-accent-foreground" : "text-foreground"
-                      }`}
-                    >
-                      {item.title}
-                    </h3>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4">
+                      <h3
+                        className={`font-heading leading-snug text-sm md:text-lg ${
+                          item.highlight ? "text-accent-foreground" : "text-foreground"
+                        }`}
+                      >
+                        {item.title}
+                      </h3>
+                      {item.lang && (
+                        <span
+                          className={`shrink-0 self-start inline-block border text-xs font-medium px-2 py-1 rounded ${
+                            item.highlight
+                              ? "border-accent-foreground text-accent-foreground"
+                              : "border-border text-foreground"
+                          }`}
+                        >
+                          {item.lang}
+                        </span>
+                      )}
+                    </div>
                     {item.speaker && (
                       <p
-                        className={`text-sm font-medium mt-2 ${
+                        className={`text-xs md:text-sm font-medium mt-2 ${
                           item.highlight ? "text-accent-foreground" : "text-foreground"
                         }`}
                       >
@@ -177,19 +189,6 @@ const Agenda = () => {
                       </p>
                     )}
                   </div>
-                  {item.lang && (
-                    <div className="shrink-0 self-start">
-                      <span
-                        className={`inline-block border text-xs font-medium px-2 py-1 rounded ${
-                          item.highlight
-                            ? "border-accent-foreground text-accent-foreground"
-                            : "border-border text-foreground"
-                        }`}
-                      >
-                        {item.lang}
-                      </span>
-                    </div>
-                  )}
                 </motion.div>
               ))}
             </div>

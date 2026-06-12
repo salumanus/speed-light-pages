@@ -47,7 +47,7 @@ const Faq = () => (
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-start">
         <div>
           <AnimatedSection>
-            <h2 className="font-heading text-5xl md:text-6xl text-foreground mb-4 lg:text-4xl">FAQ</h2>
+            <h2 className="font-heading text-3xl md:text-6xl text-foreground mb-4 lg:text-4xl">FAQ</h2>
             <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mb-12">
               Najczęściej zadawane pytania dotyczące XVIII edycji Dni Światła. Nie znalazłeś odpowiedzi? Skontaktuj się z nami.
             </p>

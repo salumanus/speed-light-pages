@@ -30,7 +30,7 @@ const Counter = ({ end, label, suffix = "" }: { end: number; label: string; suff
 
   return (
     <div ref={ref} className="text-center">
-      <div className="font-heading text-5xl font-medium text-primary md:text-7xl">{count}{suffix}</div>
+      <div className="font-heading text-4xl font-medium text-primary md:text-7xl">{count}{suffix}</div>
       <div className="text-sm mt-1 font-medium text-primary">{label}</div>
     </div>
   );
@@ -46,7 +46,7 @@ const About = () => (
               <span className="w-3 h-3 rounded-sm bg-accent inline-block" />
               <span className="font-heading text-sm uppercase tracking-widest text-foreground font-normal">Dni Światła</span>
             </div>
-            <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-6 leading-tight lg:text-4xl">
+            <h2 className="font-heading text-3xl md:text-5xl text-foreground mb-6 leading-tight lg:text-4xl">
               O konferencji <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Dni Światła</span>
             </h2>
             <p className="leading-relaxed mb-4 text-muted-foreground">
