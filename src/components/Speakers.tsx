@@ -134,7 +134,7 @@ const Speakers = () => (
             <span className="w-3 h-3 rounded-sm bg-accent inline-block" />
             <span className="font-heading text-sm uppercase tracking-widest text-foreground">Salumanus</span>
           </div>
-          <h2 className="font-heading text-3xl md:text-5xl text-foreground leading-tight lg:text-4xl" style={{ marginBottom: "1.5rem" }}>
+          <h2 className="font-heading text-2xl md:text-5xl text-foreground leading-tight lg:text-4xl" style={{ marginBottom: "1.5rem" }}>
             <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Salumanus i DCN Europe</span> Racing Team
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-3xl">Osiągnęli już niejeden szczyt przepustowości. Mistrzowie systemów xWDM i transmisji optycznej - na torze i w sieci nie ma dla nich niemożliwych prędkości.</p>
