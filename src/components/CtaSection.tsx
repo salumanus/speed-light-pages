@@ -100,21 +100,16 @@ const CtaSection = () => {
                     <label htmlFor="reg-phone" className="block text-sm mb-1.5 text-white/90">
                       Telefon <span className="text-accent">*</span>
                     </label>
-                    <div className="flex">
-                      <span className="inline-flex items-center px-3 rounded-l-lg bg-white/10 border border-r-0 border-white/10 text-white/90 gap-1.5">
-                        <span aria-hidden>🇵🇱</span>
-                        <span className="text-sm">+48</span>
-                      </span>
-                      <input
-                        id="reg-phone"
-                        name="phone"
-                        type="tel"
-                        required
-                        maxLength={20}
-                        placeholder="512 345 678"
-                        className="flex-1 px-4 py-2.5 rounded-r-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-accent transition-colors"
-                      />
-                    </div>
+                    <input
+                      id="reg-phone"
+                      name="phone"
+                      type="tel"
+                      required
+                      maxLength={20}
+                      placeholder="512 345 678"
+                      className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-accent transition-colors"
+                    />
+
                   </div>
                 </div>
 
