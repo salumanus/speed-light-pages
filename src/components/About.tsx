@@ -55,7 +55,7 @@ const About = () => (
             <p className="leading-relaxed text-muted-foreground">
               Świat, w którym technologia, precyzja i prędkość decydują o wszystkim, a zwycięża ten, kto łączy to w bezbłędną strategię - dokładnie tak jak w nowoczesnej sieci.
             </p>
-            <div className="flex gap-12 mt-10">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-6 sm:gap-12 mt-10">
               <Counter end={17} label="Edycji" />
               <Counter end={60} label="Prelegentów" suffix="+" />
               <Counter end={1000} label="Ponad Uczestników wszystkich edycji" suffix="+" />
