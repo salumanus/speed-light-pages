@@ -6,6 +6,7 @@ import marcinBalaImg from "@/assets/marcin-bala.jpg";
 import andrzejWojnarImg from "@/assets/andrzej-wojnar.jpg";
 import lukaszSukiennikImg from "@/assets/lukasz-sukiennik.jpg";
 import grzegorzRozImg from "@/assets/grzegorz-roz.jpg";
+import { useT } from "@/contexts/LanguageContext";
 
 interface Speaker {
   name: string;
@@ -15,27 +16,7 @@ interface Speaker {
   image: string;
 }
 
-const speakerPhotos = [
-  "1560250097-0b93528c311a",
-  "1472099645785-5658abf4ff4e",
-  "1519085360753-af0119f7cbe7",
-  "1507003211169-0a1dd7228f2d",
-  "1500648767791-00dcc994a43e",
-  "1438761681033-6461ffad8d80",
-  "1494790108377-be9c29b29330",
-  "1506794778202-cad84cf45f1d",
-  "1573497019940-1c28c88b4f3e",
-  "1580489944761-15a19d654956",
-];
-
-const salumanusSpeakers: Speaker[] = [
-  { name: "Marcin Bała", role: "Dyrektor ds. Technicznych", desc: "Ewangelista xWDM. Łączy biznes, technologię i umiejętność czytania branżowej przyszłości - tam, gdzie inni widzą trendy, on widzi następny ruch.", linkedin: "https://www.linkedin.com/in/marcin-bala", image: marcinBalaImg },
-  { name: "Andrzej Wojnar", role: "Product Manager", desc: "Inżynier i manager z artystyczną duszą. W Salumanus zagląda w bity i fotony - a czasem dzieli je na czworo. Po godzinach: fotografia i enologia.", linkedin: "https://www.linkedin.com/in/andrzej-wojnar-kr", image: andrzejWojnarImg },
-  { name: "Łukasz Sukiennik", role: "Dyrektor Działu Wdrożenia i Serwisu", desc: "Inżynier automatyki z talentem do tłumaczenia zawiłości sieciowych projektów. Pracuje projektowo - autorskie rozwiązania, szyte pod konkretnego klienta.", linkedin: "https://www.linkedin.com/in/lukasz-sukiennik", image: lukaszSukiennikImg },
-  { name: "Grzegorz Róż", role: "Dyrektor Działu Produktów Sieciowych", desc: "Zarządza Działem Produktów Sieciowych DCN Europe - stąd startują najlepsze sieci LAN i Wi-Fi 6. Łączy potrzeby klienta, integratora i marki w jedno działające rozwiązanie.", linkedin: "https://www.linkedin.com/in/grzegorzroz/", image: grzegorzRozImg },
-];
-
-const SpeakerCard = ({ speaker, index }: { speaker: Speaker; index: number }) => (
+const SpeakerCard = ({ speaker }: { speaker: Speaker }) => (
   <div className="group flex-shrink-0">
     <div className="bg-secondary overflow-hidden aspect-square mb-4 border border-accent" style={{ borderRadius: "5px" }}>
       <img
@@ -87,8 +68,8 @@ const SpeakerSlider = ({ speakers, perPage }: { speakers: Speaker[]; perPage: nu
                 : "grid-cols-1 md:grid-cols-2"
             }`}
           >
-            {visible.map((s, i) => (
-              <SpeakerCard key={s.name} speaker={s} index={page * perPage + i} />
+            {visible.map((s) => (
+              <SpeakerCard key={s.name} speaker={s} />
             ))}
           </motion.div>
         </AnimatePresence>
@@ -125,7 +106,16 @@ const SpeakerSlider = ({ speakers, perPage }: { speakers: Speaker[]; perPage: nu
   );
 };
 
-const Speakers = () => (
+const Speakers = () => {
+  const t = useT();
+  const salumanusSpeakers: Speaker[] = [
+    { name: "Marcin Bała", role: t("Dyrektor ds. Technicznych", "Chief Technical Officer"), desc: t("Ewangelista xWDM. Łączy biznes, technologię i umiejętność czytania branżowej przyszłości - tam, gdzie inni widzą trendy, on widzi następny ruch.", "xWDM evangelist. Combines business, technology and the ability to read the industry's future - where others see trends, he sees the next move."), linkedin: "https://www.linkedin.com/in/marcin-bala", image: marcinBalaImg },
+    { name: "Andrzej Wojnar", role: t("Product Manager", "Product Manager"), desc: t("Inżynier i manager z artystyczną duszą. W Salumanus zagląda w bity i fotony - a czasem dzieli je na czworo. Po godzinach: fotografia i enologia.", "Engineer and manager with an artistic soul. At Salumanus he looks into bits and photons - and sometimes splits them in four. After hours: photography and oenology."), linkedin: "https://www.linkedin.com/in/andrzej-wojnar-kr", image: andrzejWojnarImg },
+    { name: "Łukasz Sukiennik", role: t("Dyrektor Działu Wdrożenia i Serwisu", "Head of Deployment and Service"), desc: t("Inżynier automatyki z talentem do tłumaczenia zawiłości sieciowych projektów. Pracuje projektowo - autorskie rozwiązania, szyte pod konkretnego klienta.", "Automation engineer with a talent for explaining the complexities of network projects. Works project-based - custom solutions tailored to a specific client."), linkedin: "https://www.linkedin.com/in/lukasz-sukiennik", image: lukaszSukiennikImg },
+    { name: "Grzegorz Róż", role: t("Dyrektor Działu Produktów Sieciowych", "Head of Network Products"), desc: t("Zarządza Działem Produktów Sieciowych DCN Europe - stąd startują najlepsze sieci LAN i Wi-Fi 6. Łączy potrzeby klienta, integratora i marki w jedno działające rozwiązanie.", "Manages the DCN Europe Network Products department - the launchpad for the best LAN and Wi-Fi 6 networks. Combines the needs of the client, the integrator and the brand into one working solution."), linkedin: "https://www.linkedin.com/in/grzegorzroz/", image: grzegorzRozImg },
+  ];
+
+  return (
   <>
     <section className="bg-background my-[39px]" style={{ paddingTop: "1rem", paddingBottom: "1rem" }}>
       <div className="container-conf bg-[#f8f4f2] my-0 py-[40px]">
@@ -137,12 +127,13 @@ const Speakers = () => (
           <h2 className="font-heading text-2xl md:text-5xl text-foreground leading-tight lg:text-4xl" style={{ marginBottom: "1.5rem" }}>
             <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Salumanus i DCN Europe</span> Racing Team
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-3xl">Osiągnęli już niejeden szczyt przepustowości. Mistrzowie systemów xWDM i transmisji optycznej - na torze i w sieci nie ma dla nich niemożliwych prędkości.</p>
+          <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-3xl">{t("Osiągnęli już niejeden szczyt przepustowości. Mistrzowie systemów xWDM i transmisji optycznej - na torze i w sieci nie ma dla nich niemożliwych prędkości.", "They've already reached more than one bandwidth peak. Masters of xWDM systems and optical transmission - on the track and in the network, no speed is impossible for them.")}</p>
         </AnimatedSection>
         <SpeakerSlider speakers={salumanusSpeakers} perPage={4} />
       </div>
     </section>
   </>
-);
+  );
+};
 
 export default Speakers;
