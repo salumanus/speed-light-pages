@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import dolaczBg from "@/assets/dolacz-background.svg";
+import { useT } from "@/contexts/LanguageContext";
 
 const CtaSection = () => {
   const [success, setSuccess] = useState(false);
+  const t = useT();
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -28,9 +30,12 @@ const CtaSection = () => {
       <div className="container-conf relative">
         <AnimatedSection>
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-heading text-3xl md:text-6xl text-dark-fg mb-6 lg:text-4xl">Dołącz do nas</h2>
+            <h2 className="font-heading text-3xl md:text-6xl text-dark-fg mb-6 lg:text-4xl">{t("Dołącz do nas", "Join us")}</h2>
             <p className="text-dark-muted text-lg md:text-xl mb-10">
-              Zarejestruj się na 18 edycję Dni Światła i dołącz do grona liderów technologii sieciowych. Dla partnerów SALUMANUS i DCN Europe udział w konferencji jest bezpłatny. Daj znać swojemu opiekunowi handlowemu! Liczba miejsc ograniczona. Zarejestruj się już dziś!
+              {t(
+                "Zarejestruj się na 18 edycję Dni Światła i dołącz do grona liderów technologii sieciowych. Dla partnerów SALUMANUS i DCN Europe udział w konferencji jest bezpłatny. Daj znać swojemu opiekunowi handlowemu! Liczba miejsc ograniczona. Zarejestruj się już dziś!",
+                "Register for the 18th edition of Dni Światła and join the leaders of network technology. For SALUMANUS and DCN Europe partners, participation is free. Let your sales representative know! Limited seats. Register today!"
+              )}
             </p>
           </div>
 
@@ -41,8 +46,8 @@ const CtaSection = () => {
             {success ? (
               <div className="text-center py-10">
                 <CheckCircle2 className="w-16 h-16 mx-auto mb-4 text-accent" />
-                <h3 className="font-heading text-2xl mb-2">Dziękujemy za rejestrację!</h3>
-                <p className="text-white/70">Odezwiemy się wkrótce.</p>
+                <h3 className="font-heading text-2xl mb-2">{t("Dziękujemy za rejestrację!", "Thank you for registering!")}</h3>
+                <p className="text-white/70">{t("Odezwiemy się wkrótce.", "We'll be in touch soon.")}</p>
               </div>
             ) : (
               <form
@@ -57,7 +62,7 @@ const CtaSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="reg-name" className="block text-sm mb-1.5 text-white/90">
-                      Imię i Nazwisko <span className="text-accent">*</span>
+                      {t("Imię i Nazwisko", "Full name")} <span className="text-accent">*</span>
                     </label>
                     <input
                       id="reg-name"
@@ -71,7 +76,7 @@ const CtaSection = () => {
 
                   <div>
                     <label htmlFor="reg-company" className="block text-sm mb-1.5 text-white/90">
-                      Nazwa Firmy
+                      {t("Nazwa Firmy", "Company name")}
                     </label>
                     <input
                       id="reg-company"
@@ -98,7 +103,7 @@ const CtaSection = () => {
 
                   <div>
                     <label htmlFor="reg-phone" className="block text-sm mb-1.5 text-white/90">
-                      Telefon <span className="text-accent">*</span>
+                      {t("Telefon", "Phone")} <span className="text-accent">*</span>
                     </label>
                     <input
                       id="reg-phone"
@@ -115,7 +120,7 @@ const CtaSection = () => {
 
                 <div>
                   <label htmlFor="reg-code" className="block text-sm mb-1.5 text-white/90">
-                    Kod rejestracyjny <span className="text-accent">*</span>
+                    {t("Kod rejestracyjny", "Registration code")} <span className="text-accent">*</span>
                   </label>
                   <input
                     id="reg-code"
@@ -123,14 +128,14 @@ const CtaSection = () => {
                     type="text"
                     required
                     maxLength={50}
-                    placeholder="Wpisz kod otrzymany od opiekuna handlowego"
+                    placeholder={t("Wpisz kod otrzymany od opiekuna handlowego", "Enter the code from your sales representative")}
                     className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-accent transition-colors"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="reg-message" className="block text-sm mb-1.5 text-white/90">
-                    Dodatkowe informacje / Wiadomość <span className="text-accent">*</span>
+                    {t("Dodatkowe informacje / Wiadomość", "Additional information / Message")} <span className="text-accent">*</span>
                   </label>
                   <textarea
                     id="reg-message"
@@ -151,7 +156,10 @@ const CtaSection = () => {
                     className="mt-1 w-4 h-4 rounded accent-accent shrink-0"
                   />
                   <span>
-                    Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z polityką prywatności.
+                    {t(
+                      "Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z polityką prywatności.",
+                      "I consent to the processing of my personal data in accordance with the privacy policy."
+                    )}
                   </span>
                 </label>
 
@@ -161,7 +169,7 @@ const CtaSection = () => {
                     className="px-10 py-3 font-semibold text-white transition-opacity hover:opacity-90"
                     style={{ backgroundColor: "#D61F2F", borderRadius: "2rem" }}
                   >
-                    Zarejestruj się
+                    {t("Zarejestruj się", "Register")}
                   </button>
                 </div>
               </form>

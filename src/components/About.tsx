@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import AnimatedSection from "./AnimatedSection";
 import logoSalumanus from "@/assets/Salumanus_logo_dark.svg";
 import logoDcn from "@/assets/logo-dcn.svg";
+import { useT } from "@/contexts/LanguageContext";
 
 const Counter = ({ end, label, suffix = "" }: { end: number; label: string; suffix?: string }) => {
   const [count, setCount] = useState(0);
@@ -36,7 +37,9 @@ const Counter = ({ end, label, suffix = "" }: { end: number; label: string; suff
   );
 };
 
-const About = () => (
+const About = () => {
+  const t = useT();
+  return (
   <section className="section-py bg-[#f8f4f2]">
     <div className="container-conf">
       <AnimatedSection>
@@ -47,18 +50,24 @@ const About = () => (
               <span className="font-heading text-sm uppercase tracking-widest text-foreground font-normal">Dni Światła</span>
             </div>
             <h2 className="font-heading text-2xl md:text-5xl text-foreground mb-6 leading-tight lg:text-4xl">
-              O konferencji <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Dni Światła</span>
+              {t("O konferencji ", "About the ")}<span className="bg-accent text-accent-foreground px-3 py-1 inline-block">Dni Światła</span>{t("", " conference")}
             </h2>
             <p className="leading-relaxed mb-4 text-muted-foreground">
-              Dni Światła to jedna z najważniejszych konferencji branży Telko i Data Center w Polsce, organizowane przez Salumanus i DCN Europe. Nieprzerwanie od ponad 17 lat, a XVIII edycja wjeżdża na najwyższy poziom toru Formuły 1.
+              {t(
+                "Dni Światła to jedna z najważniejszych konferencji branży Telko i Data Center w Polsce, organizowane przez Salumanus i DCN Europe. Nieprzerwanie od ponad 17 lat, a XVIII edycja wjeżdża na najwyższy poziom toru Formuły 1.",
+                "Dni Światła is one of the most important conferences for the Telco and Data Center industry in Poland, organized by Salumanus and DCN Europe. Held continuously for over 17 years, and the 18th edition is racing onto the top tier of the Formula 1 track."
+              )}
             </p>
             <p className="leading-relaxed text-muted-foreground">
-              Świat, w którym technologia, precyzja i prędkość decydują o wszystkim, a zwycięża ten, kto łączy to w bezbłędną strategię - dokładnie tak jak w nowoczesnej sieci.
+              {t(
+                "Świat, w którym technologia, precyzja i prędkość decydują o wszystkim, a zwycięża ten, kto łączy to w bezbłędną strategię - dokładnie tak jak w nowoczesnej sieci.",
+                "A world where technology, precision and speed decide everything, and the winner is the one who combines them into a flawless strategy - just like in a modern network."
+              )}
             </p>
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-6 sm:gap-12 mt-10">
-              <Counter end={17} label="Edycji" />
-              <Counter end={60} label="Prelegentów" suffix="+" />
-              <Counter end={1000} label="Ponad Uczestników wszystkich edycji" suffix="+" />
+              <Counter end={17} label={t("Edycji", "Editions")} />
+              <Counter end={60} label={t("Prelegentów", "Speakers")} suffix="+" />
+              <Counter end={1000} label={t("Ponad Uczestników wszystkich edycji", "Participants across all editions")} suffix="+" />
             </div>
           </div>
           <div className="flex flex-col gap-8 items-center justify-center">
@@ -73,6 +82,7 @@ const About = () => (
       </AnimatedSection>
     </div>
   </section>
-);
+  );
+};
 
 export default About;
