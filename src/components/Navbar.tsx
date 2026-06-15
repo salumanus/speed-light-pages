@@ -1,24 +1,47 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import logoDniSwiatla from "@/assets/dni-swiatla-2026.svg";
-
-const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "Agenda", href: "#agenda" },
-  { label: "Rejestracja", href: "#rejestracja" },
-  { label: "Kontakt", href: "#kontakt" },
-];
+import { useLanguage, useT } from "@/contexts/LanguageContext";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [lang, setLang] = useState<"PL" | "EN">("PL");
   const [scrolled, setScrolled] = useState(false);
+  const { lang, setLang } = useLanguage();
+  const t = useT();
+
+  const navItems = [
+    { label: t("Home", "Home"), href: "#home" },
+    { label: t("Agenda", "Agenda"), href: "#agenda" },
+    { label: t("Rejestracja", "Registration"), href: "#rejestracja" },
+    { label: t("Kontakt", "Contact"), href: "#kontakt" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const LangSelect = ({ className = "" }: { className?: string }) => (
+    <Select value={lang} onValueChange={(v) => setLang(v as "PL" | "EN")}>
+      <SelectTrigger
+        className={`w-[78px] h-8 bg-transparent border-dark-fg/30 text-dark-fg text-sm font-medium ${className}`}
+      >
+        <SelectValue />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="PL">PL</SelectItem>
+        <SelectItem value="EN">EN</SelectItem>
+      </SelectContent>
+    </Select>
+  );
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 border-b transition-colors duration-300 ${scrolled ? "bg-black border-dark-fg/10 backdrop-blur-sm" : "bg-accent border-transparent"}`}>
@@ -38,12 +61,7 @@ const Navbar = () => {
               {item.label}
             </a>
           ))}
-          <button
-            onClick={() => setLang(lang === "PL" ? "EN" : "PL")}
-            className="text-dark-fg hover:opacity-70 text-sm font-medium border border-dark-fg/30 rounded px-3 py-1 transition-opacity"
-          >
-            {lang}
-          </button>
+          <LangSelect />
         </div>
 
         {/* Mobile toggle */}
@@ -66,12 +84,7 @@ const Navbar = () => {
                 {item.label}
               </a>
             ))}
-            <button
-              onClick={() => setLang(lang === "PL" ? "EN" : "PL")}
-              className="text-dark-fg/60 text-sm font-medium self-start border border-dark-fg/20 rounded px-3 py-1"
-            >
-              {lang}
-            </button>
+            <LangSelect className="self-start" />
           </div>
         </div>
       )}
