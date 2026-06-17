@@ -158,7 +158,7 @@ const CtaSection = () => {
                     {t(
                       "Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z polityką prywatności.",
                       "I consent to the processing of my personal data in accordance with the privacy policy."
-                    )}
+                    )} <span className="text-accent">*</span>
                   </span>
                 </label>
 
