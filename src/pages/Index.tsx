@@ -34,6 +34,25 @@ const Index = () => {
     }
   }, []);
 
+  // Scroll to hash target after the page has rendered (images/sections load after initial paint).
+  useEffect(() => {
+    if (!showFullSite) return;
+    const hash = window.location.hash?.replace("#", "");
+    if (!hash) return;
+
+    let attempts = 0;
+    const tryScroll = () => {
+      const el = document.getElementById(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+      if (attempts++ < 20) setTimeout(tryScroll, 150);
+    };
+    // Defer to allow layout/images to settle before scrolling.
+    setTimeout(tryScroll, 100);
+  }, [showFullSite]);
+
   if (!showFullSite) {
     return (
       <div className="min-h-screen flex flex-col">
