@@ -135,12 +135,11 @@ const CtaSection = () => {
 
                 <div>
                   <label htmlFor="reg-message" className="block text-sm mb-1.5 text-white/90">
-                    {t("Dodatkowe informacje / Wiadomość", "Additional information / Message")} <span className="text-accent">*</span>
+                    {t("Dodatkowe informacje / Wiadomość", "Additional information / Message")}
                   </label>
                   <textarea
                     id="reg-message"
                     name="message"
-                    required
                     maxLength={1000}
                     style={{ minHeight: "120px" }}
                     className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-accent transition-colors resize-y"
