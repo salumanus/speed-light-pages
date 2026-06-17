@@ -19,9 +19,9 @@ const Navbar = () => {
   const navItems = [
     { label: t("Home", "Home"), href: "#home" },
     { label: t("Agenda", "Agenda"), href: "#agenda" },
-    { label: t("Rejestracja", "Registration"), href: "#rejestracja" },
     { label: t("Kontakt", "Contact"), href: "#kontakt" },
   ];
+  const ctaItem = { label: t("Rejestracja", "Registration"), href: "#rejestracja" };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -61,6 +61,12 @@ const Navbar = () => {
               {item.label}
             </a>
           ))}
+          <a
+            href={ctaItem.href}
+            className="inline-flex items-center h-8 px-3 rounded-md border border-dark-fg/30 text-dark-fg hover:opacity-70 text-sm font-medium uppercase tracking-wider transition-opacity"
+          >
+            {ctaItem.label}
+          </a>
           <LangSelect />
         </div>
 
@@ -84,6 +90,13 @@ const Navbar = () => {
                 {item.label}
               </a>
             ))}
+            <a
+              href={ctaItem.href}
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center self-start h-8 px-3 rounded-md border border-dark-fg/30 text-dark-fg hover:opacity-70 text-sm font-medium uppercase tracking-wider transition-opacity"
+            >
+              {ctaItem.label}
+            </a>
             <LangSelect className="self-start" />
           </div>
         </div>
