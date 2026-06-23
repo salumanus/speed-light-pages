@@ -20,7 +20,7 @@ const Agenda = () => {
     { time: "12:10–12:35", title: t("Telekom świadczący Enterprise jako usługa — klocki packet-optical", "Telecom delivering Enterprise as a service — packet-optical building blocks"), speaker: "", lang: "" },
     { time: "12:35–13:00", title: t("Mniej pitstopów, szybsze okrążenie. Multiservice BTS jako węzeł agregujący sieci operatora", "Fewer pit stops, faster lap. Multiservice BTS as an aggregation node in the carrier network"), speaker: "Salumanus", lang: "PL" },
     { time: "13:00–14:30", title: t("Lunch", "Lunch"), speaker: "", lang: "" },
-    { time: "14:30–15:30", title: t(`Panel dyskusyjny Łukasz Dec – „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki"`, `Panel discussion with Łukasz Dec – "Iskander or total blackout? How to prepare a telecom network for geopolitical challenges"`), speaker: "", lang: "", highlight: true },
+    { time: "14:30–15:30", title: t(`Panel dyskusyjny Łukasz Dec – „Iskander czy totalny blackout? Jak przygotować sieć na wyzwania geopolityki"`, `Panel discussion with Łukasz Dec – "Iskander or total blackout? How to prepare a network for geopolitical challenges"`), speaker: "", lang: "", highlight: true },
     { time: "15:30–16:00", title: t("Przerwa kawowa", "Coffee break"), speaker: "", lang: "" },
     { time: "16:00–16:25", title: t("DCNY - szczegóły wkrótce", "DCNY - details coming soon"), speaker: "", lang: "" },
     { time: "16:25–16:50", title: t("Zdjąć balast, dodać prędkość. Koherentne 100/400/800G i IP over DWDM w praktyce", "Drop the ballast, add the speed. Coherent 100/400/800G and IP over DWDM in practice"), speaker: "Salumanus", lang: "PL" },
