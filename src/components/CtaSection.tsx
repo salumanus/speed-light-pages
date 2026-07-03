@@ -4,8 +4,15 @@ import AnimatedSection from "./AnimatedSection";
 import dolaczBg from "@/assets/dolacz-background.svg";
 import { useT } from "@/contexts/LanguageContext";
 
+const encode = (data: Record<string, string>) =>
+  Object.keys(data)
+    .map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
+    .join("&");
+
 const CtaSection = () => {
   const [success, setSuccess] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const t = useT();
 
   useEffect(() => {
@@ -15,6 +22,39 @@ const CtaSection = () => {
       setSuccess(true);
     }
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError(null);
+    setSubmitting(true);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data: Record<string, string> = {};
+    formData.forEach((value, key) => {
+      data[key] = value.toString();
+    });
+    try {
+      const res = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "rejestracja", ...data }),
+      });
+      if (!res.ok) throw new Error("Network error");
+      setSuccess(true);
+      if (typeof window !== "undefined") {
+        window.history.replaceState({}, "", window.location.pathname + "#rejestracja");
+      }
+    } catch (err) {
+      setError(
+        t(
+          "Wystąpił błąd podczas wysyłania. Spróbuj ponownie.",
+          "There was an error submitting the form. Please try again."
+        )
+      );
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <section
