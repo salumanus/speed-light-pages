@@ -208,13 +208,20 @@ const CtaSection = () => {
                   </span>
                 </label>
 
+                {error && (
+                  <p className="text-sm text-center text-red-400">{error}</p>
+                )}
+
                 <div className="flex justify-center pt-2">
                   <button
                     type="submit"
-                    className="px-10 py-3 font-semibold text-white transition-opacity hover:opacity-90"
+                    disabled={submitting}
+                    className="px-10 py-3 font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-60"
                     style={{ backgroundColor: "#D61F2F", borderRadius: "2rem" }}
                   >
-                    {t("Zarejestruj się", "Register")}
+                    {submitting
+                      ? t("Wysyłanie...", "Sending...")
+                      : t("Zarejestruj się", "Register")}
                   </button>
                 </div>
               </form>
