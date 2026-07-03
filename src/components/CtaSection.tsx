@@ -87,7 +87,12 @@ const CtaSection = () => {
               <div className="text-center py-10">
                 <CheckCircle2 className="w-16 h-16 mx-auto mb-4 text-accent" />
                 <h3 className="font-heading text-2xl mb-2">{t("Dziękujemy za rejestrację!", "Thank you for registering!")}</h3>
-                <p className="text-white/70">{t("Odezwiemy się wkrótce.", "We'll be in touch soon.")}</p>
+                <p className="text-white/70">
+                  {t(
+                    "Twoje zgłoszenie zostało wysłane. Skontaktujemy się z Tobą wkrótce z potwierdzeniem udziału w konferencji.",
+                    "Your submission has been received. We'll contact you shortly to confirm your participation in the conference."
+                  )}
+                </p>
               </div>
             ) : (
               <form
@@ -95,6 +100,7 @@ const CtaSection = () => {
                 method="POST"
                 action="/?success=rejestracja#rejestracja"
                 data-netlify="true"
+                onSubmit={handleSubmit}
                 className="space-y-5"
               >
                 <input type="hidden" name="form-name" value="rejestracja" />
