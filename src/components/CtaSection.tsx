@@ -4,8 +4,15 @@ import AnimatedSection from "./AnimatedSection";
 import dolaczBg from "@/assets/dolacz-background.svg";
 import { useT } from "@/contexts/LanguageContext";
 
+const encode = (data: Record<string, string>) =>
+  Object.keys(data)
+    .map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
+    .join("&");
+
 const CtaSection = () => {
   const [success, setSuccess] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const t = useT();
 
   useEffect(() => {
@@ -15,6 +22,39 @@ const CtaSection = () => {
       setSuccess(true);
     }
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError(null);
+    setSubmitting(true);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data: Record<string, string> = {};
+    formData.forEach((value, key) => {
+      data[key] = value.toString();
+    });
+    try {
+      const res = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "rejestracja", ...data }),
+      });
+      if (!res.ok) throw new Error("Network error");
+      setSuccess(true);
+      if (typeof window !== "undefined") {
+        window.history.replaceState({}, "", window.location.pathname + "#rejestracja");
+      }
+    } catch (err) {
+      setError(
+        t(
+          "Wystąpił błąd podczas wysyłania. Spróbuj ponownie.",
+          "There was an error submitting the form. Please try again."
+        )
+      );
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <section
@@ -47,7 +87,12 @@ const CtaSection = () => {
               <div className="text-center py-10">
                 <CheckCircle2 className="w-16 h-16 mx-auto mb-4 text-accent" />
                 <h3 className="font-heading text-2xl mb-2">{t("Dziękujemy za rejestrację!", "Thank you for registering!")}</h3>
-                <p className="text-white/70">{t("Odezwiemy się wkrótce.", "We'll be in touch soon.")}</p>
+                <p className="text-white/70">
+                  {t(
+                    "Twoje zgłoszenie zostało wysłane. Skontaktujemy się z Tobą wkrótce z potwierdzeniem udziału w konferencji.",
+                    "Your submission has been received. We'll contact you shortly to confirm your participation in the conference."
+                  )}
+                </p>
               </div>
             ) : (
               <form
@@ -55,6 +100,7 @@ const CtaSection = () => {
                 method="POST"
                 action="/?success=rejestracja#rejestracja"
                 data-netlify="true"
+                onSubmit={handleSubmit}
                 className="space-y-5"
               >
                 <input type="hidden" name="form-name" value="rejestracja" />
@@ -162,13 +208,20 @@ const CtaSection = () => {
                   </span>
                 </label>
 
+                {error && (
+                  <p className="text-sm text-center text-red-400">{error}</p>
+                )}
+
                 <div className="flex justify-center pt-2">
                   <button
                     type="submit"
-                    className="px-10 py-3 font-semibold text-white transition-opacity hover:opacity-90"
+                    disabled={submitting}
+                    className="px-10 py-3 font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-60"
                     style={{ backgroundColor: "#D61F2F", borderRadius: "2rem" }}
                   >
-                    {t("Zarejestruj się", "Register")}
+                    {submitting
+                      ? t("Wysyłanie...", "Sending...")
+                      : t("Zarejestruj się", "Register")}
                   </button>
                 </div>
               </form>
