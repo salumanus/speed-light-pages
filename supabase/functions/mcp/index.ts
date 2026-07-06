@@ -43,7 +43,7 @@ var AGENDA = [
   { time: "10:25\u201310:50", title: "DCN Europe \u2014 Enterprise / Wi-Fi 7 (premiera w maju) / case 100G w DC", speaker: "DCN Europe" },
   { time: "10:50\u201311:15", title: "QKD / kryptografia post-kwantowa \u2014 zabezpieczanie po\u0142\u0105cze\u0144", speaker: "" },
   { time: "11:15\u201311:45", title: "Przerwa kawowa", speaker: "" },
-  { time: "11:45\u201312:10", title: "DCN IP/MPLS \u2014 rodzina produkt\xF3w dla operator\xF3w (L2/L3)", speaker: "DCN Europe" },
+  { time: "11:45\u201312:10", title: "DCN IP/MPLS \u2014 rodzina produkt\xF3w dla operator\xF3w (L2/L3)", speaker: "Raisecom" },
   { time: "12:10\u201312:35", title: "Telekom \u015Bwiadcz\u0105cy Enterprise jako us\u0142uga \u2014 klocki packet-optical", speaker: "" },
   { time: "12:35\u201313:00", title: "Mniej pitstop\xF3w, szybsze okr\u0105\u017Cenie. Multiservice BTS jako w\u0119ze\u0142 agreguj\u0105cy sieci operatora", speaker: "Salumanus" },
   { time: "13:00\u201314:30", title: "Lunch", speaker: "" },
