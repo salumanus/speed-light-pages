@@ -16,7 +16,7 @@ const Agenda = () => {
     { time: "10:25–10:50", title: t("DCN Europe — Enterprise / Wi-Fi 7 (premiera w maju) / case 100G w DC", "DCN Europe — Enterprise / Wi-Fi 7 (premiere in May) / 100G case in DC"), speaker: "", lang: "" },
     { time: "10:50–11:15", title: t("QKD / kryptografia post-kwantowa — zabezpieczanie połączeń", "QKD / post-quantum cryptography — securing connections"), speaker: "", lang: "" },
     { time: "11:15–11:45", title: t("Przerwa kawowa", "Coffee break"), speaker: "", lang: "" },
-    { time: "11:45–12:10", title: t("DCN IP/MPLS — rodzina produktów dla operatorów (L2/L3)", "DCN IP/MPLS — product family for carriers (L2/L3)"), speaker: "", lang: "" },
+    { time: "11:45–12:10", title: t("DCN IP/MPLS — rodzina produktów dla operatorów (L2/L3)", "DCN IP/MPLS — product family for carriers (L2/L3)"), speaker: "Raisecom", lang: "" },
     { time: "12:10–12:35", title: t("Telekom świadczący Enterprise jako usługa — klocki packet-optical", "Telecom delivering Enterprise as a service — packet-optical building blocks"), speaker: "", lang: "" },
     { time: "12:35–13:00", title: t("Mniej pitstopów, szybsze okrążenie. Multiservice BTS jako węzeł agregujący sieci operatora", "Fewer pit stops, faster lap. Multiservice BTS as an aggregation node in the carrier network"), speaker: "Salumanus", lang: "PL" },
     { time: "13:00–14:30", title: t("Lunch", "Lunch"), speaker: "", lang: "" },

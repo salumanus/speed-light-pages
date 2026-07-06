@@ -7,7 +7,7 @@ const AGENDA = [
   { time: "10:25–10:50", title: "DCN Europe — Enterprise / Wi-Fi 7 (premiera w maju) / case 100G w DC", speaker: "DCN Europe" },
   { time: "10:50–11:15", title: "QKD / kryptografia post-kwantowa — zabezpieczanie połączeń", speaker: "" },
   { time: "11:15–11:45", title: "Przerwa kawowa", speaker: "" },
-  { time: "11:45–12:10", title: "DCN IP/MPLS — rodzina produktów dla operatorów (L2/L3)", speaker: "DCN Europe" },
+  { time: "11:45–12:10", title: "DCN IP/MPLS — rodzina produktów dla operatorów (L2/L3)", speaker: "Raisecom" },
   { time: "12:10–12:35", title: "Telekom świadczący Enterprise jako usługa — klocki packet-optical", speaker: "" },
   { time: "12:35–13:00", title: "Mniej pitstopów, szybsze okrążenie. Multiservice BTS jako węzeł agregujący sieci operatora", speaker: "Salumanus" },
   { time: "13:00–14:30", title: "Lunch", speaker: "" },
