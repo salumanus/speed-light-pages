@@ -11,21 +11,21 @@ const Agenda = () => {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   const agendaItems = [
-    { time: "9:00–10:00", title: t("Otwarcie Światła", "Opening of Dni Światła"), speaker: "", lang: "" },
-    { time: "10:00–10:25", title: t("Jeden bolid, każdy tor. Uniwersalny moduł optyczny i jego konfiguracja w środowisku SRD", "One car, every track. A universal optical module and its configuration in an SRD environment"), speaker: "Salumanus", lang: "PL" },
-    { time: "10:25–10:50", title: t("DCN Europe — Enterprise / Wi-Fi 7 (premiera w maju) / case 100G w DC", "DCN Europe — Enterprise / Wi-Fi 7 (premiere in May) / 100G case in DC"), speaker: "", lang: "" },
-    { time: "10:50–11:15", title: t("QKD / kryptografia post-kwantowa — zabezpieczanie połączeń", "QKD / post-quantum cryptography — securing connections"), speaker: "", lang: "" },
-    { time: "11:15–11:45", title: t("Przerwa kawowa", "Coffee break"), speaker: "", lang: "" },
-    { time: "11:45–12:10", title: t("DCN IP/MPLS — rodzina produktów dla operatorów (L2/L3)", "DCN IP/MPLS — product family for carriers (L2/L3)"), speaker: "Raisecom", lang: "" },
-    { time: "12:10–12:35", title: t("Telekom świadczący Enterprise jako usługa — klocki packet-optical", "Telecom delivering Enterprise as a service — packet-optical building blocks"), speaker: "", lang: "" },
-    { time: "12:35–13:00", title: t("Mniej pitstopów, szybsze okrążenie. Multiservice BTS jako węzeł agregujący sieci operatora", "Fewer pit stops, faster lap. Multiservice BTS as an aggregation node in the carrier network"), speaker: "Salumanus", lang: "PL" },
-    { time: "13:00–14:30", title: t("Lunch", "Lunch"), speaker: "", lang: "" },
-    { time: "14:30–15:30", title: t(`Panel dyskusyjny Łukasz Dec – „Iskander czy totalny blackout? Jak przygotować sieć na wyzwania geopolityki"`, `Panel discussion with Łukasz Dec – "Iskander or total blackout? How to prepare a network for geopolitical challenges"`), speaker: "", lang: "", highlight: true },
-    { time: "15:30–16:00", title: t("Przerwa kawowa", "Coffee break"), speaker: "", lang: "" },
-    { time: "16:00–16:25", title: t("DCNY - szczegóły wkrótce", "DCNY - details coming soon"), speaker: "", lang: "" },
-    { time: "16:25–16:50", title: t("Zdjąć balast, dodać prędkość. Koherentne 100/400/800G i IP over DWDM w praktyce", "Drop the ballast, add the speed. Coherent 100/400/800G and IP over DWDM in practice"), speaker: "Salumanus", lang: "PL" },
-    { time: "16:50–17:00", title: t("KAHOOT i sesja Q&A", "KAHOOT and Q&A session"), speaker: "", lang: "" },
-    { time: "17:00", title: t("Rozpoczęcie imprezy w stylu F1", "Start of the F1-style party"), speaker: "", lang: "" },
+    { time: "9:00–10:00", title: t("Otwarcie", "Opening"), speaker: "", company: "", lang: "" },
+    { time: "10:00–10:25", title: t("Jeden bolid, każdy tor. Uniwersalny moduł optyczny i jego konfiguracja w środowisku SRD", "One car, every track. A universal optical module and its configuration in an SRD environment"), speaker: "Marcin Bała, Mateusz Hąc", company: "Salumanus", lang: "PL" },
+    { time: "10:25–10:50", title: t("Sieci LAN i Wi-Fi o dużej gęstości w praktyce: niezawodne działanie i mierzalna wartość biznesowa w hotelach, na stadionach i w kampusach", "LAN and Wi-Fi networks with high density in practice: reliable operation and measurable business value in hotels, stadiums and campuses"), speaker: "Grzegorz Róż", company: "DCN Europe", lang: "" },
+    { time: "10:50–11:15", title: t("QKD / kryptografia post-kwantowa — zabezpieczanie połączeń", "QKD / post-quantum cryptography — securing connections"), speaker: "Łukasz Sukiennik, Marcin Bała", company: "Salumanus", lang: "" },
+    { time: "11:15–11:45", title: t("Przerwa kawowa", "Coffee break"), speaker: "", company: "", lang: "" },
+    { time: "11:45–12:10", title: t("Raisecom — rodzina produktów dla operatorów (L2/L3)", "Raisecom — product family for carriers (L2/L3)"), speaker: "", company: "Raisecom", lang: "" },
+    { time: "12:10–12:35", title: t("Paddock to Podium: Jak wysokowydajne DCI napędza rozproszoną infrastrukturę AI", "Paddock to Podium: How High-Performance DCI Powers Distributed AI Infrastructure"), speaker: "Nino Shaptoshvili", company: "Packetlight", lang: "" },
+    { time: "12:35–13:00", title: t("Mniej pitstopów, szybsze okrążenie. Multiservice BTS jako węzeł agregujący sieci operatora", "Fewer pit stops, faster lap. Multiservice BTS as an aggregation node in the carrier network"), speaker: "Łukasz Sukiennik, Marcin Bała", company: "Salumanus", lang: "PL" },
+    { time: "13:00–14:30", title: t("Lunch", "Lunch"), speaker: "", company: "", lang: "" },
+    { time: "14:30–15:30", title: t(`Panel: „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki"`, `Panel: "Iskander or total blackout? How to prepare a telecommunications network for the challenges of geopolitics"`), speaker: "Łukasz Dec i inni", company: "", lang: "", highlight: true },
+    { time: "15:30–16:00", title: t("Przerwa kawowa", "Coffee break"), speaker: "", company: "", lang: "" },
+    { time: "16:00–16:25", title: t("DCNY", "DCNY"), speaker: "", company: "DCNY", lang: "" },
+    { time: "16:25–16:50", title: t("Zdjąć balast, dodać prędkość. Koherentne 100/400/800G i IP over DWDM w praktyce", "Drop the ballast, add the speed. Coherent 100/400/800G and IP over DWDM in practice"), speaker: "Andrzej Wojnar, Adam Sedlin", company: "Salumanus, Exatel", lang: "PL" },
+    { time: "16:50–17:00", title: t("KAHOOT i sesja Q&A", "KAHOOT and Q&A session"), speaker: "", company: "", lang: "" },
+    { time: "17:00", title: t("Rozpoczęcie imprezy w stylu Formuły 1", "Start of the Formula 1-style party"), speaker: "", company: "", lang: "" },
   ];
 
   return (
@@ -107,6 +107,15 @@ const Agenda = () => {
                         }`}
                       >
                         {item.speaker}
+                      </p>
+                    )}
+                    {item.company && (
+                      <p
+                        className={`text-xs md:text-sm font-medium mt-1 ${
+                          item.highlight ? "text-accent-foreground/80" : "text-muted-foreground"
+                        }`}
+                      >
+                        {item.company}
                       </p>
                     )}
                   </div>

@@ -3,10 +3,10 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.1";
 
 // src/lib/mcp/tools/get-event-info.ts
-import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.1";
 var get_event_info_default = defineTool({
   name: "get_event_info",
   title: "Get event info",
@@ -35,36 +35,36 @@ var get_event_info_default = defineTool({
 });
 
 // src/lib/mcp/tools/get-agenda.ts
-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.1";
 import { z } from "npm:zod@^3.25.76";
 var AGENDA = [
-  { time: "9:00\u201310:00", title: "Otwarcie Dni \u015Awiat\u0142a", speaker: "" },
-  { time: "10:00\u201310:25", title: "Jeden bolid, ka\u017Cdy tor. Uniwersalny modu\u0142 optyczny i jego konfiguracja w \u015Brodowisku SRD", speaker: "Salumanus" },
-  { time: "10:25\u201310:50", title: "DCN Europe \u2014 Enterprise / Wi-Fi 7 (premiera w maju) / case 100G w DC", speaker: "DCN Europe" },
-  { time: "10:50\u201311:15", title: "QKD / kryptografia post-kwantowa \u2014 zabezpieczanie po\u0142\u0105cze\u0144", speaker: "" },
-  { time: "11:15\u201311:45", title: "Przerwa kawowa", speaker: "" },
-  { time: "11:45\u201312:10", title: "DCN IP/MPLS \u2014 rodzina produkt\xF3w dla operator\xF3w (L2/L3)", speaker: "Raisecom" },
-  { time: "12:10\u201312:35", title: "Telekom \u015Bwiadcz\u0105cy Enterprise jako us\u0142uga \u2014 klocki packet-optical", speaker: "" },
-  { time: "12:35\u201313:00", title: "Mniej pitstop\xF3w, szybsze okr\u0105\u017Cenie. Multiservice BTS jako w\u0119ze\u0142 agreguj\u0105cy sieci operatora", speaker: "Salumanus" },
-  { time: "13:00\u201314:30", title: "Lunch", speaker: "" },
-  { time: "14:30\u201315:30", title: "Panel dyskusyjny: \u201EIskander czy totalny blackout? Jak przygotowa\u0107 sie\u0107 na wyzwania geopolityki\u201D", speaker: "\u0141ukasz Dec" },
-  { time: "15:30\u201316:00", title: "Przerwa kawowa", speaker: "" },
-  { time: "16:00\u201316:25", title: "DCNY - szczeg\xF3\u0142y wkr\xF3tce", speaker: "" },
-  { time: "16:25\u201316:50", title: "Zdj\u0105\u0107 balast, doda\u0107 pr\u0119dko\u015B\u0107. Koherentne 100/400/800G i IP over DWDM w praktyce", speaker: "Salumanus" },
-  { time: "16:50\u201317:00", title: "KAHOOT i sesja Q&A", speaker: "" },
-  { time: "17:00", title: "Rozpocz\u0119cie imprezy w stylu F1", speaker: "" }
+  { time: "9:00\u201310:00", title: "Otwarcie", speaker: "", company: "" },
+  { time: "10:00\u201310:25", title: "Jeden bolid, ka\u017Cdy tor. Uniwersalny modu\u0142 optyczny i jego konfiguracja w \u015Brodowisku SRD", speaker: "Marcin Ba\u0142a, Mateusz H\u0105c", company: "Salumanus" },
+  { time: "10:25\u201310:50", title: "Sieci LAN i Wi-Fi o du\u017Cej g\u0119sto\u015Bci w praktyce: niezawodne dzia\u0142anie i mierzalna warto\u015B\u0107 biznesowa w hotelach, na stadionach i w kampusach", speaker: "Grzegorz R\xF3\u017C", company: "DCN Europe" },
+  { time: "10:50\u201311:15", title: "QKD / kryptografia post-kwantowa \u2014 zabezpieczanie po\u0142\u0105cze\u0144", speaker: "\u0141ukasz Sukiennik, Marcin Ba\u0142a", company: "Salumanus" },
+  { time: "11:15\u201311:45", title: "Przerwa kawowa", speaker: "", company: "" },
+  { time: "11:45\u201312:10", title: "Raisecom \u2014 rodzina produkt\xF3w dla operator\xF3w (L2/L3)", speaker: "", company: "Raisecom" },
+  { time: "12:10\u201312:35", title: "Paddock to Podium: How High-Performance DCI Powers Distributed AI Infrastructure", speaker: "Nino Shaptoshvili", company: "Packetlight" },
+  { time: "12:35\u201313:00", title: "Mniej pitstop\xF3w, szybsze okr\u0105\u017Cenie. Multiservice BTS jako w\u0119ze\u0142 agreguj\u0105cy sieci operatora", speaker: "\u0141ukasz Sukiennik, Marcin Ba\u0142a", company: "Salumanus" },
+  { time: "13:00\u201314:30", title: "Lunch", speaker: "", company: "" },
+  { time: "14:30\u201315:30", title: "Panel: \u201EIskander czy totalny blackout? Jak przygotowa\u0107 sie\u0107 telekomow\u0105 na wyzwania geopolityki\u201D", speaker: "\u0141ukasz Dec i inni", company: "" },
+  { time: "15:30\u201316:00", title: "Przerwa kawowa", speaker: "", company: "" },
+  { time: "16:00\u201316:25", title: "DCNY", speaker: "", company: "DCNY" },
+  { time: "16:25\u201316:50", title: "Zdj\u0105\u0107 balast, doda\u0107 pr\u0119dko\u015B\u0107. Koherentne 100/400/800G i IP over DWDM w praktyce", speaker: "Andrzej Wojnar, Adam Sedlin", company: "Salumanus, Exatel" },
+  { time: "16:50\u201317:00", title: "KAHOOT i sesja Q&A", speaker: "", company: "" },
+  { time: "17:00", title: "Rozpocz\u0119cie imprezy w stylu Formu\u0142y 1", speaker: "", company: "" }
 ];
 var get_agenda_default = defineTool2({
   name: "get_agenda",
   title: "Get agenda",
-  description: "Return the full session agenda for Dni \u015Awiat\u0142a 2026 with time slots, titles, and speaker/company when known.",
+  description: "Return the full session agenda for Dni \u015Awiat\u0142a 2026 with time slots, titles, speakers, and companies when known.",
   inputSchema: {
-    filter: z.string().optional().describe("Optional case-insensitive substring to match against session title or speaker.")
+    filter: z.string().optional().describe("Optional case-insensitive substring to match against session title, speaker, or company.")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: ({ filter }) => {
     const items = filter ? AGENDA.filter(
-      (i) => (i.title + " " + i.speaker).toLowerCase().includes(filter.toLowerCase())
+      (i) => (i.title + " " + i.speaker + " " + i.company).toLowerCase().includes(filter.toLowerCase())
     ) : AGENDA;
     return {
       content: [{ type: "text", text: JSON.stringify(items, null, 2) }],
@@ -74,7 +74,7 @@ var get_agenda_default = defineTool2({
 });
 
 // src/lib/mcp/tools/get-speakers.ts
-import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.1";
 var SPEAKERS = [
   { name: "Marcin Ba\u0142a", role: "CEO Salumanus", company: "Salumanus" },
   { name: "Andrzej Wojnar", role: "Salumanus", company: "Salumanus" },
@@ -104,5 +104,5 @@ var mcp_default = defineMcp({
 });
 
 // lovable-mcp-supabase-entry.ts
-import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.0/stacks/supabase";
+import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.1/stacks/supabase";
 Deno.serve(createSupabaseHandler(mcp_default, { functionName: "mcp" }));
