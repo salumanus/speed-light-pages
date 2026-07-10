@@ -31,7 +31,7 @@
       {
         "name": "get_agenda",
         "title": "Get agenda",
-        "description": "Return the full session agenda for Dni Światła 2026 with time slots, titles, and speaker/company when known.",
+        "description": "Return the full session agenda for Dni Światła 2026 with time slots, titles, speakers, and companies when known.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
@@ -42,7 +42,7 @@
           "properties": {
             "filter": {
               "type": "string",
-              "description": "Optional case-insensitive substring to match against session title or speaker."
+              "description": "Optional case-insensitive substring to match against session title, speaker, or company."
             }
           },
           "additionalProperties": false,

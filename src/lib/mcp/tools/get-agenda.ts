@@ -23,18 +23,18 @@ export default defineTool({
   name: "get_agenda",
   title: "Get agenda",
   description:
-    "Return the full session agenda for Dni Światła 2026 with time slots, titles, and speaker/company when known.",
+    "Return the full session agenda for Dni Światła 2026 with time slots, titles, speakers, and companies when known.",
   inputSchema: {
     filter: z
       .string()
       .optional()
-      .describe("Optional case-insensitive substring to match against session title or speaker."),
+      .describe("Optional case-insensitive substring to match against session title, speaker, or company."),
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: ({ filter }) => {
     const items = filter
       ? AGENDA.filter((i) =>
-          (i.title + " " + i.speaker).toLowerCase().includes(filter.toLowerCase()),
+          (i.title + " " + i.speaker + " " + i.company).toLowerCase().includes(filter.toLowerCase()),
         )
       : AGENDA;
     return {
