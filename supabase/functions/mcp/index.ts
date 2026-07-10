@@ -3,10 +3,10 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.1";
 
 // src/lib/mcp/tools/get-event-info.ts
-import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.1";
 var get_event_info_default = defineTool({
   name: "get_event_info",
   title: "Get event info",
@@ -35,7 +35,7 @@ var get_event_info_default = defineTool({
 });
 
 // src/lib/mcp/tools/get-agenda.ts
-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.1";
 import { z } from "npm:zod@^3.25.76";
 var AGENDA = [
   { time: "9:00\u201310:00", title: "Otwarcie Dni \u015Awiat\u0142a", speaker: "" },
@@ -74,7 +74,7 @@ var get_agenda_default = defineTool2({
 });
 
 // src/lib/mcp/tools/get-speakers.ts
-import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.1";
 var SPEAKERS = [
   { name: "Marcin Ba\u0142a", role: "CEO Salumanus", company: "Salumanus" },
   { name: "Andrzej Wojnar", role: "Salumanus", company: "Salumanus" },
@@ -104,5 +104,5 @@ var mcp_default = defineMcp({
 });
 
 // lovable-mcp-supabase-entry.ts
-import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.0/stacks/supabase";
+import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.1/stacks/supabase";
 Deno.serve(createSupabaseHandler(mcp_default, { functionName: "mcp" }));
