@@ -109,6 +109,15 @@ const Agenda = () => {
                         {item.speaker}
                       </p>
                     )}
+                    {item.company && (
+                      <p
+                        className={`text-xs md:text-sm font-medium mt-1 ${
+                          item.highlight ? "text-accent-foreground/80" : "text-muted-foreground"
+                        }`}
+                      >
+                        {item.company}
+                      </p>
+                    )}
                   </div>
                 </motion.div>
               ))}
