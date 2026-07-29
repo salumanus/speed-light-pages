@@ -16,7 +16,7 @@ const Agenda = () => {
     { time: "10:25–10:50", title: t("Sieci LAN i Wi-Fi o dużej gęstości w praktyce: niezawodne działanie i mierzalna wartość biznesowa w hotelach, na stadionach i w kampusach", "LAN and Wi-Fi networks with high density in practice: reliable operation and measurable business value in hotels, stadiums and campuses"), speaker: "Grzegorz Róż", company: "DCN Europe", lang: "" },
     { time: "10:50–11:15", title: t("Heqa — Szczegóły wkrótce", "Heqa — Details coming soon"), speaker: "", company: "", lang: "" },
     { time: "11:15–11:45", title: t("Przerwa kawowa", "Coffee break"), speaker: "", company: "", lang: "" },
-    { time: "11:45–12:10", title: t("Raisecom — Szczegóły wkrótce", "Raisecom — Details coming soon"), speaker: "", company: "", lang: "" },
+    { time: "11:45–12:10", title: t("The New Formula for Metro Networks: Super-Converged Packet-Optical with SRv6 and 400G Coherent", "The New Formula for Metro Networks: Super-Converged Packet-Optical with SRv6 and 400G Coherent"), speaker: "Kevin Wang", company: "Raisecom", lang: "" },
     { time: "12:10–12:35", title: t("Paddock to Podium: Jak wysokowydajne DCI napędza rozproszoną infrastrukturę AI", "Paddock to Podium: How High-Performance DCI Powers Distributed AI Infrastructure"), speaker: "Nino Shaptoshvili", company: "Packetlight", lang: "" },
     { time: "12:35–13:00", title: t("Mniej pitstopów, szybsze okrążenie. Multiservice BTS jako węzeł agregujący sieci operatora", "Fewer pit stops, faster lap. Multiservice BTS as an aggregation node in the carrier network"), speaker: "Łukasz Sukiennik, Marcin Bała", company: "Salumanus", lang: "PL" },
     { time: "13:00–14:30", title: t("Lunch", "Lunch"), speaker: "", company: "", lang: "" },
