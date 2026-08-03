@@ -51,7 +51,19 @@ const Agenda = () => {
 
   const agendaItems: AgendaItem[] = [
     { time: "9:00–10:00", title: t("Otwarcie", "Opening"), speaker: "", company: "", lang: "" },
-    { time: "10:00–10:25", title: t("Jeden bolid, każdy tor. Uniwersalny moduł optyczny i jego konfiguracja w środowisku SRD", "One car, every track. A universal optical module and its configuration in an SRD environment"), speaker: "Marcin Bała, Mateusz Hąc", company: "Salumanus", lang: "PL" },
+    {
+      time: "10:00–10:25",
+      title: t("Jeden bolid, każdy tor. Uniwersalny moduł optyczny i jego konfiguracja w środowisku SRD", "One car, every track. A universal optical module and its configuration in an SRD environment"),
+      speaker: "Marcin Bała, Mateusz Hąc",
+      company: "Salumanus",
+      lang: "PL",
+      abstract: [
+        t(
+          "W Formule 1 to nie liczba samochodów decyduje o wyniku, lecz to, jak szybko zespół potrafi przygotować bolid pod konkretny tor. Inne ustawienia na Monako, inne na Monzy. Uniwersalny moduł optyczny GBC Photonics działa dokładnie jak takie podwozie: to jeden transceiver, który w środowisku SRD (Smart Recode Device) „stroimy\" pod wybraną trasę, pod sprzęt dowolnego producenta, prędkość od 1G do 1.6T, kanał DWDM, pasmo O-Band czy fronthaul 5G. Zamiast magazynu pełnego jednorazowych części zamiennych inżynier ma jeden moduł i SRD. Podczas prezentacji pokażemy, jak przebiega taki „pit stop\": przeprogramowanie i autotuning modułu do wolnego kanału na multiplekserze, diagnostyka najczęstszych błędów oraz realna redukcja stocków magazynowych i elektroodpadów. Krótki pitstop to wielka oszczędność czasu na torze.",
+          "In Formula 1 the result is not decided by the number of cars, but by how quickly the team can set a car up for a specific track. One setup for Monaco, another for Monza. The GBC Photonics universal optical module works exactly like such a chassis: it is a single transceiver that, in the SRD (Smart Recode Device) environment, you \"tune\" for a chosen route, for equipment from any vendor, for speeds from 1G to 1.6T, a DWDM channel, the O-Band or 5G fronthaul. Instead of a warehouse full of single-use spare parts, the engineer has one module and an SRD. During the presentation we will show how such a \"pit stop\" works: reprogramming and auto-tuning the module to a free channel on the multiplexer, diagnosing the most common faults, and a real reduction in warehouse stock and electronic waste. A short pit stop means a big saving of time on the track.",
+        ),
+      ],
+    },
     { time: "10:25–10:50", title: t("Sieci LAN i Wi-Fi o dużej gęstości w praktyce: niezawodne działanie i mierzalna wartość biznesowa w hotelach, na stadionach i w kampusach", "LAN and Wi-Fi networks with high density in practice: reliable operation and measurable business value in hotels, stadiums and campuses"), speaker: "Grzegorz Róż", company: "DCN Europe", lang: "" },
     { time: "10:50–11:15", title: t("Heqa — Szczegóły wkrótce", "Heqa — Details coming soon"), speaker: "", company: "", lang: "" },
     { time: "11:15–11:45", title: t("Przerwa kawowa", "Coffee break"), speaker: "", company: "", lang: "" },
@@ -89,12 +101,36 @@ const Agenda = () => {
         ),
       ],
     },
-    { time: "12:35–13:00", title: t("Mniej pitstopów, szybsze okrążenie. Multiservice BTS jako węzeł agregujący sieci operatora", "Fewer pit stops, faster lap. Multiservice BTS as an aggregation node in the carrier network"), speaker: "Łukasz Sukiennik, Marcin Bała", company: "Salumanus", lang: "PL" },
+    {
+      time: "12:35–13:00",
+      title: t("Mniej pitstopów, szybsze okrążenie. Multiservice BTS jako węzeł agregujący sieci operatora", "Fewer pit stops, faster lap. Multiservice BTS as an aggregation node in the carrier network"),
+      speaker: "Łukasz Sukiennik, Marcin Bała",
+      company: "Salumanus",
+      lang: "PL",
+      abstract: [
+        t(
+          "Każdy postój w alei serwisowej kosztuje czas, a każdy węzeł w sieci kosztuje CAPEX i OPEX. Najlepsze zespoły F1 wygrywają, ograniczając liczbę pit stopów i koncentrując całą pracę w jednym, dobrze zorganizowanym boksie. Ta sama logika stoi za koncepcją Multiservice BTS: węzeł stacji bazowej przestaje obsługiwać wyłącznie ruch komórkowy i staje się boksem agregującym, punktem zbiorczym dla usług biznesowych i światłowodowych. Mniej węzłów to lżejszy bolid, a lżejszy bolid to szybsze okrążenie, czyli niższy koszt na każdy przesłany Gbit. W prezentacji pokażemy architekturę takiego wielousługowego węzła i wskażemy, gdzie dokładnie powstaje oszczędność.",
+          "Every stop in the pit lane costs time, and every node in the network costs CAPEX and OPEX. The best F1 teams win by limiting the number of pit stops and concentrating all the work in one well-organized garage. The same logic sits behind the Multiservice BTS concept: a base station node stops handling mobile traffic alone and becomes an aggregating garage, a collection point for business and fiber services. Fewer nodes mean a lighter car, and a lighter car means a faster lap - in other words, a lower cost per Gbit transmitted. In the presentation we will show the architecture of such a multiservice node and point out exactly where the savings arise.",
+        ),
+      ],
+    },
     { time: "13:00–14:30", title: t("Lunch", "Lunch"), speaker: "", company: "", lang: "" },
     { time: "14:30–15:30", title: t(`Panel: „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki"`, `Panel: "Iskander or total blackout? How to prepare a telecommunications network for the challenges of geopolitics"`), speaker: "Łukasz Dec i inni", company: "", lang: "", highlight: true },
     { time: "15:30–16:00", title: t("Przerwa kawowa", "Coffee break"), speaker: "", company: "", lang: "" },
     { time: "16:00–16:25", title: t("DCNY — Szczegóły wkrótce", "DCNY — Details coming soon"), speaker: "", company: "", lang: "" },
-    { time: "16:25–16:50", title: t("Zdjąć balast, dodać prędkość. Koherentne 100/400/800G i IP over DWDM w praktyce", "Drop the ballast, add the speed. Coherent 100/400/800G and IP over DWDM in practice"), speaker: "Andrzej Wojnar, Adam Sedlin", company: "Salumanus, Exatel", lang: "PL" },
+    {
+      time: "16:25–16:50",
+      title: t("Zdjąć balast, dodać prędkość. Koherentne 100/400/800G i IP over DWDM w praktyce", "Drop the ballast, add the speed. Coherent 100/400/800G and IP over DWDM in practice"),
+      speaker: "Andrzej Wojnar, Adam Sedlin",
+      company: "Salumanus, Exatel",
+      lang: "PL",
+      abstract: [
+        t(
+          "Mistrzostwo rozstrzyga się na długiej prostej, tam liczy się czysta prędkość maksymalna i to, ile balastu zostawiło się w garażu. Architektura IP over DWDM to właśnie zdejmowanie balastu: usunięcie transponderów i modułów „szarych\", które dokładają sieci masy i oporu. Moduł koherentny GBC Photonics trafia wprost do portu QSFP routera i prosto na multiplekser. Granica między warstwą transportową a dostępową się zaciera. Efekt jest mierzalny jak czas okrążenia: do 65% niższy CAPEX w sieci szkieletowej, do 80% mniej miejsca i do 90% niższy pobór mocy. W prezentacji omówimy realne wdrożenia 100G i 400G oraz drogę do 800G, konkretne aplikacje oraz monitorowanie transmisji jako pitwall, czytający każde okrążenie.",
+          "The championship is decided on the long straight, where what counts is pure top speed and how much ballast you left behind in the garage. IP over DWDM architecture is exactly that kind of ballast removal: stripping out the transponders and \"grey\" modules that add mass and drag to the network. The GBC Photonics coherent module goes straight into the router's QSFP port and straight on to the multiplexer. The boundary between the transport and access layers blurs. The effect is as measurable as a lap time: up to 65% lower CAPEX in the backbone network, up to 80% less space and up to 90% lower power consumption. In the presentation we will cover real 100G and 400G deployments and the road to 800G, specific applications, and transmission monitoring as a pit wall that reads every single lap.",
+        ),
+      ],
+    },
     { time: "16:50–17:00", title: t("KAHOOT i sesja Q&A", "KAHOOT and Q&A session"), speaker: "", company: "", lang: "" },
     { time: "17:00", title: t("Rozpoczęcie imprezy w stylu Formuły 1", "Start of the Formula 1-style party"), speaker: "", company: "", lang: "" },
   ];

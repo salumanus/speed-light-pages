@@ -9,6 +9,7 @@ import lukaszSukiennikImg from "@/assets/lukasz-sukiennik.jpg";
 import grzegorzRozImg from "@/assets/grzegorz-roz.jpg";
 import ninoShaptoshviliImg from "@/assets/nino-shaptoshvili.jpg";
 import kevinWangImg from "@/assets/kevin-wang.jpg";
+import mateuszHacImg from "@/assets/mateusz-hac.jpg";
 import { useT } from "@/contexts/LanguageContext";
 
 interface BioSection {
@@ -223,10 +224,163 @@ const SpeakerSlider = ({ speakers, perPage }: { speakers: Speaker[]; perPage: nu
 const Speakers = () => {
   const t = useT();
   const salumanusSpeakers: Speaker[] = [
-    { name: "Marcin Bała", role: t("Dyrektor ds. Technicznych", "Chief Technical Officer"), desc: t("Ewangelista xWDM. Łączy biznes, technologię i umiejętność czytania branżowej przyszłości - tam, gdzie inni widzą trendy, on widzi następny ruch.", "xWDM evangelist. Combines business, technology and the ability to read the industry's future - where others see trends, he sees the next move."), linkedin: "https://www.linkedin.com/in/marcin-bala", image: marcinBalaImg },
-    { name: "Andrzej Wojnar", role: t("Product Manager", "Product Manager"), desc: t("Inżynier i manager z artystyczną duszą. W Salumanus zagląda w bity i fotony - a czasem dzieli je na czworo. Po godzinach: fotografia i enologia.", "Engineer and manager with an artistic soul. At Salumanus he looks into bits and photons - and sometimes splits them in four. After hours: photography and oenology."), linkedin: "https://www.linkedin.com/in/andrzej-wojnar-kr", image: andrzejWojnarImg },
-    { name: "Łukasz Sukiennik", role: t("Dyrektor Działu Wdrożenia i Serwisu", "Head of Deployment and Service"), desc: t("Inżynier automatyki z talentem do tłumaczenia zawiłości sieciowych projektów. Pracuje projektowo - autorskie rozwiązania, szyte pod konkretnego klienta.", "Automation engineer with a talent for explaining the complexities of network projects. Works project-based - custom solutions tailored to a specific client."), linkedin: "https://www.linkedin.com/in/lukasz-sukiennik", image: lukaszSukiennikImg },
-    { name: "Grzegorz Róż", role: t("Dyrektor Działu Produktów Sieciowych", "Head of Network Products"), desc: t("Zarządza Działem Produktów Sieciowych DCN Europe - stąd startują najlepsze sieci LAN i Wi-Fi 6. Łączy potrzeby klienta, integratora i marki w jedno działające rozwiązanie.", "Manages the DCN Europe Network Products department - the launchpad for the best LAN and Wi-Fi 6 networks. Combines the needs of the client, the integrator and the brand into one working solution."), linkedin: "https://www.linkedin.com/in/grzegorzroz/", image: grzegorzRozImg },
+    {
+      name: "Marcin Bała",
+      role: t("Dyrektor ds. Technicznych", "Chief Technical Officer"),
+      desc: t("Ewangelista xWDM. Łączy biznes, technologię i umiejętność czytania branżowej przyszłości - tam, gdzie inni widzą trendy, on widzi następny ruch.", "xWDM evangelist. Combines business, technology and the ability to read the industry's future - where others see trends, he sees the next move."),
+      linkedin: "https://www.linkedin.com/in/marcin-bala",
+      image: marcinBalaImg,
+      bio: [
+        {
+          text: t(
+            "Marcin w Salumanus odpowiada za rozwój firmy na poziomie technologicznym, strukturalnym i zarządczym. Wdraża innowacje i traktuje sukcesy firmy jak własne, czując się realną częścią tego, co się w niej dzieje.",
+            "At Salumanus, Marcin is responsible for the company's development on the technological, structural and managerial level. He implements innovations and treats the company's successes as his own, feeling like a genuine part of what goes on there.",
+          ),
+        },
+        {
+          text: t(
+            "Jego domeną jest multipleksacja z podziałem długości fali. CWDM, DWDM, technologia koherentna czy rozwiązania typu alien wavelength to tematy, o których może rozmawiać godzinami, wciąż znajdując w nich nowe wątki i niuanse.",
+            "His domain is wavelength division multiplexing. CWDM, DWDM, coherent technology and alien wavelength solutions are subjects he can talk about for hours, still finding new threads and nuances in them.",
+          ),
+        },
+        {
+          text: t(
+            "Napędza go determinacja i głód działania. Im trudniejsze wyzwanie, tym większa satysfakcja z jego rozwiązania, a poczucie, że dany dzień przyniósł konkretny efekt, jest dla niego istotnym paliwem do dalszej pracy.",
+            "He is driven by determination and a hunger for action. The harder the challenge, the greater the satisfaction of solving it - and the feeling that a given day has produced a tangible result is important fuel for his further work.",
+          ),
+        },
+        {
+          text: t(
+            "Osobną fascynacją są dla niego dane, a konkretnie poszukiwanie zależności i wzorców oraz odkrywanie, jak poszczególne elementy sieci łączą się ze sobą i dokąd to prowadzi.",
+            "Data is a fascination of its own for him - specifically the search for correlations and patterns, and discovering how individual network elements connect with one another and where that leads.",
+          ),
+        },
+        {
+          text: t(
+            "Jako prelegent nie mówi o technologii w oderwaniu od rzeczywistości biznesowej. Łączy głęboką wiedzę inżynierską z doświadczeniem menedżerskim, dzięki czemu potrafi przełożyć złożone zagadnienia sieciowe na konkretne, praktyczne wnioski.",
+            "As a speaker, he never discusses technology in isolation from business reality. He combines deep engineering knowledge with managerial experience, which lets him translate complex networking topics into concrete, practical conclusions.",
+          ),
+        },
+      ],
+    },
+    {
+      name: "Andrzej Wojnar",
+      role: t("Product Manager", "Product Manager"),
+      desc: t("Inżynier i manager z artystyczną duszą. W Salumanus zagląda w bity i fotony - a czasem dzieli je na czworo. Po godzinach: fotografia i enologia.", "Engineer and manager with an artistic soul. At Salumanus he looks into bits and photons - and sometimes splits them in four. After hours: photography and oenology."),
+      linkedin: "https://www.linkedin.com/in/andrzej-wojnar-kr",
+      image: andrzejWojnarImg,
+      bio: [
+        {
+          text: t(
+            "Andrzej w Salumanus kieruje operacjami IT, opierając się na solidnym zapleczu technicznym w obszarze sieci, transmisji optycznej i dostarczania usług. Odpowiada za wydajność operacyjną, niezawodność infrastruktury oraz pracę zespołów inżynierskich.",
+            "At Salumanus, Andrzej leads IT operations, backed by a solid technical grounding in networks, optical transport and service delivery. He is responsible for operational performance, infrastructure reliability and the work of the engineering teams.",
+          ),
+        },
+        {
+          text: t(
+            "Jego domeną są sieci i transmisja optyczna, a codzienna praca toczy się wokół utrzymania usług na wysokim poziomie niezawodności. Opiera ją na rygorystycznych wskaźnikach KPI i SLA, które traktuje jako realne narzędzie zarządzania jakością, a nie formalność.",
+            "His domain is networks and optical transport, and his daily work revolves around keeping services at a high level of reliability. He builds it on rigorous KPIs and SLAs, which he treats as a genuine quality management tool rather than a formality.",
+          ),
+        },
+        {
+          text: t(
+            "W podejściu do pracy stawia na ciągłe doskonalenie procesów. Metodyki Lean i Scrum nie są dla niego hasłami, lecz sposobem na to, by usługi działały lepiej, a zespoły pracowały sprawniej.",
+            "His approach to work is built on continuous process improvement. Lean and Scrum are not buzzwords to him but a way to make services run better and teams work more efficiently.",
+          ),
+        },
+        {
+          text: t(
+            "Jego wyróżnikiem jest umiejętność łączenia operacji technicznych ze strategicznymi celami biznesowymi. Jako prelegent pokazuje, jak przełożyć złożoność infrastruktury IT na konkretne decyzje i wyniki, które rozumie zarówno inżynier, jak i osoba odpowiedzialna za stronę biznesową.",
+            "What sets him apart is the ability to connect technical operations with strategic business goals. As a speaker, he shows how to translate the complexity of IT infrastructure into concrete decisions and results that both an engineer and someone responsible for the business side can understand.",
+          ),
+        },
+      ],
+    },
+    {
+      name: "Łukasz Sukiennik",
+      role: t("Dyrektor Działu Wdrożenia i Serwisu", "Head of Deployment and Service"),
+      desc: t("Inżynier automatyki z talentem do tłumaczenia zawiłości sieciowych projektów. Pracuje projektowo - autorskie rozwiązania, szyte pod konkretnego klienta.", "Automation engineer with a talent for explaining the complexities of network projects. Works project-based - custom solutions tailored to a specific client."),
+      linkedin: "https://www.linkedin.com/in/lukasz-sukiennik",
+      image: lukaszSukiennikImg,
+      bio: [
+        {
+          text: t(
+            "Łukasz w Salumanus kieruje Działem Systemów Transmisyjnych, prowadząc zespół inżynierów odpowiedzialny za sieci optyczne i transport danych. To on stoi za projektowaniem i wdrażaniem rozwiązań, które przenoszą ruch w skali setek gigabitów na duże odległości.",
+            "At Salumanus, Łukasz heads the Transmission Systems Department, leading a team of engineers responsible for optical networks and data transport. He is the person behind the design and deployment of solutions that carry traffic at the scale of hundreds of gigabits over long distances.",
+          ),
+        },
+        {
+          text: t(
+            "Jego domeną są aktywne systemy transmisyjne, a w szczególności technologie DWDM i OTN oraz architektury IP over DWDM. To obszar, w którym porusza się swobodnie zarówno na poziomie pojedynczego modułu, jak i całej topologii sieci operatorskiej czy data center.",
+            "His domain is active transmission systems, in particular DWDM and OTN technologies and IP over DWDM architectures. It is an area he navigates comfortably at the level of a single module as well as the entire topology of a carrier or data center network.",
+          ),
+        },
+        {
+          text: t(
+            "W pracy patrzy nie tylko na to, co działa dziś, ale też na to, dokąd zmierza branża. Śledzi i komentuje kierunki rozwoju transmisji optycznej, od modułów 800G opartych na układach DSP nowej generacji po kwantową dystrybucję klucza jako praktyczny sposób na podniesienie bezpieczeństwa istniejących sieci.",
+            "In his work he looks not only at what works today, but also at where the industry is heading. He follows and comments on the directions of optical transport development, from 800G modules built on next-generation DSP chips to quantum key distribution as a practical way to raise the security of existing networks.",
+          ),
+        },
+        {
+          text: t(
+            "Ta perspektywa czyni go rozpoznawalnym głosem eksperckim, którego prognozy dotyczące rozwoju infrastruktury telekomunikacyjnej i data center trafiają do mediów branżowych.",
+            "That perspective has made him a recognized expert voice, whose forecasts on the development of telecommunications and data center infrastructure reach the industry press.",
+          ),
+        },
+        {
+          text: t(
+            "Jako prelegent nie zatrzymuje się na opisie technologii. Pokazuje, w którą stronę zmierza rynek i co konkretnie oznacza to dla osób planujących rozwój własnej sieci w najbliższych latach.",
+            "As a speaker, he does not stop at describing technology. He shows where the market is heading and what that means in concrete terms for anyone planning the development of their own network in the years ahead.",
+          ),
+        },
+      ],
+    },
+    {
+      name: "Mateusz Hąc",
+      role: t("Manager ds. Zakupów", "Purchasing Manager"),
+      desc: t("Szczegóły wkrótce.", "Details coming soon."),
+      linkedin: "https://www.linkedin.com/in/mateusz-h%C4%85c-1b6879182/",
+      image: mateuszHacImg,
+    },
+    {
+      name: "Grzegorz Róż",
+      role: t("Dyrektor Działu Produktów Sieciowych", "Head of Network Products"),
+      desc: t("Zarządza Działem Produktów Sieciowych DCN Europe - stąd startują najlepsze sieci LAN i Wi-Fi 6. Łączy potrzeby klienta, integratora i marki w jedno działające rozwiązanie.", "Manages the DCN Europe Network Products department - the launchpad for the best LAN and Wi-Fi 6 networks. Combines the needs of the client, the integrator and the brand into one working solution."),
+      linkedin: "https://www.linkedin.com/in/grzegorzroz/",
+      image: grzegorzRozImg,
+      bio: [
+        {
+          text: t(
+            "Grzegorz kieruje Działem Produktów Sieciowych w DCN Europe, gdzie łączy perspektywy klienta końcowego, integratora i marki DCN. Jest liderem, który sam buduje i rozwija swój zespół, a na co dzień dba o to, by urządzenia sieciowe DCN odpowiadały na realne potrzeby europejskiego rynku.",
+            "Grzegorz heads the Network Products department at DCN Europe, where he brings together the perspectives of the end customer, the integrator and the DCN brand. He is a leader who builds and develops his own team, and his day-to-day focus is on making sure DCN network devices answer the real needs of the European market.",
+          ),
+        },
+        {
+          text: t(
+            "Jego specjalnością są sieci LAN i łączność bezprzewodowa. Łączy w tym obszarze rolę menedżera z kompetencjami eksperta sieciowego, a z branżą telekomunikacyjną i informatyczną związany jest od wielu lat, wcześniej między innymi w Orange i Telekomunikacji Polskiej.",
+            "His specialty is LAN networks and wireless connectivity. In this area he combines the role of a manager with the skills of a network expert, and he has been part of the telecommunications and IT industry for many years, previously at Orange and Telekomunikacja Polska, among others.",
+          ),
+        },
+        {
+          text: t(
+            "W swojej pracy z pasją buduje połączenia, nie tylko te sieciowe. Potrafi zestawić ze sobą oczekiwania klienta, możliwości integratora i ofertę marki DCN tak, by każda ze stron na tym zyskiwała.",
+            "In his work he builds connections with passion - and not only the network kind. He knows how to line up the client's expectations, the integrator's capabilities and the DCN brand's offering so that every side comes out ahead.",
+          ),
+        },
+        {
+          text: t(
+            "Chętnie dzieli się wiedzą. Prowadzi szkolenia z zakresu sieci komputerowych, a jako ekspert branżowy komentuje w mediach kierunki rozwoju rynku, w tym zagadnienia bezpieczeństwa sieci i odporności urządzeń na nowe zagrożenia.",
+            "He is happy to share what he knows. He runs training courses on computer networks, and as an industry expert he comments in the media on where the market is heading, including network security and how resilient devices are to emerging threats.",
+          ),
+        },
+        {
+          text: t(
+            "Na scenie czuje się swobodnie, bo szkolenie i objaśnianie technologii to jego codzienność. Złożone zagadnienia sieciowe przekłada na konkretne korzyści, zrozumiałe zarówno dla inżyniera, jak i dla osoby odpowiedzialnej za wybór rozwiązań w firmie.",
+            "He is at ease on stage, because training and explaining technology is his everyday work. He translates complex networking topics into concrete benefits that are equally clear to an engineer and to the person choosing solutions for a company.",
+          ),
+        },
+      ],
+    },
     {
       name: "Nino Shaptoshvili",
       role: t("Wiceprezes ds. Sprzedaży, PacketLight Networks", "Vice President of Sales, PacketLight Networks"),
@@ -333,7 +487,7 @@ const Speakers = () => {
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-3xl">{t("Osiągnęli już niejeden szczyt przepustowości. Mistrzowie systemów xWDM i transmisji optycznej - na torze i w sieci nie ma dla nich niemożliwych prędkości.", "They've already reached more than one bandwidth peak. Masters of xWDM systems and optical transmission - on the track and in the network, no speed is impossible for them.")}</p>
         </AnimatedSection>
-        <SpeakerSlider speakers={salumanusSpeakers} perPage={6} />
+        <SpeakerSlider speakers={salumanusSpeakers} perPage={7} />
       </div>
     </section>
   </>
