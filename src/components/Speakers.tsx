@@ -105,7 +105,7 @@ const SpeakerDialog = ({
                 <img src={speaker.image} alt={speaker.name} className="h-full w-full object-cover" />
               </div>
 
-              <DialogTitle className="font-heading text-2xl leading-tight text-foreground sm:text-3xl">
+              <DialogTitle className="font-heading font-normal text-2xl leading-tight text-foreground sm:text-3xl">
                 {speaker.name}
               </DialogTitle>
               <DialogDescription className="mt-1 text-sm font-medium text-accent">

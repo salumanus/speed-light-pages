@@ -42,7 +42,7 @@ const RegistrationModal = ({ open, onOpenChange }: RegistrationModalProps) => {
           {success ? (
             <div className="text-center py-8">
               <CheckCircle2 className="w-16 h-16 mx-auto mb-4 text-accent" />
-              <DialogTitle className="font-heading text-2xl mb-2">
+              <DialogTitle className="font-heading font-normal text-2xl mb-2">
                 Dziękujemy za rejestrację!
               </DialogTitle>
               <DialogDescription className="text-white/70">
@@ -51,7 +51,7 @@ const RegistrationModal = ({ open, onOpenChange }: RegistrationModalProps) => {
             </div>
           ) : (
             <>
-              <DialogTitle className="font-heading text-3xl mb-2">Rejestracja</DialogTitle>
+              <DialogTitle className="font-heading font-normal text-3xl mb-2">Rejestracja</DialogTitle>
               <DialogDescription className="text-white/70 mb-6">
                 Wypełnij formularz, aby zarejestrować się na konferencję.
               </DialogDescription>
