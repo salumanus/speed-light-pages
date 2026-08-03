@@ -302,6 +302,19 @@ const Speakers = () => {
             "Provided pre-sales and post-sales technical support for Raisecom's overseas sales managers exploring the markets of India, Southeast Asia, Latin America and Europe.",
           ),
         },
+        {
+          title: t("O Raisecom", "About Raisecom"),
+          text: t(
+            "Raisecom to globalny dostawca kompleksowych rozwiązań telekomunikacyjnych i sieciowych. Firma ma siedzibę w Pekinie i jest notowana na giełdzie w Szanghaju (SHA: 603803). W ostatniej dekadzie rozwijała się w imponującym tempie, obsługując partnerów i klientów w ponad 80 krajach na świecie.",
+            "Raisecom is a global leading vendor providing comprehensive telecommunication and networking solutions. Headquartered in Beijing and listed on the Shanghai Stock Exchange (SHA: 603803), Raisecom has grown remarkably over the last decade, serving partners and customers in more than 80 countries worldwide.",
+          ),
+        },
+        {
+          text: t(
+            "Dysponując ponad trzema centrami R&D i własnym zakładem produkcyjnym w Chinach, Raisecom wykorzystuje lokalne talenty i zaplecze łańcucha dostaw, by projektować, rozwijać i dostarczać produkty z najwyższej półki w efektywnej kosztowo formule. Dzięki rozbudowanej sieci lokalnych przedstawicielstw i spółek zależnych na każdym kontynencie firma konsekwentnie dostarcza szyte na miarę rozwiązania Packet Transport, Optical Transport, Broadband Access, Industrial/IoT i Wireless Networking - operatorom oraz klientom z branż wertykalnych, lokalnie.",
+            "With more than three R&D centers and one manufacturing facility in China, Raisecom is able to harness local talent and supply chain resources to design, develop and provide best-in-class, cost-efficient products. Through well-established local representative offices and branch companies on every continent, Raisecom has always been dedicated to providing tailored Packet Transport, Optical Transport, Broadband Access, Industrial/IoT and Wireless Networking solutions to service providers and vertical industry customers locally.",
+          ),
+        },
       ],
     },
   ];
