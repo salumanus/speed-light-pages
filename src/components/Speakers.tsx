@@ -337,39 +337,21 @@ const Speakers = () => {
     },
     {
       name: "Mateusz Hąc",
-      role: t("Manager ds. Zakupów", "Purchasing Manager"),
-      desc: t("Od ponad pięciu lat prowadzi w Salumanus logistykę międzynarodową i zakupy. Pilnuje, by sprzęt był u klienta na czas.", "For over five years he has run international logistics and purchasing at Salumanus. Makes sure hardware reaches the client on time."),
+      role: t("Menedżer ds. Produktu i Zakupów", "Product and Purchasing Manager"),
+      desc: t("Od maja 2025 roku odpowiada w Salumanus za produkty i zakupy.", "Since May 2025, he has been responsible for products and purchasing at Salumanus."),
       linkedin: "https://www.linkedin.com/in/mateusz-h%C4%85c-1b6879182/",
       image: mateuszHacImg,
       bio: [
         {
           text: t(
-            "Mateusz odpowiada w Salumanus za logistykę międzynarodową i zakupy, a z firmą związany jest od ponad pięciu lat. To dzięki niemu magazyn działa bez zakłóceń, zamówienia docierają na czas, a urządzenia sieciowe marek takich jak GBC Photonics, DCN Europe czy PacketLight Networks są zawsze dostępne dla klientów.",
-            "At Salumanus, Mateusz is responsible for international logistics and purchasing, and he has been with the company for over five years. He is the reason the warehouse runs without disruption, orders arrive on time, and network devices from brands such as GBC Photonics, DCN Europe and PacketLight Networks are always available to customers.",
+            "Mateusz od maja 2025 roku pracuje w Salumanus jako Menedżer ds. Produktu i Zakupów. Odpowiada za rozwój oferty produktowej, współpracę z dostawcami oraz proces zakupowy.",
+            "Mateusz has worked at Salumanus as Product and Purchasing Manager since May 2025. He is responsible for developing the product portfolio, working with suppliers and managing the purchasing process.",
           ),
         },
         {
           text: t(
-            "Jego domeną jest logistyka, którą, jak sam mówi, ma we krwi. Panuje nad przepływem sprzętu w łańcuchu spinającym wielu dostawców i wiele zespołów, dbając o to, by żaden element projektu nie utknął na etapie dostawy.",
-            "His domain is logistics, which - as he puts it himself - he has in his blood. He keeps control of the flow of hardware across a chain that ties together many suppliers and many teams, making sure no part of a project gets stuck at the delivery stage.",
-          ),
-        },
-        {
-          text: t(
-            "W pracy ceni to, że w logistyce nieustannie coś się dzieje. Nie ma tu miejsca na nudę, są za to ambitne wyzwania i codzienna współpraca na styku różnych działów, co dobrze odpowiada jego uporządkowanemu podejściu.",
-            "What he values in his work is that something is always happening in logistics. There is no room for boredom here, but there are demanding challenges and daily cooperation at the meeting point of different departments - which suits his methodical approach well.",
-          ),
-        },
-        {
-          text: t(
-            "Poza sprawnością organizacyjną wyróżnia go serdeczność i koleżeńskość. To osoba, z którą dobrze się współpracuje i która potrafi zadbać o dobrą atmosferę tam, gdzie stykają się różne zespoły i priorytety.",
-            "Beyond his organizational skill, what sets him apart is warmth and a collegial attitude. He is someone who is easy to work with and who knows how to look after the atmosphere where different teams and priorities meet.",
-          ),
-        },
-        {
-          text: t(
-            "W strukturze Salumanus pełni rolę, której z zewnątrz na co dzień nie widać, a która decyduje o tym, czy technologia w ogóle trafi do klienta na czas. To zaplecze, na którym opiera się realizacja każdego projektu.",
-            "Within the Salumanus structure he fills a role that is not visible from the outside day to day, yet decides whether the technology reaches the client on time at all. It is the backbone on which the delivery of every project rests.",
+            "Łączy znajomość rynku z potrzebami klientów, dbając o dobór właściwych rozwiązań i sprawną współpracę między dostawcami a zespołami Salumanus.",
+            "He combines market knowledge with customer needs, ensuring the right solutions are selected and fostering effective cooperation between suppliers and Salumanus teams.",
           ),
         },
       ],
