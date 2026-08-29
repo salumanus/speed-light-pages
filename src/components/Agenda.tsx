@@ -104,7 +104,7 @@ const Agenda = () => {
     {
       time: "12:35–13:00",
       title: t("Mniej pitstopów, szybsze okrążenie. Multiservice BTS jako węzeł agregujący sieci operatora", "Fewer pit stops, faster lap. Multiservice BTS as an aggregation node in the carrier network"),
-      speaker: "Łukasz Sukiennik, Marcin Bała",
+      speaker: "Marcin Bała",
       company: "Salumanus",
       lang: "PL",
       abstract: [
