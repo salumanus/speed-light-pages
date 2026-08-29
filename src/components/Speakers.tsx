@@ -5,7 +5,6 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/compone
 import AnimatedSection from "./AnimatedSection";
 import marcinBalaImg from "@/assets/marcin-bala.jpg";
 import andrzejWojnarImg from "@/assets/andrzej-wojnar.jpg";
-import lukaszSukiennikImg from "@/assets/lukasz-sukiennik.jpg";
 import grzegorzRozImg from "@/assets/grzegorz-roz.jpg";
 import ninoShaptoshviliImg from "@/assets/nino-shaptoshvili.jpg";
 import kevinWangImg from "@/assets/kevin-wang.jpg";
@@ -292,45 +291,6 @@ const Speakers = () => {
           text: t(
             "Jego wyróżnikiem jest umiejętność łączenia operacji technicznych ze strategicznymi celami biznesowymi. Jako prelegent pokazuje, jak przełożyć złożoność infrastruktury IT na konkretne decyzje i wyniki, które rozumie zarówno inżynier, jak i osoba odpowiedzialna za stronę biznesową.",
             "What sets him apart is the ability to connect technical operations with strategic business goals. As a speaker, he shows how to translate the complexity of IT infrastructure into concrete decisions and results that both an engineer and someone responsible for the business side can understand.",
-          ),
-        },
-      ],
-    },
-    {
-      name: "Łukasz Sukiennik",
-      role: t("Dyrektor Działu Wdrożenia i Serwisu", "Head of Deployment and Service"),
-      desc: t("Inżynier automatyki z talentem do tłumaczenia zawiłości sieciowych projektów. Pracuje projektowo - autorskie rozwiązania, szyte pod konkretnego klienta.", "Automation engineer with a talent for explaining the complexities of network projects. Works project-based - custom solutions tailored to a specific client."),
-      linkedin: "https://www.linkedin.com/in/lukasz-sukiennik",
-      image: lukaszSukiennikImg,
-      bio: [
-        {
-          text: t(
-            "Łukasz w Salumanus kieruje Działem Systemów Transmisyjnych, prowadząc zespół inżynierów odpowiedzialny za sieci optyczne i transport danych. To on stoi za projektowaniem i wdrażaniem rozwiązań, które przenoszą ruch w skali setek gigabitów na duże odległości.",
-            "At Salumanus, Łukasz heads the Transmission Systems Department, leading a team of engineers responsible for optical networks and data transport. He is the person behind the design and deployment of solutions that carry traffic at the scale of hundreds of gigabits over long distances.",
-          ),
-        },
-        {
-          text: t(
-            "Jego domeną są aktywne systemy transmisyjne, a w szczególności technologie DWDM i OTN oraz architektury IP over DWDM. To obszar, w którym porusza się swobodnie zarówno na poziomie pojedynczego modułu, jak i całej topologii sieci operatorskiej czy data center.",
-            "His domain is active transmission systems, in particular DWDM and OTN technologies and IP over DWDM architectures. It is an area he navigates comfortably at the level of a single module as well as the entire topology of a carrier or data center network.",
-          ),
-        },
-        {
-          text: t(
-            "W pracy patrzy nie tylko na to, co działa dziś, ale też na to, dokąd zmierza branża. Śledzi i komentuje kierunki rozwoju transmisji optycznej, od modułów 800G opartych na układach DSP nowej generacji po kwantową dystrybucję klucza jako praktyczny sposób na podniesienie bezpieczeństwa istniejących sieci.",
-            "In his work he looks not only at what works today, but also at where the industry is heading. He follows and comments on the directions of optical transport development, from 800G modules built on next-generation DSP chips to quantum key distribution as a practical way to raise the security of existing networks.",
-          ),
-        },
-        {
-          text: t(
-            "Ta perspektywa czyni go rozpoznawalnym głosem eksperckim, którego prognozy dotyczące rozwoju infrastruktury telekomunikacyjnej i data center trafiają do mediów branżowych.",
-            "That perspective has made him a recognized expert voice, whose forecasts on the development of telecommunications and data center infrastructure reach the industry press.",
-          ),
-        },
-        {
-          text: t(
-            "Jako prelegent nie zatrzymuje się na opisie technologii. Pokazuje, w którą stronę zmierza rynek i co konkretnie oznacza to dla osób planujących rozwój własnej sieci w najbliższych latach.",
-            "As a speaker, he does not stop at describing technology. He shows where the market is heading and what that means in concrete terms for anyone planning the development of their own network in the years ahead.",
           ),
         },
       ],
