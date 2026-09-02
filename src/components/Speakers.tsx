@@ -264,33 +264,15 @@ const Speakers = () => {
     },
     {
       name: "Andrzej Wojnar",
-      role: t("Product Manager", "Product Manager"),
-      desc: t("Inżynier i manager z artystyczną duszą. W Salumanus zagląda w bity i fotony - a czasem dzieli je na czworo. Po godzinach: fotografia i enologia.", "Engineer and manager with an artistic soul. At Salumanus he looks into bits and photons - and sometimes splits them in four. After hours: photography and oenology."),
+      role: t("Technical Sales Leader", "Technical Sales Leader"),
+      desc: t("Szczegóły wkrótce.", "Details coming soon."),
       linkedin: "https://www.linkedin.com/in/andrzej-wojnar-kr",
       image: andrzejWojnarImg,
       bio: [
         {
           text: t(
-            "Andrzej w Salumanus kieruje operacjami IT, opierając się na solidnym zapleczu technicznym w obszarze sieci, transmisji optycznej i dostarczania usług. Odpowiada za wydajność operacyjną, niezawodność infrastruktury oraz pracę zespołów inżynierskich.",
-            "At Salumanus, Andrzej leads IT operations, backed by a solid technical grounding in networks, optical transport and service delivery. He is responsible for operational performance, infrastructure reliability and the work of the engineering teams.",
-          ),
-        },
-        {
-          text: t(
-            "Jego domeną są sieci i transmisja optyczna, a codzienna praca toczy się wokół utrzymania usług na wysokim poziomie niezawodności. Opiera ją na rygorystycznych wskaźnikach KPI i SLA, które traktuje jako realne narzędzie zarządzania jakością, a nie formalność.",
-            "His domain is networks and optical transport, and his daily work revolves around keeping services at a high level of reliability. He builds it on rigorous KPIs and SLAs, which he treats as a genuine quality management tool rather than a formality.",
-          ),
-        },
-        {
-          text: t(
-            "W podejściu do pracy stawia na ciągłe doskonalenie procesów. Metodyki Lean i Scrum nie są dla niego hasłami, lecz sposobem na to, by usługi działały lepiej, a zespoły pracowały sprawniej.",
-            "His approach to work is built on continuous process improvement. Lean and Scrum are not buzzwords to him but a way to make services run better and teams work more efficiently.",
-          ),
-        },
-        {
-          text: t(
-            "Jego wyróżnikiem jest umiejętność łączenia operacji technicznych ze strategicznymi celami biznesowymi. Jako prelegent pokazuje, jak przełożyć złożoność infrastruktury IT na konkretne decyzje i wyniki, które rozumie zarówno inżynier, jak i osoba odpowiedzialna za stronę biznesową.",
-            "What sets him apart is the ability to connect technical operations with strategic business goals. As a speaker, he shows how to translate the complexity of IT infrastructure into concrete decisions and results that both an engineer and someone responsible for the business side can understand.",
+            "Szczegóły wkrótce.",
+            "Details coming soon.",
           ),
         },
       ],
