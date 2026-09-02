@@ -304,8 +304,8 @@ const Speakers = () => {
       bio: [
         {
           text: t(
-            "Mateusz od maja 2025 roku pracuje w Salumanus jako Menedżer ds. Produktu i Zakupów. Odpowiada za rozwój oferty produktowej, współpracę z dostawcami oraz proces zakupowy.",
-            "Mateusz has worked at Salumanus as Product and Purchasing Manager since May 2025. He is responsible for developing the product portfolio, working with suppliers and managing the purchasing process.",
+            "Mateusz od maja 2025 roku pracuje w Salumanus. Kieruje Działem Modułów Optycznych, odpowiadając za rozwój oferty produktowej oraz całe R&D związane z działaniem modułów optycznych. Jest również odpowiedzialny za współpracę i relacje z dostawcami oraz wszystkie procesy zakupowe.",
+            "Mateusz has worked at Salumanus since May 2025. He leads the Optical Modules Department, where he is responsible for developing the product portfolio and all R&D related to optical module performance and operation. He is also responsible for supplier cooperation and relationships, as well as all purchasing processes.",
           ),
         },
         {
