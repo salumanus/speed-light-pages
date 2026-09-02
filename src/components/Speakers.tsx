@@ -265,14 +265,14 @@ const Speakers = () => {
     {
       name: "Andrzej Wojnar",
       role: t("Technical Sales Leader", "Technical Sales Leader"),
-      desc: t("Szczegóły wkrótce.", "Details coming soon."),
+      desc: t("Główny architekt i inżynier rozwiązań w Salumanus, ekspert w dziedzinie transmisji optycznej. Odpowiada za rozwój oferty sprzedażowej zaawansowanych modułów optycznych, w tym koherentnych, oraz środowiska Smart Recode Device stojącego za ideą Uniwersalnego Modułu Optycznego. Specjalizuje się w projektowaniu rozwiązań transmisyjnych dopasowanych do realnych potrzeb operatorów i integratorów, ze szczególnym naciskiem na technologie IP-over-DWDM i otwarte sieci optyczne.", "Lead architect and solutions engineer at Salumanus, specializing in optical transmission. He is responsible for developing the sales portfolio of advanced optical modules, including coherent modules, as well as the Smart Recode Device environment behind the Universal Optical Module concept. He specializes in designing transmission solutions tailored to the real-world needs of network operators and system integrators, with a particular focus on IP-over-DWDM technologies and open optical networks."),
       linkedin: "https://www.linkedin.com/in/andrzej-wojnar-kr",
       image: andrzejWojnarImg,
       bio: [
         {
           text: t(
-            "Szczegóły wkrótce.",
-            "Details coming soon.",
+            "Główny architekt i inżynier rozwiązań w Salumanus, ekspert w dziedzinie transmisji optycznej. Odpowiada za rozwój oferty sprzedażowej zaawansowanych modułów optycznych, w tym koherentnych, oraz środowiska Smart Recode Device stojącego za ideą Uniwersalnego Modułu Optycznego. Specjalizuje się w projektowaniu rozwiązań transmisyjnych dopasowanych do realnych potrzeb operatorów i integratorów, ze szczególnym naciskiem na technologie IP-over-DWDM i otwarte sieci optyczne.",
+            "Lead architect and solutions engineer at Salumanus, specializing in optical transmission. He is responsible for developing the sales portfolio of advanced optical modules, including coherent modules, as well as the Smart Recode Device environment behind the Universal Optical Module concept. He specializes in designing transmission solutions tailored to the real-world needs of network operators and system integrators, with a particular focus on IP-over-DWDM technologies and open optical networks.",
           ),
         },
       ],
