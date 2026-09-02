@@ -335,24 +335,6 @@ const Speakers = () => {
             "His specialty is LAN networks and wireless connectivity. In this area he combines the role of a manager with the skills of a network expert, and he has been part of the telecommunications and IT industry for many years, previously at Orange and Telekomunikacja Polska, among others.",
           ),
         },
-        {
-          text: t(
-            "W swojej pracy z pasją buduje połączenia, nie tylko te sieciowe. Potrafi zestawić ze sobą oczekiwania klienta, możliwości integratora i ofertę marki DCN tak, by każda ze stron na tym zyskiwała.",
-            "In his work he builds connections with passion - and not only the network kind. He knows how to line up the client's expectations, the integrator's capabilities and the DCN brand's offering so that every side comes out ahead.",
-          ),
-        },
-        {
-          text: t(
-            "Chętnie dzieli się wiedzą. Prowadzi szkolenia z zakresu sieci komputerowych, a jako ekspert branżowy komentuje w mediach kierunki rozwoju rynku, w tym zagadnienia bezpieczeństwa sieci i odporności urządzeń na nowe zagrożenia.",
-            "He is happy to share what he knows. He runs training courses on computer networks, and as an industry expert he comments in the media on where the market is heading, including network security and how resilient devices are to emerging threats.",
-          ),
-        },
-        {
-          text: t(
-            "Na scenie czuje się swobodnie, bo szkolenie i objaśnianie technologii to jego codzienność. Złożone zagadnienia sieciowe przekłada na konkretne korzyści, zrozumiałe zarówno dla inżyniera, jak i dla osoby odpowiedzialnej za wybór rozwiązań w firmie.",
-            "He is at ease on stage, because training and explaining technology is his everyday work. He translates complex networking topics into concrete benefits that are equally clear to an engineer and to the person choosing solutions for a company.",
-          ),
-        },
       ],
     },
     {
