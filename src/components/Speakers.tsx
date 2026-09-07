@@ -9,6 +9,7 @@ import grzegorzRozImg from "@/assets/grzegorz-roz.jpg";
 import ninoShaptoshviliImg from "@/assets/nino-shaptoshvili.jpg";
 import kevinWangImg from "@/assets/kevin-wang.jpg";
 import mateuszHacImg from "@/assets/mateusz-hac.jpg";
+import staffordYuImg from "@/assets/stafford-yu.jpg";
 import { useT } from "@/contexts/LanguageContext";
 
 interface BioSection {
@@ -315,6 +316,26 @@ const Speakers = () => {
           text: t(
             "Jego specjalnością są sieci LAN i łączność bezprzewodowa. Łączy w tym obszarze rolę menedżera z kompetencjami eksperta sieciowego, a z branżą telekomunikacyjną i informatyczną związany jest od wielu lat, wcześniej między innymi w Orange i Telekomunikacji Polskiej.",
             "His specialty is LAN networks and wireless connectivity. In this area he combines the role of a manager with the skills of a network expert, and he has been part of the telecommunications and IT industry for many years, previously at Orange and Telekomunikacja Polska, among others.",
+          ),
+        },
+      ],
+    },
+    {
+      name: "Stafford Yu",
+      role: t("DCN Network Engineer", "DCN Network Engineer"),
+      desc: t("Ekspert i inżynier presales w zakresie rozwiązań LAN oraz bezprzewodowej łączności Wi-Fi producenta urządzeń sieciowych DCN.", "Expert and presales engineer specializing in LAN and wireless Wi-Fi solutions from network equipment manufacturer DCN."),
+      image: staffordYuImg,
+      bio: [
+        {
+          text: t(
+            "Ekspert i inżynier presales w zakresie rozwiązań LAN oraz bezprzewodowej łączności Wi-Fi producenta urządzeń sieciowych DCN.",
+            "Expert and presales engineer specializing in LAN and wireless Wi-Fi solutions from network equipment manufacturer DCN.",
+          ),
+        },
+        {
+          text: t(
+            "Współpracuje z partnerami DCN i wspiera ich na rynkach Europy, obu Ameryk i Azji.",
+            "He works with and supports DCN partners across Europe, the Americas and Asia.",
           ),
         },
       ],
