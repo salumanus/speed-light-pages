@@ -117,7 +117,7 @@ const Agenda = () => {
     { time: "13:00–14:30", title: t("Lunch", "Lunch"), speaker: "", company: "", lang: "" },
     { time: "14:30–15:30", title: t(`Panel: „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki"`, `Panel: "Iskander or total blackout? How to prepare a telecommunications network for the challenges of geopolitics"`), speaker: "Łukasz Dec i inni", company: "", lang: "", highlight: true },
     { time: "15:30–16:00", title: t("Przerwa kawowa", "Coffee break"), speaker: "", company: "", lang: "" },
-    { time: "16:00–16:25", title: t("DCNY — Szczegóły wkrótce", "DCNY — Details coming soon"), speaker: "", company: "", lang: "" },
+    { time: "16:00–16:25", title: t("DCN solutions fallow market needs", "DCN solutions fallow market needs"), speaker: "", company: "", lang: "" },
     {
       time: "16:25–16:50",
       title: t("Zdjąć balast, dodać prędkość. Koherentne 100/400/800G i IP over DWDM w praktyce", "Drop the ballast, add the speed. Coherent 100/400/800G and IP over DWDM in practice"),
