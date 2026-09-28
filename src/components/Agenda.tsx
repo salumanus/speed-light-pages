@@ -65,7 +65,7 @@ const Agenda = () => {
       ],
     },
     { time: "10:25–10:50", title: t("Sieci LAN i Wi-Fi o dużej gęstości w praktyce: niezawodne działanie i mierzalna wartość biznesowa w hotelach, na stadionach i w kampusach", "LAN and Wi-Fi networks with high density in practice: reliable operation and measurable business value in hotels, stadiums and campuses"), speaker: "Grzegorz Róż", company: "DCN Europe", lang: "" },
-    { time: "10:50–11:15", title: t("Heqa — Szczegóły wkrótce", "Heqa — Details coming soon"), speaker: "", company: "", lang: "" },
+    { time: "10:50–11:15", title: t("HEQA — Szczegóły wkrótce", "HEQA — Details coming soon"), speaker: "", company: "", lang: "" },
     { time: "11:15–11:45", title: t("Przerwa kawowa", "Coffee break"), speaker: "", company: "", lang: "" },
     {
       time: "11:45–12:10",

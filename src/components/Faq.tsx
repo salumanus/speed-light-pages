@@ -7,13 +7,6 @@ const Faq = () => {
   const t = useT();
   const faqs = [
     {
-      q: t("Jak mogę kupić bilet na Dni Światła 2026?", "How can I get a ticket for Dni Światła 2026?"),
-      a: t(
-        "Zapisy dla partnerów Salumanus i DCN Europe są już otwarte - udział w tej grupie jest bezpłatny, wystarczy skontaktować się ze swoim opiekunem handlowym. Liczba miejsc jest ograniczona - Dni Światła co roku wypełniają salę do ostatniego krzesła.\n",
-        "Registration for Salumanus and DCN Europe partners is already open - participation in this group is free, simply contact your sales representative. The number of seats is limited - Dni Światła fills the room to the last chair every year.\n"
-      ),
-    },
-    {
       q: t("Gdzie odbędzie się konferencja?", "Where will the conference take place?"),
       a: t(
         "18 edycja Dni Światła odbędzie się 20 października 2026 w Hotelu Novotel Centrum w Warszawie - nowoczesne centrum konferencyjne w sercu stolicy, z dogodnym dojazdem komunikacją miejską.",
