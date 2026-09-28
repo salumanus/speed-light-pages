@@ -49,13 +49,6 @@ const Faq = () => {
       ),
     },
     {
-      q: t("Czy można zostać partnerem lub sponsorem wydarzenia?", "Can I become a partner or sponsor of the event?"),
-      a: t(
-        "Tak. Jeśli Twoja firma dostarcza rozwiązania z obszaru Telko, Data Center lub bezpieczeństwa sieci i chcesz zaprezentować je społeczności Dni Światła - napisz na marketing@salumanus.com. Liczba partnerów jest ograniczona.",
-        "Yes. If your company provides solutions in Telco, Data Center or network security and you'd like to present them to the Dni Światła community - write to marketing@salumanus.com. The number of partners is limited."
-      ),
-    },
-    {
       q: t("Nie znalazłeś odpowiedzi na swoje pytanie?", "Didn't find the answer to your question?"),
       a: t(
         "Napisz do nas na marketing@salumanus.com - odpowiemy najszybciej jak to możliwe.",
