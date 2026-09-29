@@ -65,7 +65,16 @@ const Agenda = () => {
       ],
     },
     { time: "10:25–10:50", title: t("Sieci LAN i Wi-Fi o dużej gęstości w praktyce: niezawodne działanie i mierzalna wartość biznesowa w hotelach, na stadionach i w kampusach", "LAN and Wi-Fi networks with high density in practice: reliable operation and measurable business value in hotels, stadiums and campuses"), speaker: "Grzegorz Róż", company: "DCN Europe", lang: "" },
-    { time: "10:50–11:15", title: t("HEQA — Szczegóły wkrótce", "HEQA — Details coming soon"), speaker: "", company: "", lang: "" },
+    {
+      time: "10:50–11:15",
+      title: "No Fuel, No Race: Protecting AI Data as It Crosses Cloud, Edge and Beyond",
+      speaker: "",
+      company: "HEQA",
+      lang: "",
+      abstract: [
+        "In Formula 1, everyone talks about the engine, but no engine wins without fuel in the tank, telemetry on the wire and radio traffic between the driver and the pit wall. AI is described the same way: as a compute problem. Operationally, it is a data problem. As AI deployments scale across cloud, edge, telecom, industrial and government environments, this data crosses networks spanning multiple trust domains - the modern equivalent of a global race calendar, where every circuit has different marshals, different rules and different risks. The attack surface expands with every new venue. HEQA will frame the problem, walk through concrete use cases and outline the market trends shaping how organizations protect AI data in motion.",
+      ],
+    },
     { time: "11:15–11:45", title: t("Przerwa kawowa", "Coffee break"), speaker: "", company: "", lang: "" },
     {
       time: "11:45–12:10",
