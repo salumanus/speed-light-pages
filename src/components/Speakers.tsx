@@ -10,6 +10,7 @@ import ninoShaptoshviliImg from "@/assets/nino-shaptoshvili.jpg";
 import kevinWangImg from "@/assets/kevin-wang.jpg";
 import mateuszHacImg from "@/assets/mateusz-hac.jpg";
 import staffordYuImg from "@/assets/stafford-yu.jpg";
+import amirKandellImg from "@/assets/amir-kandell.jpg";
 import { useT } from "@/contexts/LanguageContext";
 
 interface BioSection {
@@ -430,6 +431,45 @@ const Speakers = () => {
         },
       ],
     },
+    {
+      name: "Amir Kandell",
+      role: t(
+        "Ekspert ds. sprzedaży międzynarodowej i rozwoju biznesu",
+        "International Sales & Business Development Expert",
+      ),
+      desc: t(
+        "Ponad 20 lat doświadczenia w sprzedaży międzynarodowej i rozwoju biznesu. Skutecznie rozwija rynki, zespoły oraz długofalowe relacje z klientami.",
+        "Over 20 years of experience in international sales and business development. He successfully grows markets, teams, and long-term customer relationships.",
+      ),
+      linkedin: "https://www.linkedin.com/in/amir-kandell-34a0a13/",
+      image: amirKandellImg,
+      bio: [
+        {
+          text: t(
+            "Ponad 20 lat doświadczenia i gruntowna wiedza w obszarze sprzedaży międzynarodowej, rozwoju biznesu oraz przywództwa i zarządzania.",
+            "He brings over 20 years of experience and deep expertise in international sales, business development, leadership and management.",
+          ),
+        },
+        {
+          text: t(
+            "Szerokie doświadczenie w sprzedaży bezpośredniej, sprzedaży złożonych rozwiązań, zarządzaniu zorientowanym na ludzi oraz w marketingu. Prowadzi pełny cykl sprzedaży, a przede wszystkim potrafi zwiększać przychody, rentowność, udział w rynku i realizację celów firmy.",
+            "His background covers hands-on selling, complex solution sales, people-centric management and marketing. He runs the full sales life cycle and, above all, knows how to grow a company's top line, profitability, market share and goals.",
+          ),
+        },
+        {
+          text: t(
+            "Ma wysokie kompetencje komunikacyjne - swobodnie pracuje i odnajduje się w wielu różnych środowiskach biznesowych i kulturowych.",
+            "He has strong communication skills and works comfortably across many different business and cultural environments.",
+          ),
+        },
+        {
+          text: t(
+            "Łączy role menedżerskie z praktyką sprzedażową - na każdym stanowisku zarządczym prowadził osobiście wybrany rynek lub klientów jako własne konta.",
+            "He combines management roles with hands-on sales practice - in every leadership position he has kept a country or a set of customers as his own direct accounts.",
+          ),
+        },
+      ],
+    },
   ];
 
   return (
@@ -446,7 +486,7 @@ const Speakers = () => {
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-3xl">{t("Osiągnęli już niejeden szczyt przepustowości. Mistrzowie systemów xWDM i transmisji optycznej - na torze i w sieci nie ma dla nich niemożliwych prędkości.", "They've already reached more than one bandwidth peak. Masters of xWDM systems and optical transmission - on the track and in the network, no speed is impossible for them.")}</p>
         </AnimatedSection>
-        <SpeakerSlider speakers={salumanusSpeakers} perPage={7} />
+        <SpeakerSlider speakers={salumanusSpeakers} perPage={8} />
       </div>
     </section>
   </>

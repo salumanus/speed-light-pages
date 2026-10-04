@@ -69,7 +69,7 @@ const Agenda = () => {
       time: "10:50–11:15",
       title: "No Fuel, No Race: Protecting AI Data as It Crosses Cloud, Edge and Beyond",
       speaker: "",
-      company: "HEQA",
+      company: "HEQA Security",
       lang: "",
       abstract: [
         "In Formula 1, everyone talks about the engine, but no engine wins without fuel in the tank, telemetry on the wire and radio traffic between the driver and the pit wall. AI is described the same way: as a compute problem. Operationally, it is a data problem. As AI deployments scale across cloud, edge, telecom, industrial and government environments, this data crosses networks spanning multiple trust domains - the modern equivalent of a global race calendar, where every circuit has different marshals, different rules and different risks. The attack surface expands with every new venue. HEQA will frame the problem, walk through concrete use cases and outline the market trends shaping how organizations protect AI data in motion.",
