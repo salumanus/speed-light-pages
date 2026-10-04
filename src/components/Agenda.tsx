@@ -97,7 +97,7 @@ const Agenda = () => {
       time: "12:10–12:35",
       title: t("Paddock to Podium: Jak wysokowydajne DCI napędza rozproszoną infrastrukturę AI", "Paddock to Podium: How High-Performance DCI Powers Distributed AI Infrastructure"),
       speaker: "Nino Shaptoshvili",
-      company: "Packetlight",
+      company: "PacketLight",
       lang: "",
       abstract: [
         t(
