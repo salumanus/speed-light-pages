@@ -30,8 +30,8 @@ const Faq = () => {
     {
       q: t("Czy prezentacje będą tłumaczone?", "Will the presentations be translated?"),
       a: t(
-        "Tak. Część wystąpień naszych partnerów międzynarodowych (Hekatron, PacketLight, RAICcom, DCN Europe) odbędzie się w języku angielskim - zapewniamy tłumaczenie na język polski.",
-        "Yes. Some presentations by our international partners (Hekatron, PacketLight, RAICcom, DCN Europe) will be held in English - we provide translation into Polish."
+        "Tak. Część wystąpień naszych partnerów międzynarodowych (HEQA Security, Raisecom, Packetlight, DCN) odbędzie się w języku angielskim - zapewniamy tłumaczenie na język polski.",
+        "Yes. Some presentations by our international partners (HEQA Security, Raisecom, Packetlight, DCN) will be held in English - we provide translation into Polish."
       ),
     },
     {
