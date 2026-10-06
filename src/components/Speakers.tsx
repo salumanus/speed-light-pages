@@ -11,6 +11,7 @@ import kevinWangImg from "@/assets/kevin-wang.jpg";
 import mateuszHacImg from "@/assets/mateusz-hac.jpg";
 import staffordYuImg from "@/assets/stafford-yu.jpg";
 import amirKandellImg from "@/assets/amir-kandell.jpg";
+import adamSedlinImg from "@/assets/adam-sedlin.jpg";
 import { useT } from "@/contexts/LanguageContext";
 
 interface BioSection {
@@ -178,7 +179,7 @@ const SpeakerSlider = ({ speakers, perPage }: { speakers: Speaker[]; perPage: nu
             transition={{ duration: 0.35 }}
             className={`grid gap-x-4 gap-y-10 ${
               perPage >= 4
-                ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+                ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
                 : "grid-cols-1 md:grid-cols-2"
             }`}
           >
@@ -470,6 +471,46 @@ const Speakers = () => {
         },
       ],
     },
+    {
+      name: "Adam Sedlin",
+      role: t(
+        "Menedżer planowania sieci i projektant sieci transportowych",
+        "Network Planning Manager & Transport Network Designer",
+      ),
+      desc: t(
+        "Specjalista C/DWDM, Metro/Carrier Ethernet i SDH. Pionier technologii SDN oraz praktycznego wykorzystania Open Networking i multivendoringu w sieciach dużej skali.",
+        "Specialist in C/DWDM, Metro/Carrier Ethernet and SDH. Pioneer in SDN technology and the practical use of Open Networking and multivendoring in large-scale networks.",
+      ),
+      linkedin: "https://www.linkedin.com/in/adam-sedlin-77b9485/",
+      image: adamSedlinImg,
+      bio: [
+        {
+          text: t(
+            "Menedżer planowania sieci i projektant sieci transportowych. Specjalista w zakresie technologii C/DWDM, Metro/Carrier Ethernet oraz SDH.",
+            "Network planning manager and transport network designer. Specialist in C/DWDM, Metro/Carrier Ethernet and SDH technology.",
+          ),
+        },
+        {
+          text: t(
+            "Ma doświadczenie w projektowaniu światłowodowych sieci o zasięgu ogólnokrajowym oraz w budowie infrastruktury centrów danych. Bardzo dobrze zna systemy IP/MPLS, PDH, ATM, radiolinie oraz rozwiązania SDN.",
+            "Experienced in designing national-scale fibre optic networks and building data centre infrastructure. Very well familiar with IP/MPLS, PDH, ATM, microwave systems and SDN solutions.",
+          ),
+        },
+        {
+          text: t(
+            "Zarządzał licznymi projektami inwestycyjnymi w firmach telekomunikacyjnych. Jego głównym celem jest stałe podnoszenie kompetencji zawodowych i doświadczenia.",
+            "He has managed a wide range of investment projects in telecom companies. His main goal is to keep developing his professional skills and experience.",
+          ),
+        },
+        {
+          title: t("Specjalizacje", "Specialties"),
+          text: t(
+            "DWDM, SDH, IP/MPLS, Carrier Ethernet, VoIP, zakupy, negocjacje z dostawcami sprzętu i klientami, projektowanie sieci telekomunikacyjnych. Pionier w rozwoju technologii SDN oraz praktycznym wykorzystaniu Open Networking i multivendoringu w sieciach dużej skali.",
+            "DWDM, SDH, IP/MPLS, Carrier Ethernet, VoIP, purchasing, negotiations with equipment vendors and customers, telco network design. Pioneer in SDN technology development and the practical use of Open Networking and multivendoring in large-scale networks.",
+          ),
+        },
+      ],
+    },
   ];
 
   return (
@@ -486,7 +527,7 @@ const Speakers = () => {
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-3xl">{t("Osiągnęli już niejeden szczyt przepustowości. Mistrzowie systemów xWDM i transmisji optycznej - na torze i w sieci nie ma dla nich niemożliwych prędkości.", "They've already reached more than one bandwidth peak. Masters of xWDM systems and optical transmission - on the track and in the network, no speed is impossible for them.")}</p>
         </AnimatedSection>
-        <SpeakerSlider speakers={salumanusSpeakers} perPage={8} />
+        <SpeakerSlider speakers={salumanusSpeakers} perPage={10} />
       </div>
     </section>
   </>
