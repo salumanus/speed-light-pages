@@ -124,7 +124,7 @@ const Agenda = () => {
       ],
     },
     { time: "13:00–14:30", title: t("Lunch", "Lunch"), speaker: "", company: "", lang: "" },
-    { time: "14:30–15:30", title: t(`Panel: „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki"`, `Panel: "Iskander or total blackout? How to prepare a telecommunications network for the challenges of geopolitics"`), speaker: "Łukasz Dec, Radosław Potera, Michał Szczęsny, Piotr Jaworski", company: "", lang: "", highlight: true },
+    { time: "14:30–15:30", title: t(`Panel: „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki"`, `Panel: "Iskander or total blackout? How to prepare a telecommunications network for the challenges of geopolitics"`), speaker: "Łukasz Dec, Radosław Potera, Michał Szczęsny, Piotr Jaworski, Łukasz Chudyga", company: "", lang: "", highlight: true },
     { time: "15:30–16:00", title: t("Przerwa kawowa", "Coffee break"), speaker: "", company: "", lang: "" },
     { time: "16:00–16:25", title: t("DCN solutions fallow market needs", "DCN solutions fallow market needs"), speaker: "Stafford Yu", company: "DCN", lang: "" },
     {
