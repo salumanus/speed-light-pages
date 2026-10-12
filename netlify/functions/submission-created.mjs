@@ -34,7 +34,8 @@ const findCampaignId = async () => {
   if (status !== 200 || !Array.isArray(body) || !body.length) {
     throw new Error(`autoresponder "${AUTORESPONDER_NAME}" not found (HTTP ${status}): ${JSON.stringify(body)}`);
   }
-  return body[0].campaign.campaignId;
+  // the API returns the list id both as `campaignId` and as `campaign.id`
+  return body[0].campaignId || (body[0].campaign && body[0].campaign.id);
 };
 
 const findCustomFieldId = async (name) => {
