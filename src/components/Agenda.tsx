@@ -133,7 +133,16 @@ const Agenda = () => {
     { time: "13:00–14:30", title: t("Lunch", "Lunch"), speaker: "", company: "", lang: "" },
     { time: "14:30–15:30", title: t(`Panel: „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki"`, `Panel: "Iskander or total blackout? How to prepare a telecommunications network for the challenges of geopolitics"`), speaker: "Łukasz Dec (TELCO.in), Radosław Potera (Atman), Michał Szczęsny (Exatel), Piotr Jaworski (Orange), Łukasz Chudyga (T‑Mobile Polska), Bartosz Bednarski (Salumanus), Marcin Bała (Salumanus)", company: "", lang: "", highlight: true },
     { time: "15:30–16:00", title: t("Przerwa kawowa", "Coffee break"), speaker: "", company: "", lang: "" },
-    { time: "16:00–16:25", title: t("DCN solutions fallow market needs", "DCN solutions fallow market needs"), speaker: "Stafford Yu", company: "DCN", lang: "" },
+    {
+      time: "16:00–16:25",
+      title: "DCN solutions fallow market needs",
+      speaker: "Stafford Yu",
+      company: "DCN",
+      lang: "",
+      abstract: [
+        "Audio-visual systems are entering their third phase. AVoIP 1.0 moved AV signals onto IP networks, and AVoIP 2.0 brought standards and interoperability. AVoIP 3.0 is about running AV like IT infrastructure, with cloud management, automation and analytics. This session presents DCN’s AV-ready switching portfolio, from 1G PoE access switches for Dante AV and NDI in meeting rooms, through 10G switches for low-latency, lossless 4K SDVoE video walls, to 100G full-fibre spine-leaf cores that scale to more than 1,400 encoder and decoder nodes. It shows a dedicated AV web interface with multicast and QoS tools, and a stadium deployment that drives more than 500 displays and 20 live video walls in lossless 4K/60. The session closes with the ImCloud management platform and DCN’s Cloud Stone data center switches, including 51.2 Tbps models with up to 128 × 400G ports and support for SONiC.",
+      ],
+    },
     {
       time: "16:25–16:50",
       title: t("Zdjąć balast, dodać prędkość. Koherentne 100/400/800G i IP over DWDM w praktyce", "Drop the ballast, add the speed. Coherent 100/400/800G and IP over DWDM in practice"),
