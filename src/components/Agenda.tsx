@@ -83,7 +83,7 @@ const Agenda = () => {
       title: "No Fuel, No Race: Protecting AI Data as It Crosses Cloud, Edge and Beyond",
       speaker: "Amir Kandell",
       company: "HEQA Security",
-      lang: "",
+      lang: "EN",
       abstract: [
         "In Formula 1, everyone talks about the engine, but no engine wins without fuel in the tank, telemetry on the wire and radio traffic between the driver and the pit wall. AI is described the same way: as a compute problem. Operationally, it is a data problem. As AI deployments scale across cloud, edge, telecom, industrial and government environments, this data crosses networks spanning multiple trust domains - the modern equivalent of a global race calendar, where every circuit has different marshals, different rules and different risks. The attack surface expands with every new venue. HEQA will frame the problem, walk through concrete use cases and outline the market trends shaping how organizations protect AI data in motion.",
       ],
@@ -94,7 +94,7 @@ const Agenda = () => {
       title: t("The New Formula for Metro Networks: Super-Converged Packet-Optical with SRv6 and 400G Coherent", "The New Formula for Metro Networks: Super-Converged Packet-Optical with SRv6 and 400G Coherent"),
       speaker: "Kevin Wang",
       company: "Raisecom",
-      lang: "",
+      lang: "EN",
       abstract: [
         t(
           "Kiedyś zespoły wyścigowe wystawiały osobne samochody do kwalifikacji i do wyścigu - inne ustawienia, dwa razy więcej części, dwa razy większe ryzyko. Współczesna Formuła 1 wystawia jeden bolid dostrojony do wszystkiego. Sieci metro idą dokładnie tą samą ścieżką ewolucji: dzisiejszy stos legacy IP/MPLS + DWDM to właśnie ten stary garaż na dwa auta. Dwie warstwy, dwie płaszczyzny sterowania, dodatkowy balast pomiędzy kierowcą a torem.",
@@ -111,7 +111,7 @@ const Agenda = () => {
       title: "Paddock to Podium: How High-Performance DCI Powers Distributed AI Infrastructure",
       speaker: "Nino Shaptoshvili",
       company: "PacketLight",
-      lang: "",
+      lang: "EN",
       abstract: [
         "A modern Formula 1 team does not race from a single garage. Its operations span the circuit, the factory and mission-control rooms, yet on race day it behaves as one team, on one clock. Artificial Intelligence is reshaping data center architecture in exactly the same direction: GPU clusters, storage and compute are increasingly distributed across multiple sites to gain scalability, resilience and better utilization. The underlying network must deliver deterministic low latency, massive bandwidth and rock-solid security - the equivalent of a perfect lap, every lap.",
         "This session shows how high-performance Data Center Interconnect has become the track surface beneath the AI grid. We will examine the optical transport that lets geographically separated data centers operate as a single AI fabric moving enormous training datasets and synchronizing workloads at full throttle. The straight-line speed of coherent 400G and 800G modules. We will also address a rival that works quietly in the paddock rather than on the track: the quantum era. Quantum Key Distribution (QKD), running alongside encrypted optical transport, provides a tamper-evident channel that protects mission-critical communications long after the checkered flag.",
@@ -138,7 +138,7 @@ const Agenda = () => {
       title: "DCN solutions fallow market needs",
       speaker: "Stafford Yu",
       company: "DCN",
-      lang: "",
+      lang: "EN",
       abstract: [
         "Audio-visual systems are entering their third phase. AVoIP 1.0 moved AV signals onto IP networks, and AVoIP 2.0 brought standards and interoperability. AVoIP 3.0 is about running AV like IT infrastructure, with cloud management, automation and analytics. This session presents DCN’s AV-ready switching portfolio, from 1G PoE access switches for Dante AV and NDI in meeting rooms, through 10G switches for low-latency, lossless 4K SDVoE video walls, to 100G full-fibre spine-leaf cores that scale to more than 1,400 encoder and decoder nodes. It shows a dedicated AV web interface with multicast and QoS tools, and a stadium deployment that drives more than 500 displays and 20 live video walls in lossless 4K/60. The session closes with the ImCloud management platform and DCN’s Cloud Stone data center switches, including 51.2 Tbps models with up to 128 × 400G ports and support for SONiC.",
       ],
