@@ -50,7 +50,8 @@ const Agenda = () => {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   const agendaItems: AgendaItem[] = [
-    { time: "9:00–10:00", title: t("Otwarcie", "Opening"), speaker: "", company: "", lang: "" },
+    { time: "9:00–9:45", title: t("Rejestracje na wydarzenie", "Event registration"), speaker: "", company: "", lang: "" },
+    { time: "9:45–10:00", title: t("Otwarcie Dni Światła 2026", "Opening of Dni Światła 2026"), speaker: "Marcin Bała, Bartosz Bednarski", company: "", lang: "" },
     {
       time: "10:00–10:25",
       title: t("Jeden bolid, każdy tor. Uniwersalny moduł optyczny i jego konfiguracja w środowisku SRD", "One car, every track. A universal optical module and its configuration in an SRD environment"),
