@@ -108,19 +108,13 @@ const Agenda = () => {
     },
     {
       time: "12:10–12:35",
-      title: t("Paddock to Podium: Jak wysokowydajne DCI napędza rozproszoną infrastrukturę AI", "Paddock to Podium: How High-Performance DCI Powers Distributed AI Infrastructure"),
+      title: "Paddock to Podium: How High-Performance DCI Powers Distributed AI Infrastructure",
       speaker: "Nino Shaptoshvili",
       company: "PacketLight",
       lang: "",
       abstract: [
-        t(
-          "Nowoczesny zespół Formuły 1 nie ściga się z jednego garażu. Jego działania rozciągają się na tor, fabrykę i pokoje mission control, a mimo to w dniu wyścigu zachowuje się jak jeden zespół, na jednym zegarze. Sztuczna inteligencja przebudowuje architekturę centrów danych dokładnie w tym samym kierunku: klastry GPU, storage i moc obliczeniowa są coraz częściej rozproszone pomiędzy wiele lokalizacji, by zyskać skalowalność, odporność i lepsze wykorzystanie zasobów. Sieć pod spodem musi zapewnić deterministycznie niskie opóźnienia, ogromne pasmo i niepodważalne bezpieczeństwo - odpowiednik perfekcyjnego okrążenia, okrążenie po okrążeniu.",
-          "A modern Formula 1 team does not race from a single garage. Its operations span the circuit, the factory and mission-control rooms, yet on race day it behaves as one team, on one clock. Artificial Intelligence is reshaping data center architecture in exactly the same direction: GPU clusters, storage and compute are increasingly distributed across multiple sites to gain scalability, resilience and better utilization. The underlying network must deliver deterministic low latency, massive bandwidth and rock-solid security - the equivalent of a perfect lap, every lap.",
-        ),
-        t(
-          "Ta prezentacja pokazuje, jak wysokowydajne Data Center Interconnect stało się nawierzchnią toru pod siatką startową AI. Przyjrzymy się transmisji optycznej, która pozwala geograficznie oddalonym centrom danych działać jak jedna tkanka AI - przenosić ogromne zbiory treningowe i synchronizować obciążenia na pełnym gazie. Prędkość na prostej, czyli koherentne moduły 400G i 800G. Zajmiemy się też rywalem, który pracuje po cichu w padoku, a nie na torze: erą kwantową. Quantum Key Distribution (QKD), działające równolegle z szyfrowaną transmisją optyczną, daje kanał z wykrywaniem ingerencji, który chroni krytyczną komunikację długo po tym, jak opadnie flaga w szachownicę.",
-          "This session shows how high-performance Data Center Interconnect has become the track surface beneath the AI grid. We will examine the optical transport that lets geographically separated data centers operate as a single AI fabric moving enormous training datasets and synchronizing workloads at full throttle. The straight-line speed of coherent 400G and 800G modules. We will also address a rival that works quietly in the paddock rather than on the track: the quantum era. Quantum Key Distribution (QKD), running alongside encrypted optical transport, provides a tamper-evident channel that protects mission-critical communications long after the checkered flag.",
-        ),
+        "A modern Formula 1 team does not race from a single garage. Its operations span the circuit, the factory and mission-control rooms, yet on race day it behaves as one team, on one clock. Artificial Intelligence is reshaping data center architecture in exactly the same direction: GPU clusters, storage and compute are increasingly distributed across multiple sites to gain scalability, resilience and better utilization. The underlying network must deliver deterministic low latency, massive bandwidth and rock-solid security - the equivalent of a perfect lap, every lap.",
+        "This session shows how high-performance Data Center Interconnect has become the track surface beneath the AI grid. We will examine the optical transport that lets geographically separated data centers operate as a single AI fabric moving enormous training datasets and synchronizing workloads at full throttle. The straight-line speed of coherent 400G and 800G modules. We will also address a rival that works quietly in the paddock rather than on the track: the quantum era. Quantum Key Distribution (QKD), running alongside encrypted optical transport, provides a tamper-evident channel that protects mission-critical communications long after the checkered flag.",
       ],
     },
     {
