@@ -62,10 +62,13 @@ export default async (req) => {
   try {
     const campaignId = await findCampaignId();
     const customFieldValues = [];
-    for (const [field, value] of [["company", data.company], ["phone", data.phone]]) {
+    // GetResponse's "phone" field wants "+<prefix><digits>"; numbers typed without a prefix are treated as Polish
+    const digits = String(data.phone || "").replace(/\D/g, "");
+    const phone = !digits ? "" : String(data.phone).trim().startsWith("+") ? "+" + digits : "+48" + digits.replace(/^48/, "");
+    for (const [field, value] of [["company", String(data.company || "").trim()], ["phone", phone]]) {
       if (!value) continue;
       const id = await findCustomFieldId(field);
-      if (id) customFieldValues.push({ customFieldId: id, value: [String(value).trim()] });
+      if (id) customFieldValues.push({ customFieldId: id, value: [value] });
     }
 
     const contact = {
@@ -77,7 +80,13 @@ export default async (req) => {
       ...(customFieldValues.length ? { customFieldValues } : {}),
     };
 
-    const { status, body } = await gr("/contacts", { method: "POST", body: JSON.stringify(contact) });
+    let { status, body } = await gr("/contacts", { method: "POST", body: JSON.stringify(contact) });
+    if (status === 400 && customFieldValues.length) {
+      // a rejected custom field must not block the registration: retry with e-mail and name only
+      console.warn("GetResponse: custom fields rejected, retrying without them", JSON.stringify(body));
+      delete contact.customFieldValues;
+      ({ status, body } = await gr("/contacts", { method: "POST", body: JSON.stringify(contact) }));
+    }
     if (status === 202) {
       console.log("GetResponse: contact queued", email, "campaign", campaignId);
     } else if (status === 409) {
