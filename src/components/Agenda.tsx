@@ -65,7 +65,19 @@ const Agenda = () => {
         ),
       ],
     },
-    { time: "10:25–10:50", title: t("Sieci LAN i Wi-Fi o dużej gęstości w praktyce: niezawodne działanie i mierzalna wartość biznesowa w hotelach, na stadionach i w kampusach", "LAN and Wi-Fi networks with high density in practice: reliable operation and measurable business value in hotels, stadiums and campuses"), speaker: "Grzegorz Róż", company: "DCN Europe", lang: "PL" },
+    {
+      time: "10:25–10:50",
+      title: t("Sieci LAN i Wi-Fi o dużej gęstości w praktyce: niezawodne działanie i mierzalna wartość biznesowa w hotelach, na stadionach i w kampusach", "LAN and Wi-Fi networks with high density in practice: reliable operation and measurable business value in hotels, stadiums and campuses"),
+      speaker: "Grzegorz Róż",
+      company: "DCN Europe",
+      lang: "PL",
+      abstract: [
+        t(
+          "Wyścigu rzadko wygrywa się na prostej, za to bardzo łatwo przegrywa się go w pierwszym zakręcie, gdy dwadzieścia bolidów wchodzi w to samo miejsce w tej samej sekundzie. Sieć dużej gęstości mierzy się dokładnie z tym momentem: tysiące urządzeń walczy o ten sam eter, w tym samym czasie. Dokładanie punktów dostępowych działa wtedy jak dokładanie koni mechanicznych bolidowi bez docisku aerodynamicznego, bo przyrost mocy zamienia się w utratę przyczepności, czyli w zakłócenia współkanałowe. Rozstrzyga ustawienie: projekt radiowy, sterowanie mocą i kanałami, poprawnie zaplanowany roaming, pasmo 6 GHz w standardach Wi‑Fi 6E i 7 oraz zaplecze przewodowe, które ten ruch udźwignie. Pokażemy przy tym, że trzy środowiska jadą po zupełnie różnych torach. Hotel przypomina Monako: ciasno, bez miejsca na błąd, liczy się równe tempo, a nie rekord okrążenia, bo IPTV, VoIP i systemy hotelowe wybaczają mniej niż test prędkości. Stadion to kwalifikacje: kilkadziesiąt tysięcy urządzeń, kilkanaście minut ekstremalnego obciążenia i jedno okrążenie, które musi się udać. Kampus to pełny dystans wyścigu: tysiące użytkowników od rana do wieczora, mobilność i bezpieczeństwo w każdym sektorze. Wynik mierzymy jak czas okrążenia, czyli liczbą zgłoszeń do helpdesku, ocenami gości, sprawnością obsługi wydarzeń i kosztem utrzymania. Bez telemetrii i pitwallu, czyli monitoringu oraz analityki, nawet najlepszy projekt jedzie na ślepo.",
+          "A race is rarely won on the straight, but it is very easily lost in the first corner, when twenty cars go for the same spot in the same second. A high-density network faces exactly that moment: thousands of devices fighting for the same airwaves at the same time. Adding access points then works like adding horsepower to a car with no downforce - the extra power turns into lost grip, that is, co-channel interference. What decides the outcome is the setup: the RF design, power and channel control, properly planned roaming, the 6 GHz band in Wi-Fi 6E and 7, and a wired backbone that can carry the traffic. We will also show that the three environments race on completely different tracks. A hotel is like Monaco: tight, no room for error, where a steady pace matters more than a lap record, because IPTV, VoIP and hotel systems are less forgiving than a speed test. A stadium is qualifying: tens of thousands of devices, a dozen or so minutes of extreme load and a single lap that has to go right. A campus is the full race distance: thousands of users from morning to evening, mobility and security in every sector. We measure the result like a lap time - by the number of helpdesk tickets, guest ratings, how smoothly events run and the cost of operation. Without telemetry and a pit wall, that is, monitoring and analytics, even the best design is driving blind.",
+        ),
+      ],
+    },
     {
       time: "10:50–11:15",
       title: "No Fuel, No Race: Protecting AI Data as It Crosses Cloud, Edge and Beyond",
