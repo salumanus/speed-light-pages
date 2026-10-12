@@ -81,7 +81,7 @@ const Agenda = () => {
     {
       time: "10:50–11:15",
       title: "No Fuel, No Race: Protecting AI Data as It Crosses Cloud, Edge and Beyond",
-      speaker: "",
+      speaker: "Amir Kandell",
       company: "HEQA Security",
       lang: "",
       abstract: [
@@ -202,7 +202,7 @@ const Agenda = () => {
                 >
                   <div className="absolute left-0.5 top-2 w-3 h-3 rounded-full bg-accent border-2 border-background" />
                   <div
-                    className={`font-heading min-w-[80px] md:min-w-[110px] text-sm md:text-[18px] ${
+                    className={`font-heading w-[96px] md:w-[132px] shrink-0 text-sm md:text-[18px] ${
                       item.highlight ? "text-accent-foreground" : "text-accent"
                     }`}
                   >
