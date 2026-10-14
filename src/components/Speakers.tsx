@@ -12,6 +12,11 @@ import mateuszHacImg from "@/assets/mateusz-hac.jpg";
 import staffordYuImg from "@/assets/stafford-yu.jpg";
 import amirKandellImg from "@/assets/amir-kandell.jpg";
 import adamSedlinImg from "@/assets/adam-sedlin.jpg";
+import radoslawPoteraImg from "@/assets/radoslaw-potera.jpg";
+import michalSzczesnyImg from "@/assets/michal-szczesny.jpg";
+import lukaszDecImg from "@/assets/lukasz-dec.jpg";
+import lukaszChudygaImg from "@/assets/lukasz-chudyga.jpg";
+import bartoszBednarskiImg from "@/assets/bartosz-bednarski.jpg";
 import { useT } from "@/contexts/LanguageContext";
 
 interface BioSection {
@@ -28,8 +33,25 @@ interface Speaker {
   bio?: BioSection[];
 }
 
-const SpeakerCard = ({ speaker, onOpen }: { speaker: Speaker; onOpen: () => void }) => {
+type Variant = "speaker" | "panelist";
+
+const useLabels = (variant: Variant) => {
   const t = useT();
+  return variant === "panelist"
+    ? { kind: t("Panelista", "Panelist"), about: t("O paneliście", "About the panelist") }
+    : { kind: t("Prelegent", "Speaker"), about: t("O prelegencie", "About the speaker") };
+};
+
+const SpeakerCard = ({
+  speaker,
+  onOpen,
+  variant,
+}: {
+  speaker: Speaker;
+  onOpen: () => void;
+  variant: Variant;
+}) => {
+  const labels = useLabels(variant);
 
   return (
     <div className="group flex-shrink-0 flex flex-col">
@@ -38,7 +60,7 @@ const SpeakerCard = ({ speaker, onOpen }: { speaker: Speaker; onOpen: () => void
         onClick={onOpen}
         className="bg-secondary overflow-hidden aspect-square mb-4 border border-accent block w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
         style={{ borderRadius: "5px" }}
-        aria-label={`${t("O prelegencie", "About the speaker")}: ${speaker.name}`}
+        aria-label={`${labels.about}: ${speaker.name}`}
         tabIndex={-1}
       >
         <img
@@ -50,14 +72,14 @@ const SpeakerCard = ({ speaker, onOpen }: { speaker: Speaker; onOpen: () => void
       </button>
       <h3 className="font-heading text-xl text-foreground md:text-xl">{speaker.name}</h3>
       <p className="text-accent text-sm font-medium mb-1">{speaker.role}</p>
-      <p className="text-muted-foreground text-sm mb-4">{speaker.desc}</p>
+      <p className={`text-muted-foreground text-sm mb-4 ${variant === "panelist" ? "line-clamp-3" : ""}`}>{speaker.desc}</p>
       <div className="mt-auto flex items-center gap-3 flex-wrap">
         <button
           type="button"
           onClick={onOpen}
           className="inline-flex items-center gap-1.5 rounded-full border border-border px-4 py-1.5 text-sm font-medium text-foreground transition-colors hover:border-accent hover:bg-accent hover:text-accent-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
         >
-          {t("O prelegencie", "About the speaker")}
+          {labels.about}
           <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5" />
         </button>
         {speaker.linkedin !== undefined && (
@@ -79,11 +101,14 @@ const SpeakerCard = ({ speaker, onOpen }: { speaker: Speaker; onOpen: () => void
 const SpeakerDialog = ({
   speaker,
   onOpenChange,
+  variant,
 }: {
   speaker: Speaker | null;
   onOpenChange: (open: boolean) => void;
+  variant: Variant;
 }) => {
   const t = useT();
+  const labels = useLabels(variant);
 
   return (
     <Dialog open={speaker !== null} onOpenChange={onOpenChange}>
@@ -97,7 +122,7 @@ const SpeakerDialog = ({
               <div className="mb-5 flex items-center gap-3">
                 <span className="inline-block h-3 w-3 rounded-sm bg-accent" />
                 <span className="font-heading text-xs uppercase tracking-widest text-muted-foreground">
-                  {t("Prelegent", "Speaker")}
+                  {labels.kind}
                 </span>
               </div>
 
@@ -130,7 +155,7 @@ const SpeakerDialog = ({
               <div className="my-6 h-px bg-border" />
 
               <h4 className="font-heading mb-4 text-xs uppercase tracking-widest text-muted-foreground">
-                {t("O prelegencie", "About the speaker")}
+                {labels.about}
               </h4>
 
               {speaker.bio ? (
@@ -157,7 +182,15 @@ const SpeakerDialog = ({
   );
 };
 
-const SpeakerSlider = ({ speakers, perPage }: { speakers: Speaker[]; perPage: number }) => {
+const SpeakerSlider = ({
+  speakers,
+  perPage,
+  variant = "speaker",
+}: {
+  speakers: Speaker[];
+  perPage: number;
+  variant?: Variant;
+}) => {
   const [page, setPage] = useState(0);
   const [activeSpeaker, setActiveSpeaker] = useState<Speaker | null>(null);
   const totalPages = Math.ceil(speakers.length / perPage);
@@ -184,7 +217,7 @@ const SpeakerSlider = ({ speakers, perPage }: { speakers: Speaker[]; perPage: nu
             }`}
           >
             {visible.map((s) => (
-              <SpeakerCard key={s.name} speaker={s} onOpen={() => setActiveSpeaker(s)} />
+              <SpeakerCard key={s.name} speaker={s} variant={variant} onOpen={() => setActiveSpeaker(s)} />
             ))}
           </motion.div>
         </AnimatePresence>
@@ -218,7 +251,7 @@ const SpeakerSlider = ({ speakers, perPage }: { speakers: Speaker[]; perPage: nu
         </div>
       )}
 
-      <SpeakerDialog speaker={activeSpeaker} onOpenChange={(open) => !open && setActiveSpeaker(null)} />
+      <SpeakerDialog speaker={activeSpeaker} variant={variant} onOpenChange={(open) => !open && setActiveSpeaker(null)} />
     </div>
   );
 };
@@ -513,6 +546,104 @@ const Speakers = () => {
     },
   ];
 
+  // Opis na karcie jest przycinany do 3 linijek, pełny tekst w popupie.
+  const panelists: Speaker[] = [
+    {
+      name: "Radosław Potera",
+      role: t("Członek zarządu, Atman", "Management Board Member, Atman"),
+      desc: t(
+        "Łączy kompetencje inżynierskie z zarządczymi, z wieloletnim doświadczeniem w planowaniu, budowie i eksploatacji sieci telekomunikacyjnych oraz w realizacji dużych inwestycji infrastrukturalnych w skali całego kraju. Zna od podstaw projektowanie i utrzymanie centrów danych, a także zagadnienia infrastruktury IT i cyberbezpieczeństwa. Ma doświadczenie w fuzjach i przejęciach, zarządzaniu zmianą oraz negocjacjach z klientami, dostawcami, samorządami i instytucjami rządowymi.",
+        "He combines engineering and management expertise, with many years of experience in planning, building and operating telecommunications networks and in delivering large, nationwide infrastructure investments. He knows data centre design and operation from the ground up, as well as IT infrastructure and cybersecurity. He has experience in mergers and acquisitions, change management and negotiations with customers, suppliers, local governments and government institutions.",
+      ),
+      image: radoslawPoteraImg,
+      bio: [
+        {
+          text: t(
+            "Łączy kompetencje inżynierskie z zarządczymi, z wieloletnim doświadczeniem w planowaniu, budowie i eksploatacji sieci telekomunikacyjnych oraz w realizacji dużych inwestycji infrastrukturalnych w skali całego kraju. Zna od podstaw projektowanie i utrzymanie centrów danych, a także zagadnienia infrastruktury IT i cyberbezpieczeństwa. Ma doświadczenie w fuzjach i przejęciach, zarządzaniu zmianą oraz negocjacjach z klientami, dostawcami, samorządami i instytucjami rządowymi.",
+            "He combines engineering and management expertise, with many years of experience in planning, building and operating telecommunications networks and in delivering large, nationwide infrastructure investments. He knows data centre design and operation from the ground up, as well as IT infrastructure and cybersecurity. He has experience in mergers and acquisitions, change management and negotiations with customers, suppliers, local governments and government institutions.",
+          ),
+        },
+      ],
+    },
+    {
+      name: "Michał Szczęsny",
+      role: t(
+        "Dyrektor Departamentu Architektury i Planowania Sieci, EXATEL",
+        "Director of Network Architecture and Planning Department, EXATEL",
+      ),
+      desc: t(
+        "Architekt oddany paradygmatowi all-ways on. Skoncentrowany na wdrażaniu sieci i rozwiązań nowej generacji - niezależnie od warstwy - od transportu po usługi. Ekspert w zarządzaniu strategią technologiczną ściśle związaną z rozwijającym się rynkiem telekomunikacyjnym. Ekspert UE w projektach 5G i Quantum oraz zaangażowany w prace IEC i PKN. Aktualnie dyrektor biura architektury i planowania sieci w EXATEL. Zawsze w służbie łączności!",
+        "An architect devoted to the all-ways-on paradigm. Focused on deploying next-generation networks and solutions - regardless of the layer - from transport to services. Expert in managing technology strategy closely aligned with the evolving telecommunications market. EU expert in 5G and Quantum projects, involved in the work of IEC and PKN. Currently director of the network architecture and planning office at EXATEL. Always in the service of connectivity!",
+      ),
+      image: michalSzczesnyImg,
+      bio: [
+        {
+          text: t(
+            "Architekt oddany paradygmatowi all-ways on. Skoncentrowany na wdrażaniu sieci i rozwiązań nowej generacji - niezależnie od warstwy - od transportu po usługi. Ekspert w zarządzaniu strategią technologiczną ściśle związaną z rozwijającym się rynkiem telekomunikacyjnym. Ekspert UE w projektach 5G i Quantum oraz zaangażowany w prace IEC i PKN. Aktualnie dyrektor biura architektury i planowania sieci w EXATEL. Zawsze w służbie łączności!",
+            "An architect devoted to the all-ways-on paradigm. Focused on deploying next-generation networks and solutions - regardless of the layer - from transport to services. Expert in managing technology strategy closely aligned with the evolving telecommunications market. EU expert in 5G and Quantum projects, involved in the work of IEC and PKN. Currently director of the network architecture and planning office at EXATEL. Always in the service of connectivity!",
+          ),
+        },
+      ],
+    },
+    {
+      name: "Łukasz Dec",
+      role: t(
+        "Założyciel i redaktor prowadzący, TELKO.in",
+        "Founder and Managing Editor, TELKO.in",
+      ),
+      desc: t(
+        "Od blisko 25 lat związany dziennikarsko z rynkiem nowoczesnych technologii ze szczególnym uwzględnieniem telekomunikacji. Pracę rozpoczynał w mediach branżowych, by poprzez gazety ogólnoinformacyjne dojść do własnego serwisu. Z wykształcenia i zamiłowania historyk.",
+        "For nearly 25 years he has worked as a journalist covering the modern technology market, with a particular focus on telecommunications. He started out in trade media and, by way of general-interest newspapers, went on to found his own news service. A historian by education and by passion.",
+      ),
+      image: lukaszDecImg,
+      bio: [
+        {
+          text: t(
+            "Od blisko 25 lat związany dziennikarsko z rynkiem nowoczesnych technologii ze szczególnym uwzględnieniem telekomunikacji. Pracę rozpoczynał w mediach branżowych, by poprzez gazety ogólnoinformacyjne dojść do własnego serwisu. Z wykształcenia i zamiłowania historyk.",
+            "For nearly 25 years he has worked as a journalist covering the modern technology market, with a particular focus on telecommunications. He started out in trade media and, by way of general-interest newspapers, went on to found his own news service. A historian by education and by passion.",
+          ),
+        },
+      ],
+    },
+    {
+      name: "Łukasz Chudyga",
+      role: t(
+        "Tribe Lead T-Mobile Polska, Technology Operations Director T-Mobile Polska Business Solutions",
+        "Tribe Lead T-Mobile Polska, Technology Operations Director T-Mobile Polska Business Solutions",
+      ),
+      desc: t(
+        "Obszar działalności obejmuje łączność i usługi komunikacyjne, platformy chmurowe i kolokacyjne, ekosystemy Microsoft i SAP, IoT, cyberbezpieczeństwo oraz integrację systemów na dużą skalę. Zamiast zarządzać pojedynczymi produktami, buduje spójne portfele i modele operacyjne, które wspierają wzrost, niezawodność i długofalową wartość dla klienta. Ma bogate doświadczenie w skalowaniu organizacji technologicznych i prowadzeniu dużych programów transformacyjnych.",
+        "His area of responsibility covers connectivity and communication services, cloud and colocation platforms, Microsoft and SAP ecosystems, IoT, cybersecurity and large-scale systems integration. Rather than managing individual products, he builds coherent portfolios and operating models that drive growth, reliability and long-term customer value. He has extensive experience in scaling technology organisations and leading large transformation programmes.",
+      ),
+      image: lukaszChudygaImg,
+      bio: [
+        {
+          text: t(
+            "Obszar działalności obejmuje łączność i usługi komunikacyjne, platformy chmurowe i kolokacyjne, ekosystemy Microsoft i SAP, IoT, cyberbezpieczeństwo oraz integrację systemów na dużą skalę. Zamiast zarządzać pojedynczymi produktami, buduje spójne portfele i modele operacyjne, które wspierają wzrost, niezawodność i długofalową wartość dla klienta. Ma bogate doświadczenie w skalowaniu organizacji technologicznych i prowadzeniu dużych programów transformacyjnych.",
+            "His area of responsibility covers connectivity and communication services, cloud and colocation platforms, Microsoft and SAP ecosystems, IoT, cybersecurity and large-scale systems integration. Rather than managing individual products, he builds coherent portfolios and operating models that drive growth, reliability and long-term customer value. He has extensive experience in scaling technology organisations and leading large transformation programmes.",
+          ),
+        },
+      ],
+    },
+    {
+      name: "Bartosz Bednarski",
+      role: "Managing Director | Vice President, Salumanus",
+      desc: t(
+        "Doświadczony menedżer z ponad 25-letnim stażem w sprzedaży, budowaniu strategii rozwoju biznesu, transformacji organizacji i zarządzaniu operacyjnym. Doświadczenie zdobywał zarówno w firmach z sektora korporacyjnego, jak i w start-upach oraz małych i średnich przedsiębiorstwach. Specjalizuje się w restrukturyzacji i naprawie firm, zarządzaniu zmianą i reorganizacji oraz rozwoju biznesu. Jest zwolennikiem ambitnych, przełomowych celów biznesowych.",
+        "An experienced manager with over 25 years in sales, business development strategy, organisational transformation and operations management. He has gained his experience both in corporate companies and in start-ups and small and medium-sized enterprises. He specialises in company restructuring and turnaround, change management and reorganisation, and business development. A strong believer in ambitious, breakthrough business goals.",
+      ),
+      image: bartoszBednarskiImg,
+      bio: [
+        {
+          text: t(
+            "Doświadczony menedżer z ponad 25-letnim stażem w sprzedaży, budowaniu strategii rozwoju biznesu, transformacji organizacji i zarządzaniu operacyjnym. Doświadczenie zdobywał zarówno w firmach z sektora korporacyjnego, jak i w start-upach oraz małych i średnich przedsiębiorstwach. Specjalizuje się w restrukturyzacji i naprawie firm, zarządzaniu zmianą i reorganizacji oraz rozwoju biznesu. Jest zwolennikiem ambitnych, przełomowych celów biznesowych.",
+            "An experienced manager with over 25 years in sales, business development strategy, organisational transformation and operations management. He has gained his experience both in corporate companies and in start-ups and small and medium-sized enterprises. He specialises in company restructuring and turnaround, change management and reorganisation, and business development. A strong believer in ambitious, breakthrough business goals.",
+          ),
+        },
+      ],
+    },
+  ];
+
   return (
   <>
     <section className="bg-background my-[39px]" style={{ paddingTop: "1rem", paddingBottom: "1rem" }}>
@@ -528,6 +659,21 @@ const Speakers = () => {
           <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-3xl">{t("Osiągnęli już niejeden szczyt przepustowości. Mistrzowie systemów xWDM i transmisji optycznej - na torze i w sieci nie ma dla nich niemożliwych prędkości.", "They've already reached more than one bandwidth peak. Masters of xWDM systems and optical transmission - on the track and in the network, no speed is impossible for them.")}</p>
         </AnimatedSection>
         <SpeakerSlider speakers={salumanusSpeakers} perPage={10} />
+      </div>
+    </section>
+
+    <section id="panelisci" className="bg-white py-[56px]">
+      <div className="container-conf">
+        <AnimatedSection>
+          <div className="flex items-center gap-3 mb-8">
+            <span className="w-3 h-3 rounded-sm bg-accent inline-block" />
+            <span className="font-heading text-sm uppercase tracking-widest text-foreground">{t("Panel dyskusyjny", "Panel discussion")}</span>
+          </div>
+          <h2 className="font-heading text-2xl md:text-5xl text-foreground leading-tight lg:text-4xl mb-12">
+            <span className="bg-accent text-accent-foreground px-3 py-1 inline-block">{t("Paneliści", "Panelists")}</span>
+          </h2>
+        </AnimatedSection>
+        <SpeakerSlider speakers={panelists} perPage={10} variant="panelist" />
       </div>
     </section>
   </>

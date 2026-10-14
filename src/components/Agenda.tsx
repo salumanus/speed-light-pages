@@ -51,7 +51,7 @@ const Agenda = () => {
 
   const agendaItems: AgendaItem[] = [
     { time: "8:45–9:45", title: t("Rejestracje na wydarzenie", "Event registration"), speaker: "", company: "", lang: "" },
-    { time: "9:45–10:00", title: t("Otwarcie Dni Światła 2026", "Opening of Dni Światła 2026"), speaker: "Marcin Bała, Bartosz Bednarski", company: "", lang: "" },
+    { time: "9:45–10:00", title: t("Otwarcie Dni Światła 2026", "Opening of Dni Światła 2026"), speaker: "Krzysztof Podgórski, Bartosz Bednarski", company: "", lang: "" },
     {
       time: "10:00–10:25",
       title: t("Jeden bolid, każdy tor. Uniwersalny moduł optyczny i jego konfiguracja w środowisku SRD", "One car, every track. A universal optical module and its configuration in an SRD environment"),
