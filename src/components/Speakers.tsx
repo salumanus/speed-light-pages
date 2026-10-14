@@ -17,6 +17,7 @@ import michalSzczesnyImg from "@/assets/michal-szczesny.jpg";
 import lukaszDecImg from "@/assets/lukasz-dec.jpg";
 import lukaszChudygaImg from "@/assets/lukasz-chudyga.jpg";
 import bartoszBednarskiImg from "@/assets/bartosz-bednarski.jpg";
+import piotrJaworskiImg from "@/assets/piotr-jaworski.jpg";
 import { useT } from "@/contexts/LanguageContext";
 
 interface BioSection {
@@ -638,6 +639,26 @@ const Speakers = () => {
           text: t(
             "Doświadczony menedżer z ponad 25-letnim stażem w sprzedaży, budowaniu strategii rozwoju biznesu, transformacji organizacji i zarządzaniu operacyjnym. Doświadczenie zdobywał zarówno w firmach z sektora korporacyjnego, jak i w start-upach oraz małych i średnich przedsiębiorstwach. Specjalizuje się w restrukturyzacji i naprawie firm, zarządzaniu zmianą i reorganizacji oraz rozwoju biznesu. Jest zwolennikiem ambitnych, przełomowych celów biznesowych.",
             "An experienced manager with over 25 years in sales, business development strategy, organisational transformation and operations management. He has gained his experience both in corporate companies and in start-ups and small and medium-sized enterprises. He specialises in company restructuring and turnaround, change management and reorganisation, and business development. A strong believer in ambitious, breakthrough business goals.",
+          ),
+        },
+      ],
+    },
+    {
+      name: "Piotr Jaworski",
+      role: t(
+        "Członek Zarządu ds. Sieci i Technologii, Orange Polska",
+        "Management Board Member for Network and Technology, Orange Polska",
+      ),
+      desc: t(
+        "Z firmą związany jest od 1991 roku i przeszedł w niej całą drogę, od funkcji technicznych, przez kierowanie techniczną obsługą klienta oraz dostarczaniem i serwisem usług, po strategiczne kierowanie całym pionem sieci i technologii jednego z czołowych operatorów na rynku. Odpowiadał za techniczne dostarczanie i utrzymanie usług dla klientów Orange Polska i operatorów alternatywnych oraz za realizację inwestycji sieciowych, w tym projektu światłowodowego VHBB-FTTH. Zasiada w radach nadzorczych NetWorkS! i Światłowód Inwestycje, a wcześniej przez kilkanaście lat przewodniczył Radzie Nadzorczej TP Teltech.",
+        "He has been with the company since 1991 and has gone all the way from technical roles, through heading technical customer service and service delivery and maintenance, to the strategic leadership of the entire network and technology division of one of the leading operators on the market. He was responsible for the technical delivery and maintenance of services for Orange Polska customers and alternative operators, and for network investments, including the VHBB-FTTH fibre project. He sits on the supervisory boards of NetWorkS! and Światłowód Inwestycje, and previously chaired the Supervisory Board of TP Teltech for over a decade.",
+      ),
+      image: piotrJaworskiImg,
+      bio: [
+        {
+          text: t(
+            "Z firmą związany jest od 1991 roku i przeszedł w niej całą drogę, od funkcji technicznych, przez kierowanie techniczną obsługą klienta oraz dostarczaniem i serwisem usług, po strategiczne kierowanie całym pionem sieci i technologii jednego z czołowych operatorów na rynku. Odpowiadał za techniczne dostarczanie i utrzymanie usług dla klientów Orange Polska i operatorów alternatywnych oraz za realizację inwestycji sieciowych, w tym projektu światłowodowego VHBB-FTTH. Zasiada w radach nadzorczych NetWorkS! i Światłowód Inwestycje, a wcześniej przez kilkanaście lat przewodniczył Radzie Nadzorczej TP Teltech.",
+            "He has been with the company since 1991 and has gone all the way from technical roles, through heading technical customer service and service delivery and maintenance, to the strategic leadership of the entire network and technology division of one of the leading operators on the market. He was responsible for the technical delivery and maintenance of services for Orange Polska customers and alternative operators, and for network investments, including the VHBB-FTTH fibre project. He sits on the supervisory boards of NetWorkS! and Światłowód Inwestycje, and previously chaired the Supervisory Board of TP Teltech for over a decade.",
           ),
         },
       ],
