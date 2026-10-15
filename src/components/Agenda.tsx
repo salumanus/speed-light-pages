@@ -131,7 +131,7 @@ const Agenda = () => {
       ],
     },
     { time: "13:00–14:30", title: t("Lunch", "Lunch"), speaker: "", company: "", lang: "" },
-    { time: "14:30–15:30", title: t(`Panel: „Iskander czy totalny blackout? Jak przygotować sieć telekomową na wyzwania geopolityki"`, `Panel: "Iskander or total blackout? How to prepare a telecommunications network for the challenges of geopolitics"`), speaker: "Łukasz Dec (TELCO.in), Łukasz Chudyga (T‑Mobile Polska), Radosław Potera (Atman), Michał Szczęsny (Exatel), Piotr Jaworski (Orange Polska), Bartosz Bednarski (Salumanus)", company: "", lang: "", highlight: true },
+    { time: "14:30–15:30", title: t(`Panel: „Sieć gotowa na wszystko. Jak budować odporną infrastrukturę telekomunikacyjną"`, `Panel: "A network ready for anything. How to build resilient telecommunications infrastructure"`), speaker: "Łukasz Dec (TELCO.in), Łukasz Chudyga (T‑Mobile Polska), Radosław Potera (Atman), Michał Szczęsny (Exatel), Piotr Jaworski (Orange Polska), Bartosz Bednarski (Salumanus)", company: "", lang: "", highlight: true },
     { time: "15:30–16:00", title: t("Przerwa kawowa", "Coffee break"), speaker: "", company: "", lang: "" },
     {
       time: "16:00–16:25",
@@ -214,8 +214,8 @@ const Agenda = () => {
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4">
                       <h3
-                        className={`font-heading leading-snug text-sm md:text-lg ${
-                          item.highlight ? "text-accent-foreground" : "text-foreground"
+                        className={`font-heading leading-snug ${
+                          item.highlight ? "text-base md:text-2xl text-accent-foreground" : "text-sm md:text-lg text-foreground"
                         }`}
                       >
                         {item.title}
