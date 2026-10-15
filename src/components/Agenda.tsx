@@ -156,7 +156,7 @@ const Agenda = () => {
         ),
       ],
     },
-    { time: "16:50–17:00", title: t("KAHOOT i sesja Q&A", "KAHOOT and Q&A session"), speaker: "", company: "", lang: "" },
+    { time: "16:50–17:00", title: t("KAHOOT", "KAHOOT"), speaker: "", company: "", lang: "" },
     { time: "17:00", title: t("Rozpoczęcie imprezy w stylu Formuły 1", "Start of the Formula 1-style party"), speaker: "", company: "", lang: "" },
   ];
 
