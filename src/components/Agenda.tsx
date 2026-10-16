@@ -131,7 +131,7 @@ const Agenda = () => {
       ],
     },
     { time: "13:00–14:30", title: t("Lunch", "Lunch"), speaker: "", company: "", lang: "" },
-    { time: "14:30–15:30", title: t(`Panel: „Sieć gotowa na wszystko. Jak budować odporną infrastrukturę telekomunikacyjną"`, `Panel: "A network ready for anything. How to build resilient telecommunications infrastructure"`), speaker: "Łukasz Dec (TELCO.in), Łukasz Chudyga (T‑Mobile Polska), Radosław Potera (Atman), Michał Szczęsny (Exatel), Piotr Jaworski (Orange Polska), Bartosz Bednarski (Salumanus)", company: "", lang: "", highlight: true },
+    { time: "14:30–15:30", title: t(`Panel: „Sieć gotowa na wszystko. Jak budować odporną infrastrukturę telekomunikacyjną"`, `Panel: "A network ready for anything. How to build resilient telecommunications infrastructure"`), speaker: "Łukasz Dec (TELKO.IN), Łukasz Chudyga (T‑Mobile Polska), Radosław Potera (Atman), Michał Szczęsny (Exatel), Piotr Jaworski (Orange Polska), Bartosz Bednarski (Salumanus)", company: "", lang: "", highlight: true },
     { time: "15:30–16:00", title: t("Przerwa kawowa", "Coffee break"), speaker: "", company: "", lang: "" },
     {
       time: "16:00–16:25",

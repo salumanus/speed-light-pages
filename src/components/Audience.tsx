@@ -34,8 +34,8 @@ const Audience = () => {
       icon: Cpu,
       title: t("Decydenci biznesowi", "Business decision-makers"),
       desc: t(
-        "Dla dyrektorów i zarządów operatorów telekomunikacyjnych oraz dostawców usług Enterprise. Tu technologia spotyka się z P&L - monetyzacja sieci, Enterprise-as-a-Service, zarządzanie ryzykiem geopolitycznym. Panel finałowy „Iskander czy totalny blackout\" — rozmowa, której nigdzie indziej nie usłyszysz.",
-        "For directors and boards of telecom operators and Enterprise service providers. Where technology meets P&L - network monetization, Enterprise-as-a-Service, geopolitical risk management. The closing panel \"Iskander or total blackout\" — a conversation you won't hear anywhere else."
+        "Dla dyrektorów i zarządów operatorów telekomunikacyjnych oraz dostawców usług Enterprise. Tu technologia spotyka się z P&L - monetyzacja sieci, Enterprise-as-a-Service, zarządzanie ryzykiem geopolitycznym. Panel finałowy „Sieć gotowa na wszystko. Jak budować odporną infrastrukturę telekomunikacyjną\" — rozmowa, której nigdzie indziej nie usłyszysz.",
+        "For directors and boards of telecom operators and Enterprise service providers. Where technology meets P&L - network monetization, Enterprise-as-a-Service, geopolitical risk management. The closing panel \"A network ready for anything. How to build resilient telecommunications infrastructure\" — a conversation you won't hear anywhere else."
       ),
     },
   ];

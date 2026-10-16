@@ -589,8 +589,8 @@ const Speakers = () => {
     {
       name: "Łukasz Dec",
       role: t(
-        "Założyciel i redaktor prowadzący, TELKO.in",
-        "Founder and Managing Editor, TELKO.in",
+        "Założyciel i redaktor prowadzący, TELKO.IN",
+        "Founder and Managing Editor, TELKO.IN",
       ),
       desc: t(
         "Od blisko 25 lat związany dziennikarsko z rynkiem nowoczesnych technologii ze szczególnym uwzględnieniem telekomunikacji. Pracę rozpoczynał w mediach branżowych, by poprzez gazety ogólnoinformacyjne dojść do własnego serwisu. Z wykształcenia i zamiłowania historyk.",
