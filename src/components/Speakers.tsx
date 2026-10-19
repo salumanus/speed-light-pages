@@ -28,6 +28,7 @@ interface BioSection {
 interface Speaker {
   name: string;
   role: string;
+  company?: string;
   desc: string;
   linkedin?: string;
   image: string;
@@ -72,7 +73,9 @@ const SpeakerCard = ({
         />
       </button>
       <h3 className="font-heading text-xl text-foreground md:text-xl">{speaker.name}</h3>
-      <p className="text-accent text-sm font-medium mb-1">{speaker.role}</p>
+      <p className="text-accent text-sm font-medium">{speaker.role}</p>
+      {speaker.company && <p className="text-foreground text-sm font-semibold">{speaker.company}</p>}
+      <div className="mb-1" />
       <p className={`text-muted-foreground text-sm mb-4 ${variant === "panelist" ? "line-clamp-3" : ""}`}>{speaker.desc}</p>
       <div className="mt-auto flex items-center gap-3 flex-wrap">
         <button
@@ -140,6 +143,7 @@ const SpeakerDialog = ({
               <DialogDescription className="mt-1 text-sm font-medium text-accent">
                 {speaker.role}
               </DialogDescription>
+              {speaker.company && <p className="text-sm font-semibold text-foreground">{speaker.company}</p>}
 
               {speaker.linkedin && (
                 <a
@@ -263,6 +267,7 @@ const Speakers = () => {
     {
       name: "Marcin Bała",
       role: t("Dyrektor ds. Technicznych", "Chief Technical Officer"),
+      company: "Salumanus",
       desc: t("Ewangelista xWDM. Łączy biznes, technologię i umiejętność czytania branżowej przyszłości - tam, gdzie inni widzą trendy, on widzi następny ruch.", "xWDM evangelist. Combines business, technology and the ability to read the industry's future - where others see trends, he sees the next move."),
       linkedin: "https://www.linkedin.com/in/marcin-bala",
       image: marcinBalaImg,
@@ -302,6 +307,7 @@ const Speakers = () => {
     {
       name: "Andrzej Wojnar",
       role: t("Technical Sales Leader", "Technical Sales Leader"),
+      company: "Salumanus",
       desc: t("Główny architekt i inżynier rozwiązań w Salumanus. Ekspert w dziedzinie transmisji optycznej, modułów koherentnych i otwartych sieci optycznych.", "Lead architect and solutions engineer at Salumanus. Expert in optical transmission, coherent modules and open optical networks."),
       linkedin: "https://www.linkedin.com/in/andrzej-wojnar-kr",
       image: andrzejWojnarImg,
@@ -317,6 +323,7 @@ const Speakers = () => {
     {
       name: "Mateusz Hąc",
       role: t("Menedżer ds. Produktu i Zakupów", "Product and Purchasing Manager"),
+      company: "Salumanus",
       desc: t("Od maja 2025 roku odpowiada w Salumanus za produkty i zakupy.", "Since May 2025, he has been responsible for products and purchasing at Salumanus."),
       linkedin: "https://www.linkedin.com/in/mateusz-h%C4%85c-1b6879182/",
       image: mateuszHacImg,
@@ -338,6 +345,7 @@ const Speakers = () => {
     {
       name: "Grzegorz Róż",
       role: t("Dyrektor Działu Produktów Sieciowych", "Head of Network Products"),
+      company: "DCN Europe",
       desc: t("Zarządza Działem Produktów Sieciowych DCN Europe - stąd startują najlepsze sieci LAN i Wi-Fi 6. Łączy potrzeby klienta, integratora i marki w jedno działające rozwiązanie.", "Manages the DCN Europe Network Products department - the launchpad for the best LAN and Wi-Fi 6 networks. Combines the needs of the client, the integrator and the brand into one working solution."),
       linkedin: "https://www.linkedin.com/in/grzegorzroz/",
       image: grzegorzRozImg,
@@ -359,6 +367,7 @@ const Speakers = () => {
     {
       name: "Stafford Yu",
       role: t("DCN Network Engineer", "DCN Network Engineer"),
+      company: "DCN",
       desc: t("Ekspert i inżynier presales w zakresie rozwiązań LAN oraz bezprzewodowej łączności Wi-Fi producenta urządzeń sieciowych DCN.", "Expert and presales engineer specializing in LAN and wireless Wi-Fi solutions from network equipment manufacturer DCN."),
       image: staffordYuImg,
       bio: [
@@ -378,7 +387,8 @@ const Speakers = () => {
     },
     {
       name: "Nino Shaptoshvili",
-      role: t("Wiceprezes ds. Sprzedaży, PacketLight Networks", "Vice President of Sales, PacketLight Networks"),
+      role: t("Wiceprezes ds. Sprzedaży", "Vice President of Sales"),
+      company: "PacketLight",
       linkedin: "https://www.linkedin.com/in/nino-shaptoshvili-mba-3061194/",
       desc: t("Ponad 25 lat w telekomunikacji i high-tech. Otwiera nowe rynki i buduje strategiczne partnerstwa - od Europy po Azję Środkową.", "Over 25 years in telecom and high-tech. Opens new markets and builds strategic partnerships - from Europe to Central Asia."),
       image: ninoShaptoshviliImg,
@@ -418,7 +428,8 @@ const Speakers = () => {
     },
     {
       name: "Kevin Wang",
-      role: t("Zastępca Dyrektora Działu Międzynarodowego, Raisecom", "Deputy Director, International Department, Raisecom"),
+      role: t("Zastępca Dyrektora Działu Międzynarodowego", "Deputy Director, International Department"),
+      company: "Raisecom",
       linkedin: "https://www.linkedin.com/in/kevin-wang-59180727/",
       desc: t("Ponad 20 lat w Raisecom - od wsparcia technicznego po zarządzanie sprzedażą zagraniczną. Zbudował sieć dystrybucji w ponad 20 krajach UE.", "Over 20 years at Raisecom - from technical support to running international sales. Built a distribution network in more than 20 EU countries."),
       image: kevinWangImg,
@@ -472,6 +483,7 @@ const Speakers = () => {
         "Ekspert ds. sprzedaży międzynarodowej i rozwoju biznesu",
         "International Sales & Business Development Expert",
       ),
+      company: "HEQA Security",
       desc: t(
         "Ponad 20 lat doświadczenia w sprzedaży międzynarodowej i rozwoju biznesu. Skutecznie rozwija rynki, zespoły oraz długofalowe relacje z klientami.",
         "Over 20 years of experience in international sales and business development. He successfully grows markets, teams, and long-term customer relationships.",
@@ -511,6 +523,7 @@ const Speakers = () => {
         "Menedżer planowania sieci i projektant sieci transportowych",
         "Network Planning Manager & Transport Network Designer",
       ),
+      company: "Exatel",
       desc: t(
         "Specjalista C/DWDM, Metro/Carrier Ethernet i SDH. Pionier technologii SDN oraz praktycznego wykorzystania Open Networking i multivendoringu w sieciach dużej skali.",
         "Specialist in C/DWDM, Metro/Carrier Ethernet and SDH. Pioneer in SDN technology and the practical use of Open Networking and multivendoring in large-scale networks.",
