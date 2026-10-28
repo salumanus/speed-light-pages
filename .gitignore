@@ -31,3 +31,8 @@ dist-ssr
 
 # Local Netlify folder
 .netlify
+
+# ZIP build for e-mail and local data (not for the repo)
+dist-zip
+*.zip
+*.xlsx
