@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/Salumanus_logo_white.svg">
+  <img src=".github/assets/Salumanus_logo_dark.svg" alt="Salumanus" width="320">
+</picture>
+
 # Dni Światła — dniswiatla.pl
 
 Strona konferencji **Dni Światła 2026 (XVIII edycja)** — 20 października 2026, Hotel Novotel Centrum, Warszawa.
